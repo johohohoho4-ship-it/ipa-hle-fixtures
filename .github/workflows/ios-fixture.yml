@@ -1,0 +1,38 @@
+name: Build unsigned iOS fixture and simulator reference
+
+on:
+  workflow_dispatch:
+    inputs:
+      fixture:
+        description: Fixture directory under fixtures/ (for example uikit-form)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build-fixture:
+    name: Build ${{ inputs.fixture }}
+    runs-on: macos-15   # arm64 image; "macos-15-arm64" is no runner label
+    timeout-minutes: 45
+    steps:
+      - name: Check out fixture source
+        uses: actions/checkout@v7
+
+      - name: Build IPA and simulator reference
+        id: build
+        shell: bash
+        env:
+          FIXTURE: ${{ inputs.fixture }}
+        run: bash fixtures/template/build-fixture.sh "$FIXTURE"
+
+      - name: Upload IPA, symbols, screenshots, and XCUITest results
+        if: always()
+        uses: actions/upload-artifact@v5
+        with:
+          name: ios-fixture-${{ steps.build.outputs.fixture }}
+          path: ${{ runner.temp }}/ipa-hle-fixture-artifacts/${{ steps.build.outputs.fixture }}
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 14

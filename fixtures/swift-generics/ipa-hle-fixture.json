@@ -1,0 +1,7 @@
+{
+  "project": "SwiftGenerics.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftgenerics",
+  "app_name": "SwiftGenerics",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftGenerics"
+}

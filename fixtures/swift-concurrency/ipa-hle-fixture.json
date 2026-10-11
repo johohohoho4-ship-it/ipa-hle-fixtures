@@ -1,0 +1,7 @@
+{
+  "project": "SwiftConcurrency.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftconcurrency",
+  "app_name": "SwiftConcurrency",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftConcurrency"
+}

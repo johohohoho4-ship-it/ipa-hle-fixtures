@@ -1,0 +1,7 @@
+{
+  "project": "UIKitLayout.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.uikitlayout",
+  "app_name": "UIKitLayout",
+  "minimum_ios": "15.0",
+  "scheme": "UIKitLayout"
+}

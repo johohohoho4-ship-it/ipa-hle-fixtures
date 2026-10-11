@@ -1,0 +1,7 @@
+{
+  "project": "DispatchAsync.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.dispatch",
+  "app_name": "DispatchAsync",
+  "minimum_ios": "15.0",
+  "scheme": "DispatchAsync"
+}

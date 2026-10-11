@@ -1,0 +1,7 @@
+{
+  "project": "ObjCProtocolFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.objc-protocols",
+  "app_name": "ObjCProtocolFixture",
+  "minimum_ios": "15.0",
+  "scheme": "ObjCProtocolFixture"
+}

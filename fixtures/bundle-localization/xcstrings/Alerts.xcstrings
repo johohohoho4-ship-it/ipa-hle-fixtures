@@ -1,0 +1,11 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "retry": {
+      "localizations": {
+        "de": { "stringUnit": { "state": "translated", "value": "Nochmal" } }
+      }
+    }
+  },
+  "version": "1.0"
+}

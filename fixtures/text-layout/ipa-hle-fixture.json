@@ -1,0 +1,7 @@
+{
+  "project": "TextLayout.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.textlayout",
+  "app_name": "TextLayout",
+  "minimum_ios": "15.0",
+  "scheme": "TextLayout"
+}

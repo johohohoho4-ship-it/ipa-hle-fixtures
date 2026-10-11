@@ -1,0 +1,7 @@
+{
+  "project": "CoreAnimationFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.coreanimation",
+  "app_name": "CoreAnimationFixture",
+  "minimum_ios": "15.0",
+  "scheme": "CoreAnimationFixture"
+}

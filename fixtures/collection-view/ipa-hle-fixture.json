@@ -1,0 +1,7 @@
+{
+  "project": "CollectionViewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.collection-view",
+  "app_name": "CollectionViewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "CollectionViewFixture"
+}

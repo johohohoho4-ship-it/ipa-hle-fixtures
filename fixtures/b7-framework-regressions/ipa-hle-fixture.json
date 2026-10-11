@@ -1,0 +1,7 @@
+{
+  "project": "B7FrameworkRegressions.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.b7frameworkregressions",
+  "app_name": "B7FrameworkRegressions",
+  "minimum_ios": "15.0",
+  "scheme": "B7FrameworkRegressions"
+}

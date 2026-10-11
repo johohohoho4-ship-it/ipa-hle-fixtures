@@ -1,0 +1,7 @@
+{
+  "project": "Calculator.xcodeproj",
+  "scheme": "Calculator",
+  "app_name": "Calculator",
+  "bundle_id": "org.ipahle.fixture.calculator",
+  "minimum_ios": "15.0"
+}

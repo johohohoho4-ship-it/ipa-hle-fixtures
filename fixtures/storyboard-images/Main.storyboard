@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="imagesVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="sceneImages">
+            <objects>
+                <viewController storyboardIdentifier="images" id="imagesVC" customClass="SBImagesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="imagesView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fillV">
+                                <rect key="frame" x="20" y="120" width="150" height="100"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbimg.fill"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fitV">
+                                <rect key="frame" x="190" y="120" width="150" height="100"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbimg.fit"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="halves" translatesAutoresizingMaskIntoConstraints="NO" id="centerV">
+                                <rect key="frame" x="20" y="240" width="150" height="100"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbimg.center"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="emptyV">
+                                <rect key="frame" x="190" y="240" width="150" height="100"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbimg.empty"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="imagesSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fillV" firstAttribute="top" secondItem="imagesSafe" secondAttribute="top" constant="61" id="c1"/>
+                            <constraint firstItem="fillV" firstAttribute="leading" secondItem="imagesSafe" secondAttribute="leading" constant="20" id="c2"/>
+                            <constraint firstItem="fillV" firstAttribute="width" constant="150" id="c3"/>
+                            <constraint firstItem="fillV" firstAttribute="height" constant="100" id="c4"/>
+                            <constraint firstItem="fitV" firstAttribute="top" secondItem="fillV" secondAttribute="top" id="c5"/>
+                            <constraint firstItem="fitV" firstAttribute="leading" secondItem="fillV" secondAttribute="trailing" constant="20" id="c6"/>
+                            <constraint firstItem="fitV" firstAttribute="width" constant="150" id="c7"/>
+                            <constraint firstItem="fitV" firstAttribute="height" constant="100" id="c8"/>
+                            <constraint firstItem="centerV" firstAttribute="top" secondItem="fillV" secondAttribute="bottom" constant="20" id="c9"/>
+                            <constraint firstItem="centerV" firstAttribute="leading" secondItem="fillV" secondAttribute="leading" id="c10"/>
+                            <constraint firstItem="centerV" firstAttribute="width" constant="150" id="c11"/>
+                            <constraint firstItem="centerV" firstAttribute="height" constant="100" id="c12"/>
+                            <constraint firstItem="emptyV" firstAttribute="top" secondItem="centerV" secondAttribute="top" id="c13"/>
+                            <constraint firstItem="emptyV" firstAttribute="leading" secondItem="fitV" secondAttribute="leading" id="c14"/>
+                            <constraint firstItem="emptyV" firstAttribute="width" constant="150" id="c15"/>
+                            <constraint firstItem="emptyV" firstAttribute="height" constant="100" id="c16"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fillView" destination="fillV" id="o1"/>
+                        <outlet property="fitView" destination="fitV" id="o2"/>
+                        <outlet property="centerView" destination="centerV" id="o3"/>
+                        <outlet property="emptyView" destination="emptyV" id="o4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frImages" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="halves" width="40" height="20"/>
+        <image name="photo.jpg" width="64" height="48"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

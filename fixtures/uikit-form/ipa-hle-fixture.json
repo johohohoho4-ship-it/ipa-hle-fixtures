@@ -1,0 +1,7 @@
+{
+  "project": "UIKitForm.xcodeproj",
+  "scheme": "UIKitForm",
+  "app_name": "UIKitForm",
+  "bundle_id": "org.ipahle.fixture.uikitform",
+  "minimum_ios": "15.0"
+}

@@ -1,0 +1,7 @@
+{
+  "project": "GestureFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.gestures",
+  "app_name": "GestureFixture",
+  "minimum_ios": "15.0",
+  "scheme": "GestureFixture"
+}

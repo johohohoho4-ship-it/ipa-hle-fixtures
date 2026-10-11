@@ -1,0 +1,7 @@
+{
+  "project": "MemoryMapFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.memory-map",
+  "app_name": "MemoryMapFixture",
+  "minimum_ios": "15.0",
+  "scheme": "MemoryMapFixture"
+}

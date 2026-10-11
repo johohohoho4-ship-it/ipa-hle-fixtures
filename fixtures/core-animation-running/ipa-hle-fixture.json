@@ -1,0 +1,7 @@
+{
+  "project": "RunningAnimationFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.runninganimation",
+  "app_name": "RunningAnimationFixture",
+  "minimum_ios": "15.0",
+  "scheme": "RunningAnimationFixture"
+}

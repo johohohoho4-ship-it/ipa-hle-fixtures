@@ -1,0 +1,7 @@
+{
+  "project": "TouchFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.touches",
+  "app_name": "TouchFixture",
+  "minimum_ios": "15.0",
+  "scheme": "TouchFixture"
+}

@@ -1,0 +1,7 @@
+{
+  "project": "PersistenceFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.persistence",
+  "app_name": "PersistenceFixture",
+  "minimum_ios": "15.0",
+  "scheme": "PersistenceFixture"
+}

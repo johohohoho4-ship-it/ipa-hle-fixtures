@@ -1,0 +1,7 @@
+{
+  "project": "AutoresizingFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.autoresizing",
+  "app_name": "AutoresizingFixture",
+  "minimum_ios": "15.0",
+  "scheme": "AutoresizingFixture"
+}

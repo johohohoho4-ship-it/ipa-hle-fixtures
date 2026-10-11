@@ -1,0 +1,7 @@
+{
+  "project": "BundleLocalization.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.bundlelocalization",
+  "app_name": "BundleLocalization",
+  "minimum_ios": "15.0",
+  "scheme": "BundleLocalization"
+}

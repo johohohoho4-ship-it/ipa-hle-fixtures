@@ -1,0 +1,67 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "fixture.greeting": {
+      "localizations": {
+        "de": { "stringUnit": { "state": "translated", "value": "Hallo aus dem Katalog" } },
+        "en": { "stringUnit": { "state": "translated", "value": "Hello from catalog" } }
+      }
+    },
+    "fixture.items": {
+      "localizations": {
+        "de": {
+          "stringUnit": { "state": "translated", "value": "%#@count@" },
+          "substitutions": {
+            "count": {
+              "argNum": 1,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": { "stringUnit": { "state": "translated", "value": "%lld Element" } },
+                  "other": { "stringUnit": { "state": "translated", "value": "%lld Elemente" } }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "fixture.directPlural": {
+      "localizations": {
+        "de": {
+          "variations": {
+            "plural": {
+              "one": { "stringUnit": { "state": "translated", "value": "%lld Ding" } },
+              "other": { "stringUnit": { "state": "translated", "value": "%lld Dinge" } }
+            }
+          }
+        }
+      }
+    },
+    "fixture.multiple": {
+      "localizations": {
+        "de": {
+          "stringUnit": { "state": "translated", "value": "%#@count@ %#@other@" },
+          "substitutions": {
+            "count": {
+              "argNum": 1,
+              "formatSpecifier": "d",
+              "variations": { "plural": { "other": { "stringUnit": { "value": "%d Dinge" } } } }
+            },
+            "other": {
+              "argNum": 2,
+              "formatSpecifier": "d",
+              "variations": { "plural": { "other": { "stringUnit": { "value": "%d andere" } } } }
+            }
+          }
+        }
+      }
+    },
+    "fixture.precedence": {
+      "localizations": {
+        "de": { "stringUnit": { "state": "translated", "value": "Catalog value" } }
+      }
+    }
+  },
+  "version": "1.0"
+}

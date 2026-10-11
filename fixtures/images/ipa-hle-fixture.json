@@ -1,0 +1,7 @@
+{
+  "project": "ImagesFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.images",
+  "app_name": "ImagesFixture",
+  "minimum_ios": "15.0",
+  "scheme": "ImagesFixture"
+}

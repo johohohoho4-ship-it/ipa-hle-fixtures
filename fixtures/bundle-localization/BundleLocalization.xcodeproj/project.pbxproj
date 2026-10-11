@@ -1,0 +1,160 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* AppDelegate.m */; };
+		A10000000000000000000002 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* ViewController.m */; };
+		A10000000000000000000003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* main.m */; };
+		A10000000000000000000004 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Localizable.strings */; };
+		A10000000000000000000005 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* Localizable.stringsdict */; };
+		A10000000000000000000006 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* InfoPlist.strings */; };
+		A10000000000000000000007 /* LocalizedBadge.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* LocalizedBadge.png */; };
+		B10000000000000000000001 /* FixtureReferenceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A80000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000000000000000000001;
+			remoteInfo = BundleLocalization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A20000000000000000000002 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A20000000000000000000003 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A20000000000000000000004 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A20000000000000000000005 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000007 /* BundleLocalization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BundleLocalization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+        A20000000000000000000008 /* Localizable.strings */ = {isa = PBXVariantGroup; children = (A20000000000000000000009 /* de */, A2000000000000000000000A /* en */,); name = Localizable.strings; sourceTree = "<group>"; };
+        A20000000000000000000009 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+        A2000000000000000000000A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A2000000000000000000000B /* Localizable.stringsdict */ = {isa = PBXVariantGroup; children = (A2000000000000000000000C /* de */, A2000000000000000000000D /* en */,); name = Localizable.stringsdict; sourceTree = "<group>"; };
+		A2000000000000000000000C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = de; path = de.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A2000000000000000000000D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		A2000000000000000000000E /* InfoPlist.strings */ = {isa = PBXVariantGroup; children = (A2000000000000000000000F /* de */, A20000000000000000000010 /* en */,); name = InfoPlist.strings; sourceTree = "<group>"; };
+		A2000000000000000000000F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A20000000000000000000010 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A20000000000000000000011 /* LocalizedBadge.png */ = {isa = PBXVariantGroup; children = (A20000000000000000000012 /* de */, A20000000000000000000013 /* en */,); name = LocalizedBadge.png; sourceTree = "<group>"; };
+		A20000000000000000000012 /* de */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = de; path = de.lproj/LocalizedBadge.png; sourceTree = "<group>"; };
+		A20000000000000000000013 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/LocalizedBadge.png; sourceTree = "<group>"; };
+		B20000000000000000000001 /* FixtureReferenceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixtureReferenceUITests.m; sourceTree = "<group>"; };
+		B20000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		B30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (A40000000000000000000002 /* BundleLocalization */, B40000000000000000000001 /* FixtureReferenceUITests */, A40000000000000000000003 /* Products */);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* BundleLocalization */ = {
+			isa = PBXGroup;
+			children = (A20000000000000000000004 /* AppDelegate.h */, A20000000000000000000001 /* AppDelegate.m */, A20000000000000000000005 /* ViewController.h */, A20000000000000000000002 /* ViewController.m */, A20000000000000000000003 /* main.m */, A20000000000000000000006 /* Info.plist */, A20000000000000000000008 /* Localizable.strings */, A2000000000000000000000B /* Localizable.stringsdict */, A2000000000000000000000E /* InfoPlist.strings */, A20000000000000000000011 /* LocalizedBadge.png */);
+			path = .;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000007 /* BundleLocalization.app */, B20000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
+		B40000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXGroup;
+			children = (B20000000000000000000001 /* FixtureReferenceUITests.m */,);
+			path = FixtureReferenceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* BundleLocalization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (A60000000000000000000001 /* Sources */, A30000000000000000000001 /* Frameworks */, A60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = BundleLocalization;
+			productName = BundleLocalization;
+			productReference = A20000000000000000000007 /* BundleLocalization.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B50000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70000000000000000000002 /* Target config list */;
+			buildPhases = (B60000000000000000000001 /* Sources */, B30000000000000000000001 /* Frameworks */, B60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = (B80000000000000000000002 /* PBXTargetDependency */);
+			name = FixtureReferenceUITests;
+			productName = FixtureReferenceUITests;
+			productReference = B20000000000000000000002 /* FixtureReferenceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					B50000000000000000000001 = {CreatedOnToolsVersion = 16.0; TestTargetID = A50000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+            knownRegions = (en, Base, de);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* BundleLocalization */, B50000000000000000000001 /* FixtureReferenceUITests */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000004 /* Localizable.strings in Resources */, A10000000000000000000005 /* Localizable.stringsdict in Resources */, A10000000000000000000006 /* InfoPlist.strings in Resources */, A10000000000000000000007 /* LocalizedBadge.png in Resources */,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AppDelegate.m in Sources */, A10000000000000000000002 /* ViewController.m in Sources */, A10000000000000000000003 /* main.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001 /* FixtureReferenceUITests.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000000000000000000001 /* BundleLocalization */;
+			targetProxy = B80000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; }; name = Debug; };
+		A90000000000000000000002 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; }; name = Release; };
+		A90000000000000000000003 /* Debug target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.bundlelocalization; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		A90000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.bundlelocalization; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+		B90000000000000000000003 /* Debug target */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.bundlelocalization.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = BundleLocalization; USES_XCTEST = YES; }; name = Debug; };
+		B90000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.bundlelocalization.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = BundleLocalization; USES_XCTEST = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Project config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000001 /* Debug project */, A90000000000000000000002 /* Release project */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000003 /* Debug target */, A90000000000000000000004 /* Release target */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		B70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (B90000000000000000000003 /* Debug target */, B90000000000000000000004 /* Release target */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A80000000000000000000001 /* Project object */;
+}

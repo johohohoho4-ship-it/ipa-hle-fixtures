@@ -1,0 +1,7 @@
+{
+  "project": "SwiftCollections.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftcollections",
+  "app_name": "SwiftCollections",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftCollections"
+}

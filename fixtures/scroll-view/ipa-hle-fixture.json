@@ -1,0 +1,7 @@
+{
+  "project": "ScrollViewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.scroll-view",
+  "app_name": "ScrollViewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "ScrollViewFixture"
+}

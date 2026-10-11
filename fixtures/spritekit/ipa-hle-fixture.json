@@ -1,0 +1,7 @@
+{
+  "project": "SpriteKitGame.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.spritekit",
+  "app_name": "SpriteKitGame",
+  "minimum_ios": "15.0",
+  "scheme": "SpriteKitGame"
+}

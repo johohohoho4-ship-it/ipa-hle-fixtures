@@ -1,0 +1,7 @@
+{
+  "project": "AudioFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.audio",
+  "app_name": "AudioFixture",
+  "minimum_ios": "15.0",
+  "scheme": "AudioFixture"
+}

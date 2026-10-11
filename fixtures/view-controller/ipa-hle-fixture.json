@@ -1,0 +1,7 @@
+{
+  "project": "ViewControllerFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.viewcontroller",
+  "app_name": "ViewControllerFixture",
+  "minimum_ios": "15.0",
+  "scheme": "ViewControllerFixture"
+}

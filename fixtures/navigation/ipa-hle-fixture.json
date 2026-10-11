@@ -1,0 +1,7 @@
+{
+  "project": "NavigationFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.navigation",
+  "app_name": "NavigationFixture",
+  "minimum_ios": "15.0",
+  "scheme": "NavigationFixture"
+}

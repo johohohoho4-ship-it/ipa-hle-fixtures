@@ -1,0 +1,7 @@
+{
+  "project": "Exceptions.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.exceptions",
+  "app_name": "Exceptions",
+  "minimum_ios": "15.0",
+  "scheme": "Exceptions"
+}

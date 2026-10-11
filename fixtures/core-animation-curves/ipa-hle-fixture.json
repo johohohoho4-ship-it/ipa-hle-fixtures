@@ -1,0 +1,7 @@
+{
+  "project": "TimingCurveFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.timingcurves",
+  "app_name": "TimingCurveFixture",
+  "minimum_ios": "15.0",
+  "scheme": "TimingCurveFixture"
+}

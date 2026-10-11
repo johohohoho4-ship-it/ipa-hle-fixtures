@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardImagesFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.storyboardimages",
+  "app_name": "StoryboardImagesFixture",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardImagesFixture"
+}

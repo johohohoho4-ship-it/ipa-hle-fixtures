@@ -1,0 +1,7 @@
+{
+  "project": "SpriteKitArchives.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.spritekit-archives",
+  "app_name": "SpriteKitArchives",
+  "minimum_ios": "15.0",
+  "scheme": "SpriteKitArchives"
+}

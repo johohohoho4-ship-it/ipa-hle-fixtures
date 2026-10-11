@@ -1,0 +1,7 @@
+{
+  "project": "SwiftFoundation.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftfoundation",
+  "app_name": "SwiftFoundation",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftFoundation"
+}

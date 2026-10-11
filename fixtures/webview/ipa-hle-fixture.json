@@ -1,0 +1,7 @@
+{
+  "project": "WebViewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.webview",
+  "app_name": "WebViewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "WebViewFixture"
+}

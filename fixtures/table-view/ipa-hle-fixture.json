@@ -1,0 +1,7 @@
+{
+  "project": "TableViewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.table-view",
+  "app_name": "TableViewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "TableViewFixture"
+}

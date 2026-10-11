@@ -1,0 +1,7 @@
+{
+  "project": "Symbols.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.symbols",
+  "app_name": "Symbols",
+  "minimum_ios": "15.0",
+  "scheme": "Symbols"
+}

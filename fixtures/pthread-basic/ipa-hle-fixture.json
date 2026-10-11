@@ -1,0 +1,7 @@
+{
+  "project": "PthreadFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.pthread",
+  "app_name": "PthreadFixture",
+  "minimum_ios": "15.0",
+  "scheme": "PthreadFixture"
+}
