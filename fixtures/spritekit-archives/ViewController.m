@@ -55,7 +55,7 @@ static NSString *Pixels(CGImageRef image) {
     return out;
 }
 
-static NSString *Rect(CGRect r) {
+static NSString *RectText(CGRect r) {
     return [NSString stringWithFormat:@"%.4f %.4f %.4f %.4f", r.origin.x, r.origin.y, r.size.width, r.size.height];
 }
 
@@ -155,7 +155,7 @@ static void LogArchive(NSString *label, id object) {
     for (NSString *name in [names sortedArrayUsingSelector:@selector(compare:)]) {
         SKTexture *texture = [atlas textureNamed:name];
         SKLog([NSString stringWithFormat:@"SK_TEX %@ size %.4f %.4f rect %@", name, texture.size.width,
-               texture.size.height, Rect(texture.textureRect)]);
+               texture.size.height, RectText(texture.textureRect)]);
         SKLog([NSString stringWithFormat:@"SK_TEXPIX %@ %@", name, Pixels(texture.CGImage)]);
         SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithTexture:texture];
         SKTexture *drawn = [self.skView textureFromNode:sprite];
@@ -182,7 +182,7 @@ static void LogArchive(NSString *label, id object) {
            ? [NSString stringWithFormat:@"names %lu", (unsigned long)missing.textureNames.count] : @"nil"]);
     SKTexture *sub = [SKTexture textureWithRect:CGRectMake(0.5, 0.5, 0.5, 0.5) inTexture:[atlas textureNamed:@"hero"]];
     SKLog([NSString stringWithFormat:@"SK_LOOKUP sub hero size %.4f %.4f rect %@ %@", sub.size.width, sub.size.height,
-           Rect(sub.textureRect), Pixels(sub.CGImage)]);
+           RectText(sub.textureRect), Pixels(sub.CGImage)]);
 }
 
 - (void)logArchives:(SKTextureAtlas *)atlas {
