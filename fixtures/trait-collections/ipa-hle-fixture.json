@@ -1,0 +1,7 @@
+{
+  "project": "TraitCollections.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.traitcollections",
+  "app_name": "TraitCollections",
+  "minimum_ios": "15.0",
+  "scheme": "TraitCollections"
+}
