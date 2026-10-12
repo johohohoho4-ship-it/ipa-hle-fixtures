@@ -124,6 +124,11 @@
         titles = @[@"Only arranged view"];
         sizes = @[@20];
     }
+    if ([profile isEqualToString:@"equal-centering-horizontal"]) {
+        // Equal centering only equalizes the center-to-center distance while the arranged
+        // views fit, so this profile keeps them short.
+        titles = @[@"A", @"B", @"C"];
+    }
     for (NSUInteger index = 0; index < titles.count; index++) {
         UILabel *label = [[UILabel alloc] init];
         label.isAccessibilityElement = YES;

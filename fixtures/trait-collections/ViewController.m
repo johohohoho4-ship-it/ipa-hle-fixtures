@@ -54,8 +54,14 @@
     [self.view addSubview:classes];
 
     [self logTraitAndFontProfiles];
-    [self updateTraitLabels];
     [self logSystemColors];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // The override set in viewDidLoad only reaches the view's trait collection once the view
+    // is in the window; re-reading here makes the intended start-in-Dark observable.
+    [self updateTraitLabels];
 }
 
 - (void)updateTraitLabels {
