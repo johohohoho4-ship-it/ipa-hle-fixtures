@@ -84,7 +84,7 @@
     UITraitCollection *light = [UITraitCollection traitCollectionWithUserInterfaceStyle:UIUserInterfaceStyleLight];
     UITraitCollection *regularWidth = [UITraitCollection traitCollectionWithHorizontalSizeClass:UIUserInterfaceSizeClassRegular];
     UITraitCollection *largeCategory = [UITraitCollection traitCollectionWithPreferredContentSizeCategory:
-        @"UICTContentSizeCategoryAccessibilityExtraExtraExtraLarge"];
+        UIContentSizeCategoryAccessibilityExtraExtraExtraLarge];
     UITraitCollection *merged = [UITraitCollection traitCollectionWithTraitsFromCollections:@[light, regularWidth, largeCategory]];
     UIFont *base = [UIFont systemFontOfSize:17.0];
     UIFontMetrics *metrics = [UIFontMetrics metricsForTextStyle:@"UICTFontTextStyleBody"];
