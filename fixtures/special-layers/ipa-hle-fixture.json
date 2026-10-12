@@ -1,0 +1,7 @@
+{
+  "project": "SpecialLayersFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.speciallayers",
+  "app_name": "SpecialLayersFixture",
+  "minimum_ios": "15.0",
+  "scheme": "SpecialLayersFixture"
+}
