@@ -56,6 +56,7 @@
     "fixtures/audio/Info.plist": "290470fa774fb9316f76dd09fe83dd9c78ca61c6530b22600913c54ac78725b7",
     "fixtures/audio/ViewController.h": "d29c64fb13f130bbfc3af396f12e9308d874eabc0a1bec2e9b7ec156b1d5081d",
     "fixtures/audio/ViewController.m": "c4dd2762257d99edc8f92aa58dc7fcc32359aafbd2c53efc0425f0c7b430406b",
+    "fixtures/audio/beep.wav": "ee5ab768585360b387e16de81c2140d7dda09d2e9849e2b3d6bad69cf4af513c",
     "fixtures/audio/ipa-hle-fixture.json": "c1d0eb84b87ab3d6634d8e70f8575d90f2e4cec425571e0d2b7b82ef93fe0c5f",
     "fixtures/audio/main.m": "e31f6c5e1671beb0435e51c04487d6985517376a8937134b642a17135dbc80fb",
     "fixtures/autoresizing/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
