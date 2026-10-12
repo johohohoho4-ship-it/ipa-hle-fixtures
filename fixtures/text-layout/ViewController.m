@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#include <math.h>
 #include <stdio.h>
 
 // G3 text layout. Every label has a fixed frame, so the screenshot compares drawing alone;
@@ -13,6 +14,7 @@ static NSString *const kLong = @"Ein sehr langer Satz, der in einer einzigen Zei
 @implementation ViewController {
     NSMutableArray<UILabel *> *_labels;
     NSMutableArray<NSString *> *_names;
+    BOOL _calibrated;
 }
 
 - (UILabel *)label:(NSString *)name frame:(CGRect)frame text:(NSString *)text size:(CGFloat)size lines:(NSInteger)lines {
@@ -99,6 +101,24 @@ static NSString *const kLong = @"Ein sehr langer Satz, der in einer einzigen Zei
     [self.view addSubview:status];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // Only the XCUITest asks for the calibration (about 120 000 measurements, a minute or more):
+    // the cold start and the HLE replay stay fast. A label tells the test that it is done.
+    if (![NSProcessInfo.processInfo.arguments containsObject:@"-ipahle-calibrate-sf"] || _calibrated) {
+        return;
+    }
+    _calibrated = YES;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self printCalibration];
+        UILabel *done = [[UILabel alloc] initWithFrame:CGRectMake(16, 796, 358, 16)];
+        done.accessibilityIdentifier = @"text.calibrated";
+        done.text = @"TEXT_CALIBRATED";
+        done.font = [UIFont systemFontOfSize:10];
+        [self.view addSubview:done];
+    });
+}
+
 - (void)printMetrics {
     for (NSNumber *size in @[@12, @15, @17, @20, @28]) {
         UIFont *font = [UIFont systemFontOfSize:size.doubleValue];
@@ -168,6 +188,64 @@ static NSString *const kLong = @"Ein sehr langer Satz, der in einer einzigen Zei
         printf("TEXT_WIDTH glyph %s %.3f\n", sample.UTF8String, [sample sizeWithAttributes:@{NSFontAttributeName: body}].width);
     }
     printf("TEXT_DONE\n");
+}
+
+- (void)printCalibration {
+    // Calibration of SF Pro for the HLE (G3): advances also for Medium and Semibold; the size-dependent
+    // tracking as the advance of "n" at every size (the same offset for every character of one optical
+    // font); kerning pairs as w("ab") - w("a") - w("b"), only those not zero, by index into charset.
+    NSString *charset = @" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`"
+                        @"abcdefghijklmnopqrstuvwxyz{|}~äöüßÄÖÜéèàçñ€–—…„“”‘’«»·•";
+    NSArray<NSNumber *> *allWeights = @[@(UIFontWeightRegular), @(UIFontWeightMedium), @(UIFontWeightSemibold),
+                                        @(UIFontWeightBold)];
+    for (NSNumber *weight in @[@(UIFontWeightMedium), @(UIFontWeightSemibold)]) {
+        for (NSNumber *size in @[@17, @28]) {
+            UIFont *font = [UIFont systemFontOfSize:size.doubleValue weight:weight.doubleValue];
+            printf("TEXT_CHARS w=%.2f pt=%.0f", weight.doubleValue, size.doubleValue);
+            for (NSUInteger i = 0; i < charset.length; i++) {
+                NSString *one = [charset substringWithRange:NSMakeRange(i, 1)];
+                NSString *ten = [@"" stringByPaddingToLength:10 withString:one startingAtIndex:0];
+                printf(" %.3f", [ten sizeWithAttributes:@{NSFontAttributeName: font}].width / 10.0);
+            }
+            printf("\n");
+        }
+    }
+    for (NSNumber *weight in allWeights) {
+        printf("TEXT_TRACK w=%.2f", weight.doubleValue);
+        for (NSNumber *size in @[@6, @8, @9, @10, @11, @12, @13, @14, @15, @16, @17, @18, @19, @20, @22, @24, @26, @28,
+                                 @30, @32, @34, @36, @40, @48, @56, @64]) {
+            UIFont *font = [UIFont systemFontOfSize:size.doubleValue weight:weight.doubleValue];
+            printf(" %.0f:%.4f", size.doubleValue,
+                   [@"nnnnnnnnnn" sizeWithAttributes:@{NSFontAttributeName: font}].width / 10.0);
+        }
+        printf("\n");
+    }
+    for (NSNumber *weight in allWeights) {
+        for (NSNumber *size in @[@17, @28]) {
+            UIFont *font = [UIFont systemFontOfSize:size.doubleValue weight:weight.doubleValue];
+            NSDictionary *attributes = @{NSFontAttributeName: font};
+            NSUInteger count = charset.length;
+            double single[256];
+            for (NSUInteger i = 0; i < count && i < 256; i++) {
+                single[i] = [[charset substringWithRange:NSMakeRange(i, 1)] sizeWithAttributes:attributes].width;
+            }
+            NSUInteger pairs = 0;
+            for (NSUInteger i = 0; i < count && i < 256; i++) {
+                NSString *a = [charset substringWithRange:NSMakeRange(i, 1)];
+                for (NSUInteger j = 0; j < count && j < 256; j++) {
+                    NSString *pair = [a stringByAppendingString:[charset substringWithRange:NSMakeRange(j, 1)]];
+                    double kern = [pair sizeWithAttributes:attributes].width - single[i] - single[j];
+                    if (fabs(kern) >= 0.001) {
+                        printf("TEXT_KERN w=%.2f pt=%.0f %lu %lu %.3f\n", weight.doubleValue, size.doubleValue,
+                               (unsigned long)i, (unsigned long)j, kern);
+                        pairs++;
+                    }
+                }
+            }
+            printf("TEXT_KERN_COUNT w=%.2f pt=%.0f %lu\n", weight.doubleValue, size.doubleValue, (unsigned long)pairs);
+        }
+    }
+    printf("TEXT_CALIBRATED\n");
 }
 
 @end
