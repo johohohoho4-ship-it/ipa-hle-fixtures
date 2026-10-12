@@ -261,7 +261,7 @@
     "fixtures/pthread-lifecycle/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
     "fixtures/pthread-lifecycle/ViewController.mm": "64ad9bddb3d78152a81362c86a90e294322e08bb28097f4f311c3aeb1df0c08f",
     "fixtures/pthread-lifecycle/ipa-hle-fixture.json": "9c2e659552b0e8283e080b2cb81dc4bc418d2a454d4d11453032a1f1f230d276",
-    "fixtures/pthread-lifecycle/main.m": "c6cd90003f749cbc0382a33d1b7bb8f06c74cad19b2b11fd4d070eb4f8154c82",
+    "fixtures/pthread-lifecycle/main.m": "1d6283209ff5606be0a1af90641d7d221fe45747ae16baf760e1eb7fdc7c3ef1",
     "fixtures/scroll-view/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
     "fixtures/scroll-view/AppDelegate.m": "f43df7c96cc147bbf3f1b76a4a76be8fe927c7b77e1dc2070068a6adba00803f",
     "fixtures/scroll-view/FixtureReferenceUITests/FixtureReferenceUITests.m": "6438e19a67fe5764107aaac25ada339cecd7df993f1e9be424af6d01a6889a6b",
