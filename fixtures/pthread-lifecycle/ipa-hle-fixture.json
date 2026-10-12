@@ -1,0 +1,7 @@
+{
+  "project": "PthreadLifecycle.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.pthreadlifecycle",
+  "app_name": "PthreadLifecycle",
+  "minimum_ios": "15.0",
+  "scheme": "PthreadLifecycle"
+}
