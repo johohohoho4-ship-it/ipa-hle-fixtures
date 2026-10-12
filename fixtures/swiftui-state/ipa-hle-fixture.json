@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUIState.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuistate",
+  "app_name": "SwiftUIState",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftUIState"
+}

@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUIHello.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuihello",
+  "app_name": "SwiftUIHello",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftUIHello"
+}
