@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="controlsVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="sceneControls">
+            <objects>
+                <viewController storyboardIdentifier="controls" id="controlsVC" customClass="SBControlsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="controlsView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="leading" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="stackV">
+                                <rect key="frame" x="20" y="120" width="200" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2">
+                                        <rect key="frame" x="0.0" y="42.666666666666664" width="36" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3">
+                                        <rect key="frame" x="0.0" y="85.333333333333329" width="46" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="sbctl.stack"/>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ada" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fieldV">
+                                <rect key="frame" x="20" y="260" width="200" height="34"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbctl.field"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="switchV">
+                                <rect key="frame" x="240" y="261.66666666666669" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbctl.switch"/>
+                                <connections>
+                                    <action selector="toggled:" destination="controlsVC" eventType="valueChanged" id="act2"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tapV">
+                                <rect key="frame" x="20" y="320" width="120" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sbctl.tap"/>
+                                <gestureRecognizers>
+                                    <tapGestureRecognizer numberOfTapsRequired="2" id="tapGR">
+                                        <connections>
+                                            <action selector="tapped:" destination="controlsVC" id="act1"/>
+                                        </connections>
+                                    </tapGestureRecognizer>
+                                </gestureRecognizers>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="controlsSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="stackV" firstAttribute="top" secondItem="controlsSafe" secondAttribute="top" constant="61" id="c1"/>
+                            <constraint firstItem="stackV" firstAttribute="leading" secondItem="controlsSafe" secondAttribute="leading" constant="20" id="c2"/>
+                            <constraint firstItem="stackV" firstAttribute="width" constant="200" id="c3"/>
+                            <constraint firstItem="stackV" firstAttribute="height" constant="120" id="c4"/>
+                            <constraint firstItem="fieldV" firstAttribute="top" secondItem="stackV" secondAttribute="bottom" constant="20" id="c5"/>
+                            <constraint firstItem="fieldV" firstAttribute="leading" secondItem="stackV" secondAttribute="leading" id="c6"/>
+                            <constraint firstItem="fieldV" firstAttribute="width" constant="200" id="c7"/>
+                            <constraint firstItem="switchV" firstAttribute="centerY" secondItem="fieldV" secondAttribute="centerY" id="c8"/>
+                            <constraint firstItem="switchV" firstAttribute="leading" secondItem="fieldV" secondAttribute="trailing" constant="20" id="c9"/>
+                            <constraint firstItem="tapV" firstAttribute="top" secondItem="fieldV" secondAttribute="bottom" constant="26" id="c10"/>
+                            <constraint firstItem="tapV" firstAttribute="leading" secondItem="stackV" secondAttribute="leading" id="c11"/>
+                            <constraint firstItem="tapV" firstAttribute="width" constant="120" id="c12"/>
+                            <constraint firstItem="tapV" firstAttribute="height" constant="60" id="c13"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="stackV" id="o1"/>
+                        <outlet property="nameField" destination="fieldV" id="o2"/>
+                        <outlet property="toggle" destination="switchV" id="o3"/>
+                        <outlet property="tapView" destination="tapV" id="o4"/>
+                        <outletCollection property="labels" destination="l1" collectionClass="NSMutableArray" id="oc1"/>
+                        <outletCollection property="labels" destination="l2" collectionClass="NSMutableArray" id="oc2"/>
+                        <outletCollection property="labels" destination="l3" collectionClass="NSMutableArray" id="oc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frControls" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
