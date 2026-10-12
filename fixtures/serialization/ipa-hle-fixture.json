@@ -1,0 +1,7 @@
+{
+  "project": "Serialization.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.serialization",
+  "app_name": "Serialization",
+  "minimum_ios": "15.0",
+  "scheme": "Serialization"
+}
