@@ -19,9 +19,11 @@
         [self expect:app label:[NSString stringWithFormat:@"Done %ld", (long)n]];
         [self attach:app name:[NSString stringWithFormat:@"Table-step-%ld", (long)n]];
     }
-    // A real tap on the third visible row (frame y 100 + 28 header + 88 = row 2 after the deletion): the delegate answers.
-    XCUICoordinate *origin = [app coordinateWithNormalizedOffset:CGVectorMake(0, 0)];
-    [[origin coordinateWithOffset:CGVectorMake(120, 100 + 28 + 44 * 2 + 20)] tap];
+    // A real tap on the cell that shows "Row 2" (after the deletion of the old row 2 it is the third row; its position
+    // depends on the header and the safe area, so the cell is looked up by its label instead of a coordinate).
+    XCUIElement *cell = app.cells.staticTexts[@"Row 2"];
+    XCTAssertTrue([cell waitForExistenceWithTimeout:5]);
+    [cell tap];
     [self expect:app label:@"Selected 2"];
     [self attach:app name:@"Table-tap-selected"];
 }

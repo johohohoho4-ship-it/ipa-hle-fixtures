@@ -388,7 +388,7 @@
     "fixtures/symbols/main.m": "c6cd90003f749cbc0382a33d1b7bb8f06c74cad19b2b11fd4d070eb4f8154c82",
     "fixtures/table-view/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
     "fixtures/table-view/AppDelegate.m": "f43df7c96cc147bbf3f1b76a4a76be8fe927c7b77e1dc2070068a6adba00803f",
-    "fixtures/table-view/FixtureReferenceUITests/FixtureReferenceUITests.m": "b5fc92893a3d344a3b664beb4a6db9a871b4ac525cefb93b1b8d8b881e7305cd",
+    "fixtures/table-view/FixtureReferenceUITests/FixtureReferenceUITests.m": "4e732197775514f96e05cc6ad906dbed1511eff28cfaf01736792d9c998540a7",
     "fixtures/table-view/Info.plist": "fb1abed2a11657f1b9f2e4305910979583507cacd4aa8e3b9aad8ddc83c74569",
     "fixtures/table-view/TableViewFixture.xcodeproj/project.pbxproj": "4092dff1c6edf6caa5fd4824711b591ce52102a9fb6b80a75647724ebc7ed337",
     "fixtures/table-view/TableViewFixture.xcodeproj/xcshareddata/xcschemes/TableViewFixture.xcscheme": "45773e71ec79a8fa6c49095a54f2946db60019d4b416121b0abfdf5960c5e7e8",
