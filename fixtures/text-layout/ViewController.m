@@ -191,15 +191,18 @@ static NSString *const kLong = @"Ein sehr langer Satz, der in einer einzigen Zei
 }
 
 - (void)printCalibration {
-    // Calibration of SF Pro for the HLE (G3): advances also for Medium and Semibold; the size-dependent
-    // tracking as the advance of "n" at every size (the same offset for every character of one optical
-    // font); kerning pairs as w("ab") - w("a") - w("b"), only those not zero, by index into charset.
+    // Calibration of SF Pro for the HLE (G3): advances of every character for four weights at every size
+    // from 18 to 34 points (SF's optical size changes continuously there; 17 and 28 come above for
+    // Regular and Bold, here for Medium and Semibold too); the size-dependent tracking as the advance of
+    // "n" from 6 to 64 points; kerning pairs as w("ab") - w("a") - w("b") at 17, 20, 22, 24 and 28
+    // points, only those not zero, by index into charset.
     NSString *charset = @" !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`"
                         @"abcdefghijklmnopqrstuvwxyz{|}~äöüßÄÖÜéèàçñ€–—…„“”‘’«»·•";
     NSArray<NSNumber *> *allWeights = @[@(UIFontWeightRegular), @(UIFontWeightMedium), @(UIFontWeightSemibold),
                                         @(UIFontWeightBold)];
-    for (NSNumber *weight in @[@(UIFontWeightMedium), @(UIFontWeightSemibold)]) {
-        for (NSNumber *size in @[@17, @28]) {
+    for (NSNumber *weight in allWeights) {
+        for (NSNumber *size in @[@12, @14, @16, @17, @18, @19, @20, @21, @22, @23, @24, @25, @26, @27, @28, @29, @30,
+                                 @32, @34]) {
             UIFont *font = [UIFont systemFontOfSize:size.doubleValue weight:weight.doubleValue];
             printf("TEXT_CHARS w=%.2f pt=%.0f", weight.doubleValue, size.doubleValue);
             for (NSUInteger i = 0; i < charset.length; i++) {
@@ -221,7 +224,7 @@ static NSString *const kLong = @"Ein sehr langer Satz, der in einer einzigen Zei
         printf("\n");
     }
     for (NSNumber *weight in allWeights) {
-        for (NSNumber *size in @[@17, @28]) {
+        for (NSNumber *size in @[@17, @20, @22, @24, @28]) {
             UIFont *font = [UIFont systemFontOfSize:size.doubleValue weight:weight.doubleValue];
             NSDictionary *attributes = @{NSFontAttributeName: font};
             NSUInteger count = charset.length;
