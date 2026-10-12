@@ -249,6 +249,7 @@
     "fixtures/pthread-basic/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
     "fixtures/pthread-basic/ViewController.m": "c72cff9cf695bc6c12410ed40c58c9186eaa0536aa7a1c2bf3fd56791ef2b06f",
     "fixtures/pthread-basic/ipa-hle-fixture.json": "7390e9eab8be738b37af5bbeea841d8c3a923af5a39ee29384315fa902521165",
+    "fixtures/pthread-basic/main.c": "f3e48a63d75448600b172e61fdffab0649da3c9acf4fa09e372dfe0fb6299949",
     "fixtures/pthread-basic/main.m": "c6cd90003f749cbc0382a33d1b7bb8f06c74cad19b2b11fd4d070eb4f8154c82",
     "fixtures/pthread-basic/pthread_basic.h": "ff71bc7d1c7d2cf6d8d833abb397e7b0d86fc5af83b0392a261f948b28f8442b",
     "fixtures/pthread-lifecycle/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
