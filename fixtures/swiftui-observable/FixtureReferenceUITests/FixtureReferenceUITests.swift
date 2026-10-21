@@ -33,7 +33,7 @@ final class FixtureReferenceUITests: XCTestCase {
         app.buttons["obs.decrement"].tap()
         XCTAssertEqual(count.label, "Count: 2")
 
-        app.switches["obs.toggle"].tap()
+        app.buttons["obs.toggle"].tap()
         XCTAssertTrue(app.staticTexts["obs.detail"].waitForExistence(timeout: 2))
         XCTAssertTrue(app.staticTexts["obs.detail"].label.contains("2"))
 
