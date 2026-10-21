@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="navVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sceneNav">
+            <objects>
+                <navigationController storyboardIdentifier="nav" id="navVC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="navBar">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rootVC" kind="relationship" relationship="rootViewController" id="relRoot"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frNav" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400.0" y="0.0"/>
+        </scene>
+        <!--Root-->
+        <scene sceneID="sceneRoot">
+            <objects>
+                <viewController storyboardIdentifier="root" id="rootVC" customClass="NavRootViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rootView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Root" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rootLabel">
+                                <rect key="frame" x="20" y="123" width="200" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lg.root"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="guides" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stateLabel">
+                                <rect key="frame" x="20" y="154" width="200" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lg.state"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plainButton">
+                                <rect key="frame" x="20" y="195" width="160" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lg.plain"/>
+                                <state key="normal" title="Plain"/>
+                                <connections>
+                                    <action selector="plain:" destination="rootVC" eventType="touchUpInside" id="plainAction"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="showButton">
+                                <rect key="frame" x="20" y="249" width="140" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nav.show"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <segue destination="detailVC" kind="show" identifier="toDetail" animates="NO" id="showSegue"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goButton">
+                                <rect key="frame" x="20" y="303" width="140" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nav.go"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="go:" destination="rootVC" eventType="touchUpInside" id="goAction"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rootSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rootLabel" firstAttribute="top" secondItem="rootSafe" secondAttribute="top" constant="20" id="r1"/>
+                            <constraint firstItem="rootLabel" firstAttribute="leading" secondItem="rootSafe" secondAttribute="leading" constant="20" id="r2"/>
+                            <constraint firstItem="stateLabel" firstAttribute="top" secondItem="rootLabel" secondAttribute="bottom" constant="10" id="r3"/>
+                            <constraint firstItem="stateLabel" firstAttribute="leading" secondItem="rootLabel" secondAttribute="leading" id="r4"/>
+                            <constraint firstItem="plainButton" firstAttribute="top" secondItem="stateLabel" secondAttribute="bottom" constant="20" id="r5"/>
+                            <constraint firstItem="plainButton" firstAttribute="leading" secondItem="rootLabel" secondAttribute="leading" id="r6"/>
+                            <constraint firstItem="plainButton" firstAttribute="width" constant="160" id="r7"/>
+                            <constraint firstItem="plainButton" firstAttribute="height" constant="44" id="r8"/>
+                            <constraint firstItem="showButton" firstAttribute="top" secondItem="plainButton" secondAttribute="bottom" constant="10" id="r9"/>
+                            <constraint firstItem="showButton" firstAttribute="leading" secondItem="rootLabel" secondAttribute="leading" id="r10"/>
+                            <constraint firstItem="showButton" firstAttribute="width" constant="140" id="r11"/>
+                            <constraint firstItem="showButton" firstAttribute="height" constant="44" id="r12"/>
+                            <constraint firstItem="goButton" firstAttribute="top" secondItem="showButton" secondAttribute="bottom" constant="10" id="r13"/>
+                            <constraint firstItem="goButton" firstAttribute="leading" secondItem="rootLabel" secondAttribute="leading" id="r14"/>
+                            <constraint firstItem="goButton" firstAttribute="width" constant="140" id="r15"/>
+                            <constraint firstItem="goButton" firstAttribute="height" constant="44" id="r16"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Root" id="rootItem">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="addItem">
+                            <connections>
+                                <action selector="addTapped:" destination="rootVC" id="addAction"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Right" enabled="NO" id="rightItem">
+                            <connections>
+                                <action selector="rightTapped:" destination="rootVC" id="rightAction"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rightItem" destination="rightItem" id="outRight"/>
+                        <outlet property="rootLabel" destination="rootLabel" id="outRootLabel"/>
+                        <outlet property="stateLabel" destination="stateLabel" id="outStateLabel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frRoot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.0" y="0.0"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="sceneDetail">
+            <objects>
+                <viewController storyboardIdentifier="detail" id="detailVC" customClass="NavDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="detailView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="detailLabel">
+                                <rect key="frame" x="20" y="123" width="200" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nav.detail"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="popButton">
+                                <rect key="frame" x="20" y="164" width="140" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nav.pop"/>
+                                <state key="normal" title="Pop"/>
+                                <connections>
+                                    <action selector="pop:" destination="detailVC" eventType="touchUpInside" id="popAction"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="detailSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="detailLabel" firstAttribute="top" secondItem="detailSafe" secondAttribute="top" constant="20" id="e1"/>
+                            <constraint firstItem="detailLabel" firstAttribute="leading" secondItem="detailSafe" secondAttribute="leading" constant="20" id="e2"/>
+                            <constraint firstItem="detailSafe" firstAttribute="trailing" secondItem="detailLabel" secondAttribute="trailing" constant="20" id="e3"/>
+                            <constraint firstItem="popButton" firstAttribute="top" secondItem="detailLabel" secondAttribute="bottom" constant="20" id="e4"/>
+                            <constraint firstItem="popButton" firstAttribute="leading" secondItem="detailLabel" secondAttribute="leading" id="e5"/>
+                            <constraint firstItem="popButton" firstAttribute="width" constant="140" id="e6"/>
+                            <constraint firstItem="popButton" firstAttribute="height" constant="44" id="e7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="detailItem"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="detailLabel" id="outDetail"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frDetail" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200.0" y="0.0"/>
+        </scene>
+        <!--Plain without navigation controller-->
+        <scene sceneID="scenePlain">
+            <objects>
+                <viewController storyboardIdentifier="plain" id="plainVC" customClass="PlainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="plainView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plainLabel">
+                                <rect key="frame" x="20" y="80" width="200" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lg.plain.label"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plainCloseButton">
+                                <rect key="frame" x="20" y="121" width="140" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lg.plain.close"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="plainVC" eventType="touchUpInside" id="plainCloseAction"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="plainSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="plainLabel" firstAttribute="top" secondItem="plainSafe" secondAttribute="top" constant="20" id="p1"/>
+                            <constraint firstItem="plainLabel" firstAttribute="leading" secondItem="plainSafe" secondAttribute="leading" constant="20" id="p2"/>
+                            <constraint firstItem="plainCloseButton" firstAttribute="top" secondItem="plainLabel" secondAttribute="bottom" constant="20" id="p3"/>
+                            <constraint firstItem="plainCloseButton" firstAttribute="leading" secondItem="plainLabel" secondAttribute="leading" id="p4"/>
+                            <constraint firstItem="plainCloseButton" firstAttribute="width" constant="140" id="p5"/>
+                            <constraint firstItem="plainCloseButton" firstAttribute="height" constant="44" id="p6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="plainItem"/>
+                    <connections>
+                        <outlet property="plainLabel" destination="plainLabel" id="outPlainLabel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frPlain" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400.0" y="700.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

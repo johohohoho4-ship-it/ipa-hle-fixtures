@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardNavFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.layoutguides",
+  "app_name": "StoryboardNavFixture",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardNavFixture"
+}
