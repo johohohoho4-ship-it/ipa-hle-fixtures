@@ -58,6 +58,7 @@ struct ContentView: View {
     @Environment(CounterModel.self) private var model
 
     var body: some View {
+        @Bindable var model = model
         VStack(spacing: 12) {
             Text("Count: \(model.count)")
                 .font(.title)
@@ -76,7 +77,11 @@ struct ContentView: View {
                 .accessibilityIdentifier("obs.increment")
             }
             .padding(.horizontal)
-            DetailToggle(model: model)
+            Button(model.showDetail ? "Hide detail" : "Show detail") {
+                model.showDetail.toggle()
+                fixtureLog("SWO_TAP detail isOn=\(model.showDetail)")
+            }
+            .accessibilityIdentifier("obs.toggle")
             if model.showDetail {
                 DetailView()
             }
@@ -107,18 +112,6 @@ struct ContentView: View {
             // The onChange closure is @Sendable; no main-actor state may be read here.
             fixtureLog("SWO_ONCHANGE")
         }
-    }
-}
-
-struct DetailToggle: View {
-    @Bindable var model: CounterModel
-
-    var body: some View {
-        Button(model.showDetail ? "Hide detail" : "Show detail") {
-            model.showDetail.toggle()
-            fixtureLog("SWO_TAP detail isOn=\(model.showDetail)")
-        }
-        .accessibilityIdentifier("obs.toggle")
     }
 }
 
