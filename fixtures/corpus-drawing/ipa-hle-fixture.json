@@ -1,0 +1,7 @@
+{
+  "project": "ios_swift_drawing_app.xcodeproj",
+  "scheme": "DrawingCorpus",
+  "app_name": "ios_swift_drawing_app",
+  "bundle_id": "org.ipahle.corpus.drawing",
+  "minimum_ios": "15.0"
+}

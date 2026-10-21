@@ -1,0 +1,7 @@
+{
+  "project": "TodoApp.xcodeproj",
+  "scheme": "SimpleTodoCorpus",
+  "app_name": "TodoApp",
+  "bundle_id": "org.ipahle.corpus.simpletodo",
+  "minimum_ios": "15.0"
+}

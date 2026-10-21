@@ -1,0 +1,7 @@
+{
+  "project": "CleanStore.xcodeproj",
+  "scheme": "CleanStore",
+  "app_name": "CleanStore",
+  "bundle_id": "org.ipahle.corpus.cleanstore",
+  "minimum_ios": "15.0"
+}
