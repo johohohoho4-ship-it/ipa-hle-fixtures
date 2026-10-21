@@ -56,7 +56,6 @@ func layoutLine<T>(_ name: String, _ type: T.Type) {
 
 struct ContentView: View {
     @Environment(CounterModel.self) private var model
-    @State private var tracked = false
 
     var body: some View {
         @Bindable var model = model
@@ -88,7 +87,6 @@ struct ContentView: View {
                     .accessibilityIdentifier("obs.row.\(row)")
             }
             Button("Track") {
-                tracked = true
                 observeCount()
                 fixtureLog("SWO_TRACK count=\(model.count)")
             }
@@ -108,7 +106,8 @@ struct ContentView: View {
         withObservationTracking {
             _ = model.count
         } onChange: {
-            fixtureLog("SWO_ONCHANGE count=\(model.count) tracked=\(tracked)")
+            // The onChange closure is @Sendable; no main-actor state may be read here.
+            fixtureLog("SWO_ONCHANGE")
         }
     }
 }

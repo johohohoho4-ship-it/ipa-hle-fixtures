@@ -504,7 +504,7 @@
     "fixtures/swiftui-hello/ipa-hle-fixture.json": "260cb6a7792ebb31d4b12fb468dfb78fdd5f1c1bbf52307a70916075668ed96c",
     "fixtures/swiftui-observable/FixtureReferenceUITests/FixtureReferenceUITests.swift": "8599ad9a03fbc0e40d94ab43e648ea90346d36d7517e708a5207a21562777318",
     "fixtures/swiftui-observable/Info.plist": "47735a3a16c316b561126ac0dc8d7f490a3295be5346bfbb590c502d5cda2452",
-    "fixtures/swiftui-observable/StateApp.swift": "bb00286fa6af1dd979470f31fd6204cae731375eba6d438048297bac68f9d021",
+    "fixtures/swiftui-observable/StateApp.swift": "a495399c1f855d323a402977c1e13da06190129aaafb60188d57fc50f13396bd",
     "fixtures/swiftui-observable/SwiftUIState.xcodeproj/project.pbxproj": "0071f82adfada2f0b4d4d9baaf4508bfd3fc387c55f8fca1dffc2be5171f1836",
     "fixtures/swiftui-observable/SwiftUIState.xcodeproj/xcshareddata/xcschemes/SwiftUIState.xcscheme": "d5627054ba525c9458744e18161a96906bc40443d88d4307435202e92025c65f",
     "fixtures/swiftui-observable/ipa-hle-fixture.json": "6a0a598b68f07c7e425529561a298b5cc6eda4e7604be924ecdff9bc43d9ba53",
