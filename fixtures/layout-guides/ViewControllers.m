@@ -28,6 +28,16 @@ static NSString *SelName(SEL selector) {
     return selector ? NSStringFromSelector(selector) : @"none";
 }
 
+// systemItem and owningViewController are not in the public UIKit headers on
+// this SDK; KVC reads the runtime value without guessing one.
+static id SafeValue(id object, NSString *key) {
+    @try {
+        return [object valueForKey:key];
+    } @catch (NSException *exception) {
+        return nil;
+    }
+}
+
 // The native values F7 needs: length, owning controller/view and the layout
 // frame of both layout-support guides. Deprecated API on purpose: it is the
 // surface a real iOS 18.5 app still gets for storyboard view controllers.
@@ -38,6 +48,8 @@ static void LogGuides(UIViewController *vc, const char *phase) {
     UILayoutGuide *bottomGuide = (UILayoutGuide *)bottom;
     CGRect topFrame = topGuide.layoutFrame;
     CGRect bottomFrame = bottomGuide.layoutFrame;
+    id topOwner = SafeValue(top, @"owningViewController");
+    id bottomOwner = SafeValue(bottom, @"owningViewController");
     CGFloat status = 0;
     if (@available(iOS 13.0, *)) {
         status = vc.view.window.windowScene.statusBarManager.statusBarFrame.size.height;
@@ -48,7 +60,7 @@ static void LogGuides(UIViewController *vc, const char *phase) {
            phase, object_getClassName(vc), vc.navigationController != nil,
            top.length, bottom.length,
            object_getClassName(top), object_getClassName(bottom),
-           top.owningViewController == vc, bottom.owningViewController == vc,
+           topOwner == vc, bottomOwner == vc,
            object_getClassName(topGuide.owningView),
            topFrame.origin.x, topFrame.origin.y, topFrame.size.width, topFrame.size.height,
            bottomFrame.origin.x, bottomFrame.origin.y, bottomFrame.size.width, bottomFrame.size.height,
@@ -75,10 +87,11 @@ static void LogGuides(UIViewController *vc, const char *phase) {
 }
 
 static void LogItem(const char *phase, const char *side, UIBarButtonItem *item) {
+    id rawSystem = SafeValue(item, @"systemItem");
     printf("LG_ITEM phase=%s side=%s cls=%s title=%s system=%ld enabled=%d action=%s target=%s id=%s\n",
            phase, side, object_getClassName(item),
            item.title ? item.title.UTF8String : "(nil)",
-           (long)item.systemItem, item.enabled,
+           rawSystem ? (long)[rawSystem integerValue] : -1L, item.enabled,
            SelName(item.action).UTF8String, ItemName(item.target).UTF8String,
            item.accessibilityIdentifier ? item.accessibilityIdentifier.UTF8String : "(nil)");
 }
