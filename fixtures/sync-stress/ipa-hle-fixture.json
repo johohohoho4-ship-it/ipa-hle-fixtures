@@ -1,0 +1,7 @@
+{
+  "project": "SyncStressFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.syncstress",
+  "app_name": "SyncStressFixture",
+  "minimum_ios": "15.0",
+  "scheme": "SyncStressFixture"
+}
