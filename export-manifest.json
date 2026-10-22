@@ -340,7 +340,7 @@
     "fixtures/guide-archive/AppDelegate.h": "13349a4936776341301c573deff2c95a0dbc77412956f298fb6923aeac46b8f5",
     "fixtures/guide-archive/AppDelegate.m": "c407d903e823fcb0e817e0f826bf8afc83e36959d15239f6f75b9ce8acd80049",
     "fixtures/guide-archive/FixtureReferenceUITests/FixtureReferenceUITests.m": "6ea9e778e5d7477cbf800ad4a4c509bdb4d0310116e6f65cc0412bbe3fe0ad4a",
-    "fixtures/guide-archive/GuideArchive.xcodeproj/project.pbxproj": "544d85cac67ffa89d8c42dcff371d6154d032cb6681f730b43af14865dbf4172",
+    "fixtures/guide-archive/GuideArchive.xcodeproj/project.pbxproj": "b2214bd5a6916847561a0c4866b615a454c66073615deb16a3552e8d80893d61",
     "fixtures/guide-archive/GuideArchive.xcodeproj/xcshareddata/xcschemes/GuideArchive.xcscheme": "19715318fa33487ae5f6a05171c853f20c551985f9897bcc9e28a2ad00ee6370",
     "fixtures/guide-archive/Info.plist": "9ef2bd31cfe2a7335537097a50432eb2f499f820c1bc1d6b231087c4c59689bb",
     "fixtures/guide-archive/Main.storyboard": "33579757d8b9181a179f23723482e94545744d706c2268e5958cce4a1d375af1",
