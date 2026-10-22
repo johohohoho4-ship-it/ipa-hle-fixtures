@@ -1,0 +1,7 @@
+{
+  "project": "SwiftProtocols.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftprotocols",
+  "app_name": "SwiftProtocols",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftProtocols"
+}

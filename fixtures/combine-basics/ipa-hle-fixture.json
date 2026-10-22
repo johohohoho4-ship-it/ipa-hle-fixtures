@@ -1,0 +1,7 @@
+{
+  "project": "CombineBasics.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.combinebasics",
+  "app_name": "CombineBasics",
+  "minimum_ios": "15.0",
+  "scheme": "CombineBasics"
+}
