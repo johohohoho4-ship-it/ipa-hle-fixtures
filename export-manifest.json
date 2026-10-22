@@ -58,7 +58,8 @@
     "uikit-form",
     "uikit-layout",
     "view-controller",
-    "webview"
+    "webview",
+    "window-scene"
   ],
   "files": {
     ".github/workflows/ios-fixture.yml": "4952c3b52a52d466c7f6cba4f84be3ea334365ed4fe14e9183dde3224b6c0eb1",
@@ -757,7 +758,17 @@
     "fixtures/webview/WebViewFixture.xcodeproj/project.pbxproj": "cf0cdc2913aa6f5e73116e1ec20d0fd064fa198c24fe6d44f4d9bc349503b3f7",
     "fixtures/webview/WebViewFixture.xcodeproj/xcshareddata/xcschemes/WebViewFixture.xcscheme": "5a87c5f9224d3ee4341f64e377b74ec46de5229ffc374cb5c1589c393215f3f4",
     "fixtures/webview/ipa-hle-fixture.json": "4dd3e5606741a17a5b9cf3b21de01acc9327ff0104436a56d71a74de4ea30e8e",
-    "fixtures/webview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a"
+    "fixtures/webview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
+    "fixtures/window-scene/AppDelegate.h": "68f41abef3d414f2826f552b9e0f3eb17119f674680a8936432b3d083e944842",
+    "fixtures/window-scene/AppDelegate.m": "9dcc5d026537e7935b96c47a646307e521e04a7a7a8c35c9e35bf53da4b6eeb1",
+    "fixtures/window-scene/FixtureReferenceUITests/FixtureReferenceUITests.m": "77edeb67985163aef5b7c5f923cf7fa2b2799a103e9927e661c53c1d32e9d112",
+    "fixtures/window-scene/Info.plist": "5b43d803902720f2eeec84677fda9ef85fad2872980e9996083417f6f66b74c5",
+    "fixtures/window-scene/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
+    "fixtures/window-scene/ViewController.m": "6370ee5b726cce4f0aa4c9e052c8c31148c28932de0079aa2034d3f7cc074298",
+    "fixtures/window-scene/WindowScene.xcodeproj/project.pbxproj": "e35c40c69dc23341723ffeb163b7fa4dae8a542dfa7293fa24804bbf7b176ae9",
+    "fixtures/window-scene/WindowScene.xcodeproj/xcshareddata/xcschemes/WindowScene.xcscheme": "cc049670136ca75b281eea93cab69c2dec09e0a573ba193b36b1654b9541a1f1",
+    "fixtures/window-scene/ipa-hle-fixture.json": "9f7a246ea03569cc1ca268089a8a637d604ae786ceaca6dfec172bb96467abf3",
+    "fixtures/window-scene/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a"
   },
   "note": "Public build inputs only; reference logs and codemagic.yaml removed before publishing."
 }

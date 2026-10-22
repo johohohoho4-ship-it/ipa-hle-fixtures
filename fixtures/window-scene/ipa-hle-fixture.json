@@ -1,0 +1,7 @@
+{
+  "project": "WindowScene.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.windowscene",
+  "app_name": "WindowScene",
+  "minimum_ios": "15.0",
+  "scheme": "WindowScene"
+}
