@@ -77,7 +77,9 @@
 - (void)toggleAppearance {
     self.view.overrideUserInterfaceStyle = self.view.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark
         ? UIUserInterfaceStyleLight : UIUserInterfaceStyleDark;
-    [self updateTraitLabels];
+    // A new override reaches the view's trait collection on the next update pass, not
+    // synchronously; read it once the run loop turns, as UIKit does.
+    [self performSelector:@selector(updateTraitLabels) withObject:nil afterDelay:0];
 }
 
 - (void)logTraitAndFontProfiles {

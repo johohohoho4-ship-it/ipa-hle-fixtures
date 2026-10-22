@@ -10,6 +10,16 @@
     self.continueAfterFailure = NO;
 }
 
+// The app reads the new trait collection one run-loop turn after the tap; wait for the
+// label instead of asserting the next main-thread state.
+- (void)waitForLabel:(XCUIElement *)element toEqual:(NSString *)text {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"label == %@", text];
+    XCTNSPredicateExpectation *expectation =
+        [[XCTNSPredicateExpectation alloc] initWithPredicate:predicate object:element];
+    XCTAssertEqual([XCTWaiter waitForExpectations:@[expectation] timeout:5.0],
+                   XCTWaiterResultCompleted, @"%@ did not become %@", element, text);
+}
+
 - (void)testTraitInheritanceDynamicColorsAndDynamicType {
     XCUIApplication *app = [[XCUIApplication alloc] init];
     [app launch];
@@ -18,7 +28,7 @@
     XCTAssertTrue([title waitForExistenceWithTimeout:15.0], @"The trait collection fixture must appear");
 
     XCUIElement *style = app.staticTexts[@"trait.style"];
-    XCTAssertEqualObjects(style.label, @"Appearance: Dark");
+    [self waitForLabel:style toEqual:@"Appearance: Dark"];
 
     XCUIElement *sizeClasses = app.staticTexts[@"trait.size-classes"];
     XCTAssertTrue(sizeClasses.exists);
@@ -33,13 +43,13 @@
     XCUIElement *toggle = app.buttons[@"trait.toggle-appearance"];
     XCTAssertTrue(toggle.isHittable);
     [toggle tap];
-    XCTAssertEqualObjects(style.label, @"Appearance: Light");
+    [self waitForLabel:style toEqual:@"Appearance: Light"];
     XCTAttachment *lightScreenshot = [XCTAttachment attachmentWithScreenshot:[app screenshot]];
     lightScreenshot.name = @"trait-collections-light-profile";
     lightScreenshot.lifetime = XCTAttachmentLifetimeKeepAlways;
     [self addAttachment:lightScreenshot];
     [toggle tap];
-    XCTAssertEqualObjects(style.label, @"Appearance: Dark");
+    [self waitForLabel:style toEqual:@"Appearance: Dark"];
 
     XCTAttachment *screenshot = [XCTAttachment attachmentWithScreenshot:[app screenshot]];
     screenshot.name = @"trait-collections-dark-profile";
