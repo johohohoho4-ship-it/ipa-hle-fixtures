@@ -1,14 +1,15 @@
 #import "AppDelegate.h"
 #import "ViewControllers.h"
+#include <stdio.h>
 
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    GuideArchiveViewController *root = [storyboard instantiateInitialViewController];
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:root];
-    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = navigation;
-    [self.window makeKeyAndVisible];
+    printf("GA_APP launch window=%d\n", self.window != nil);
+    UIViewController *root = self.window.rootViewController;
+    if (root && ![root isKindOfClass:UINavigationController.class]) {
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:root];
+        self.window.rootViewController = navigation;
+    }
     return YES;
 }
 @end
