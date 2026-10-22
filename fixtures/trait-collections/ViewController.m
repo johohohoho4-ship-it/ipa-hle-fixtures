@@ -97,6 +97,30 @@
            (long)merged.userInterfaceStyle, (long)merged.horizontalSizeClass,
            merged.preferredContentSizeCategory.UTF8String,
            [merged containsTraitsInCollection:largeCategory], base.pointSize, scaled.pointSize, preferred.pointSize);
+
+    // F18 metrics: the native scaling curve and the preferred-font table over every
+    // content size category, for two text styles. The HLE currently derives both from
+    // one factor; these rows decide whether that model holds and give the exact values.
+    UIFontMetrics *headlineMetrics = [UIFontMetrics metricsForTextStyle:@"UICTFontTextStyleHeadline"];
+    NSArray<UIContentSizeCategory> *categories = @[
+        UIContentSizeCategoryExtraSmall, UIContentSizeCategorySmall, UIContentSizeCategoryMedium,
+        UIContentSizeCategoryLarge, UIContentSizeCategoryExtraLarge, UIContentSizeCategoryExtraExtraLarge,
+        UIContentSizeCategoryExtraExtraExtraLarge, UIContentSizeCategoryAccessibilityMedium,
+        UIContentSizeCategoryAccessibilityLarge, UIContentSizeCategoryAccessibilityExtraLarge,
+        UIContentSizeCategoryAccessibilityExtraExtraLarge,
+        UIContentSizeCategoryAccessibilityExtraExtraExtraLarge];
+    for (UIContentSizeCategory category in categories) {
+        UITraitCollection *traits = [UITraitCollection traitCollectionWithPreferredContentSizeCategory:category];
+        UIFont *bodyScaled = [metrics scaledFontForFont:base compatibleWithTraitCollection:traits];
+        UIFont *bodyPreferred = [UIFont preferredFontForTextStyle:@"UICTFontTextStyleBody"
+                                         compatibleWithTraitCollection:traits];
+        UIFont *headlineScaled = [headlineMetrics scaledFontForFont:base compatibleWithTraitCollection:traits];
+        UIFont *headlinePreferred = [UIFont preferredFontForTextStyle:@"UICTFontTextStyleHeadline"
+                                             compatibleWithTraitCollection:traits];
+        printf("TR_SCALE category=%s bodyScaled=%.1f bodyPreferred=%.1f headlineScaled=%.1f headlinePreferred=%.1f\n",
+               category.UTF8String, bodyScaled.pointSize, bodyPreferred.pointSize,
+               headlineScaled.pointSize, headlinePreferred.pointSize);
+    }
 }
 
 - (void)logSystemColors {
