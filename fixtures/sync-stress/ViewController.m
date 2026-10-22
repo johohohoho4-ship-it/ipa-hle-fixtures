@@ -1,14 +1,30 @@
 #import "ViewController.h"
 #import "sync_stress.h"
+#import <pthread.h>
+
+static ViewController *gRunner;
+
+static void *run_stress(void *unused) {
+    (void)unused;
+    int code = sync_stress_run();
+    // The stress blocks while its workers run; report from the main queue so the
+    // UI (and an HLE session) stays responsive.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [gRunner showResult:code];
+    });
+    return 0;
+}
 
 @interface ViewController ()
 @property (nonatomic, strong) UILabel *resultLabel;
+- (void)showResult:(int)code;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    gRunner = self;
     self.view.backgroundColor = UIColor.systemBackgroundColor;
 
     UIStackView *content = [[UIStackView alloc] init];
@@ -60,10 +76,19 @@
 }
 
 - (void)runFixture {
-    int result = sync_stress_run();
-    self.resultLabel.text = result == 0
+    self.resultLabel.text = @"Läuft …";
+    pthread_t thread;
+    if (pthread_create(&thread, NULL, run_stress, NULL) == 0) {
+        pthread_detach(thread);
+    } else {
+        self.resultLabel.text = @"SYNC_FAIL:exit-30";
+    }
+}
+
+- (void)showResult:(int)code {
+    self.resultLabel.text = code == 0
         ? @"SYNC_OK:8000:125250"
-        : [NSString stringWithFormat:@"SYNC_FAIL:exit-%d", result];
+        : [NSString stringWithFormat:@"SYNC_FAIL:exit-%d", code];
 }
 
 @end
