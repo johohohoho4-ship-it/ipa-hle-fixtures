@@ -1,0 +1,7 @@
+{
+  "project": "SceneGeometry.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.scenegeometry",
+  "app_name": "SceneGeometry",
+  "minimum_ios": "17.0",
+  "scheme": "SceneGeometry"
+}

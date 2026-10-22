@@ -1,0 +1,7 @@
+{
+  "project": "GuideArchive.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.guidearchive",
+  "app_name": "GuideArchive",
+  "minimum_ios": "15.0",
+  "scheme": "GuideArchive"
+}
