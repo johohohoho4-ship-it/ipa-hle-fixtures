@@ -12,12 +12,14 @@
 }
 
 - (void)report:(NSString *)phase {
-    UILayoutGuide *top = (UILayoutGuide *)self.topLayoutGuide;
-    UILayoutGuide *bottom = (UILayoutGuide *)self.bottomLayoutGuide;
+    id<UILayoutSupport> topSupport = self.topLayoutGuide;
+    id<UILayoutSupport> bottomSupport = self.bottomLayoutGuide;
+    UILayoutGuide *top = (UILayoutGuide *)topSupport;
+    UILayoutGuide *bottom = (UILayoutGuide *)bottomSupport;
     UIView *view = self.view;
     printf("GA_GUIDE phase=%s top=%.1f bottom=%.1f topClass=%s bottomClass=%s distinct=%d "
            "topOwner=%s bottomOwner=%s topFrame=%.1f,%.1f,%.1f,%.1f bottomFrame=%.1f,%.1f,%.1f,%.1f\n",
-           phase.UTF8String, top.length, bottom.length, object_getClassName(top), object_getClassName(bottom),
+           phase.UTF8String, topSupport.length, bottomSupport.length, object_getClassName(top), object_getClassName(bottom),
            top != bottom,
            top.owningView ? object_getClassName(top.owningView) : "none",
            bottom.owningView ? object_getClassName(bottom.owningView) : "none",
