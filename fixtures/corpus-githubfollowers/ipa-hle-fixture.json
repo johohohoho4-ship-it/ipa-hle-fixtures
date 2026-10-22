@@ -2,6 +2,6 @@
   "project": "GitHubFollowers.xcodeproj",
   "bundle_id": "com.monika.mateska.GitHubFollowers",
   "app_name": "GitHubFollowers",
-  "minimum_ios": "16.0",
+  "minimum_ios": "13.0",
   "scheme": "GitHubFollowers"
 }

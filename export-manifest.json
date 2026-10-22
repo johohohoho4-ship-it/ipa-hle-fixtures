@@ -269,7 +269,7 @@
     "fixtures/corpus-githubfollowers/GitHubFollowers/shared/views/GHTitleLabel.swift": "627bc35b835ef41ac054ddc7ae149184e34f1ef22415befcc2c87f4b827deff8",
     "fixtures/corpus-githubfollowers/GitHubFollowersUITests/GitHubFollowersUITests.swift": "01b95ef8a41121f85f024cb65a0a0fa416a5bc70775399c08abcf44593802ca2",
     "fixtures/corpus-githubfollowers/GitHubFollowersUITests/GitHubFollowersUITestsLaunchTests.swift": "af3ef55e063eb252d0206763367ea1ec9b64a7cbe19d20bf3535f6e7ba00e5b1",
-    "fixtures/corpus-githubfollowers/ipa-hle-fixture.json": "1a71351b8bf3be269bba1780aa8c2c980ff704d1e8fd20e40e57e4d4d1ceb139",
+    "fixtures/corpus-githubfollowers/ipa-hle-fixture.json": "9ad92007b74294e1181d7a4b9045edd6ad08ea5f0f54005336f148dccbf307a9",
     "fixtures/corpus-simpletodo/CorpusUITests/CorpusUITests.swift": "babe8f688283b354f414bbe298968c5b744e02d603354ba3b0e0978653366dcb",
     "fixtures/corpus-simpletodo/TodoApp.xcodeproj/project.pbxproj": "c6cf29dc0aeebada00e3cca07f03b2627beaef0c43e7daf2497524e2c408901e",
     "fixtures/corpus-simpletodo/TodoApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "72d3e49617a2548826ffcd8fa40479d56a6eff64ab91c8763d5a16af103f4700",
