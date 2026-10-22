@@ -586,7 +586,7 @@
     "fixtures/swift-generics/SwiftGenerics.xcodeproj/xcshareddata/xcschemes/SwiftGenerics.xcscheme": "ad263db817affdb7a7f322bfb4de92d04a5cae1c6f1de86d38cc5ded0f1d4192",
     "fixtures/swift-generics/ViewController.swift": "7db456cebbd7dccdf8a4e197dbcdbd9af10598898d153e616a88a263ed5826ee",
     "fixtures/swift-generics/ipa-hle-fixture.json": "b701953c7d8349fdc3937a6df4b14ac8f0f48f2a1f85b5108f280c56558b368f",
-    "fixtures/swift-protocols/AppDelegate.swift": "f4d09d9831121b541db5d3be23200457614da8b517def60a5c25083bac6996c9",
+    "fixtures/swift-protocols/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/swift-protocols/FixtureReferenceUITests/FixtureReferenceUITests.swift": "771b891c5b09471cbf1ee0d74e0b18f98b8e1ad6cbb85b255e3fbccbd9bdac07",
     "fixtures/swift-protocols/Info.plist": "fe839d5437b1e76317a2960b45baaacbec4b8894328420ae25c2c3b720f6ceba",
     "fixtures/swift-protocols/ProtocolChecks.swift": "7e81d8b2ecfc1feb293585ad57ac41438efd8a36f8ea4aed6efbb08126b88017",
