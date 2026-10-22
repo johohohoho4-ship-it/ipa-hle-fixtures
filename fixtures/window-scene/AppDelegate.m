@@ -23,6 +23,13 @@
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     printf("WS_CONNECT sameSession=%d assigned=%d sceneClass=%s\n", scene.session == session,
            self.window.windowScene == windowScene, NSStringFromClass(scene.class).UTF8String);
+    // Sol 18be622e: the native start does not log WS_CONFIG from
+    // application:configurationForConnectingSceneSession:. Measure the role of a
+    // configuration object built here, outside that callback, so both the
+    // controller and the stored role of an explicit configuration are covered.
+    UISceneConfiguration *probe = [[UISceneConfiguration alloc] initWithName:@"Probe" sessionRole:session.role];
+    printf("WS_ROLE phase=willConnect sessionRole=%s configRole=%s name=%s\n",
+           session.role.UTF8String, probe.role.UTF8String, probe.name.UTF8String);
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
 }

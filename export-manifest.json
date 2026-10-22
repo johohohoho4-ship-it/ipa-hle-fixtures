@@ -781,7 +781,7 @@
     "fixtures/webview/ipa-hle-fixture.json": "4dd3e5606741a17a5b9cf3b21de01acc9327ff0104436a56d71a74de4ea30e8e",
     "fixtures/webview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/window-scene/AppDelegate.h": "68f41abef3d414f2826f552b9e0f3eb17119f674680a8936432b3d083e944842",
-    "fixtures/window-scene/AppDelegate.m": "9dcc5d026537e7935b96c47a646307e521e04a7a7a8c35c9e35bf53da4b6eeb1",
+    "fixtures/window-scene/AppDelegate.m": "90e3843cdcd50aeee1bcaba57f6c3df0c70291a9f74042728ee0c9df51723fef",
     "fixtures/window-scene/FixtureReferenceUITests/FixtureReferenceUITests.m": "77edeb67985163aef5b7c5f923cf7fa2b2799a103e9927e661c53c1d32e9d112",
     "fixtures/window-scene/Info.plist": "5b43d803902720f2eeec84677fda9ef85fad2872980e9996083417f6f66b74c5",
     "fixtures/window-scene/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
