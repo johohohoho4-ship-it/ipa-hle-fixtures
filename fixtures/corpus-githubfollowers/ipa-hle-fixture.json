@@ -1,0 +1,7 @@
+{
+  "project": "GitHubFollowers.xcodeproj",
+  "bundle_id": "com.monika.mateska.GitHubFollowers",
+  "app_name": "GitHubFollowers",
+  "minimum_ios": "16.0",
+  "scheme": "GitHubFollowers"
+}
