@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUILayout.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuilayout",
+  "app_name": "SwiftUILayout",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUILayout"
+}
