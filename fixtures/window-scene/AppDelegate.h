@@ -5,4 +5,7 @@
 
 @interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
 @property(nonatomic, strong) UIWindow *window;
+@property(nonatomic, strong) NSArray<UISceneConfiguration *> *configMatrix;
+@property(nonatomic, strong) UISceneSession *session;
+- (void)logMatrixAfterConnect;
 @end

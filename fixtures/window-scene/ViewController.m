@@ -1,4 +1,5 @@
 #import "ViewController.h"
+#import "AppDelegate.h"
 #include <stdio.h>
 
 static void PrintRect(const char *phase, const char *name, CGRect rect) {
@@ -81,7 +82,14 @@ static void PrintRect(const char *phase, const char *name, CGRect rect) {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    if (self.sample == 0) [self recordGeometry];
+    if (self.sample == 0) {
+        // F1: re-read the scene configurations after the connection completed.
+        id delegate = self.view.window.windowScene.delegate;
+        if ([delegate isKindOfClass:[SceneDelegate class]]) {
+            [(SceneDelegate *)delegate logMatrixAfterConnect];
+        }
+        [self recordGeometry];
+    }
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {

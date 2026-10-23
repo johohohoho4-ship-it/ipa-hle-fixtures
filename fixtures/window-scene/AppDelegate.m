@@ -3,8 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static NSArray<UISceneConfiguration *> *gConfigMatrix;
-
 static BOOL ConfigMatrixEnabled(void) {
     const char *value = getenv("WS_CONFIG_MATRIX");
     return value != NULL && value[0] == '1';
@@ -19,12 +17,10 @@ static const char *DelegateName(UISceneConfiguration *config) {
     return cls ? NSStringFromClass(cls).UTF8String : "(nil)";
 }
 
-static void PrintConfiguration(const char *phase, NSInteger index,
-                               UISceneConfiguration *config, UISceneSession *session) {
-    printf("WS_CFG phase=%s index=%ld name=%s role=%s delegate=%s ptr=%p sessionConfig=%d\n",
+static void PrintConfiguration(const char *phase, NSInteger index, UISceneConfiguration *config) {
+    printf("WS_CFG phase=%s index=%ld name=%s role=%s delegate=%s ptr=%p\n",
            phase, (long)index, CStringOrNil(config.name), CStringOrNil(config.role),
-           DelegateName(config), (__bridge void *)config,
-           session != nil && config == session.configuration);
+           DelegateName(config), (__bridge void *)config);
 }
 
 static void PrintWindows(const char *phase, UIWindowScene *scene, UIWindow *root) {
@@ -41,26 +37,9 @@ static void PrintWindows(const char *phase, UIWindowScene *scene, UIWindow *root
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)options {
     printf("WS_APP launch\n");
     if (ConfigMatrixEnabled()) {
-        // F1 measurement (Sol, 2026-10-23): name, role, delegateClass and object
-        // identity before the scene connects, for cold and repeated starts.
+        // F1 measurement (Sol, 2026-10-23): open sessions before the scene
+        // connects, for cold and repeated starts.
         printf("WS_LAUNCH matrix=1 openSessions=%lu\n", (unsigned long)application.openSessions.count);
-        NSMutableArray<UISceneConfiguration *> *configs = [NSMutableArray array];
-        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Main"
-                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
-        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Probe"
-                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
-        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Second"
-                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
-        @try {
-            [configs addObject:[[UISceneConfiguration alloc] initWithName:nil
-                                                             sessionRole:UIWindowSceneSessionRoleApplication]];
-        } @catch (NSException *exception) {
-            printf("WS_CFG phase=initNil error=%s\n", exception.name.UTF8String);
-        }
-        gConfigMatrix = configs;
-        for (NSUInteger index = 0; index < configs.count; index++) {
-            PrintConfiguration("init", index, configs[index], nil);
-        }
     }
     return YES;
 }
@@ -77,20 +56,29 @@ static void PrintWindows(const char *phase, UIWindowScene *scene, UIWindow *root
 @implementation SceneDelegate
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)options {
     UIWindowScene *windowScene = (UIWindowScene *)scene;
-    if (gConfigMatrix) {
-        // The same objects read again in willConnect, plus the configuration that
-        // actually connected this session. Pure observation, no expected value.
-        printf("WS_CFG phase=willConnect openSessions=%lu\n",
-               (unsigned long)UIApplication.sharedApplication.openSessions.count);
-        for (NSUInteger index = 0; index < gConfigMatrix.count; index++) {
-            PrintConfiguration("willConnect", index, gConfigMatrix[index], session);
+    if (ConfigMatrixEnabled()) {
+        // F1 measurement: construct and read the configurations in willConnect,
+        // then read the same objects again after the connection. Reading
+        // session.configuration inside willConnect is deliberately deferred;
+        // it is the API the measurement is about.
+        NSMutableArray<UISceneConfiguration *> *configs = [NSMutableArray array];
+        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Main"
+                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
+        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Probe"
+                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
+        [configs addObject:[[UISceneConfiguration alloc] initWithName:@"Second"
+                                                         sessionRole:UIWindowSceneSessionRoleApplication]];
+        @try {
+            [configs addObject:[[UISceneConfiguration alloc] initWithName:nil
+                                                             sessionRole:UIWindowSceneSessionRoleApplication]];
+        } @catch (NSException *exception) {
+            printf("WS_CFG phase=initNil error=%s\n", exception.name.UTF8String);
         }
-        UISceneConfiguration *actual = session.configuration;
-        printf("WS_CFG phase=session name=%s role=%s delegate=%s ptr=%p\n",
-               actual ? CStringOrNil(actual.name) : "(nil)",
-               actual ? CStringOrNil(actual.role) : "(nil)",
-               actual ? DelegateName(actual) : "(nil)",
-               (__bridge void *)actual);
+        self.configMatrix = configs;
+        self.session = session;
+        for (NSUInteger index = 0; index < configs.count; index++) {
+            PrintConfiguration("willConnect", index, configs[index]);
+        }
     }
     PrintWindows("beforeWindow", windowScene, nil);
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
@@ -107,5 +95,18 @@ static void PrintWindows(const char *phase, UIWindowScene *scene, UIWindow *root
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
     PrintWindows("afterKey", windowScene, self.window);
+}
+
+- (void)logMatrixAfterConnect {
+    if (!self.configMatrix) return;
+    for (NSUInteger index = 0; index < self.configMatrix.count; index++) {
+        PrintConfiguration("afterConnect", index, self.configMatrix[index]);
+    }
+    UISceneConfiguration *actual = self.session.configuration;
+    printf("WS_CFG phase=session name=%s role=%s delegate=%s ptr=%p\n",
+           actual ? CStringOrNil(actual.name) : "(nil)",
+           actual ? CStringOrNil(actual.role) : "(nil)",
+           actual ? DelegateName(actual) : "(nil)",
+           (__bridge void *)actual);
 }
 @end
