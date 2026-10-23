@@ -17,6 +17,10 @@ final class FixtureReferenceUITests: XCTestCase {
         XCTAssertTrue(status.waitForExistence(timeout: 5))
         XCTAssertEqual(status.label, "FOUNDATION_OK")
 
+        let styleLog = app.staticTexts["foundation.stylelog"]
+        XCTAssertTrue(styleLog.waitForExistence(timeout: 5), "The D7 measurement label must appear")
+        NSLog("D7_STYLE_VALUES %@", styleLog.label)
+
         let screenshot = XCTAttachment(screenshot: app.screenshot())
         screenshot.name = "swift-foundation-all-checks-passed"
         screenshot.lifetime = .keepAlways

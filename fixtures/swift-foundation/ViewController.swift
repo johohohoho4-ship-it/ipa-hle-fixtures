@@ -28,6 +28,17 @@ final class ViewController: UIViewController {
         writeLine(status)
         statusLabel.text = status
         statusLabel.accessibilityLabel = status
+
+        // D7 measurement transport: the XCUITest prints this label into the test log,
+        // where the native dateStyle/timeStyle strings can be read back.
+        let styleLog = UILabel(frame: CGRect(x: 20, y: 540, width: 350, height: 40))
+        styleLog.accessibilityIdentifier = "foundation.stylelog"
+        styleLog.numberOfLines = 1
+        styleLog.text = results
+            .filter { $0.0.hasPrefix("date_style_") || $0.0.hasPrefix("time_style_") || $0.0.hasPrefix("date_time_") }
+            .map { "\($0.0)=\($0.2)" }
+            .joined(separator: "|")
+        view.addSubview(styleLog)
     }
 
     private func writeLine(_ line: String) {
