@@ -7,6 +7,7 @@
 - (void)toggleAppearance;
 - (void)updateTraitLabels;
 - (void)logSystemColors;
+- (void)logContentSizeIdentity;
 - (void)logTraitAndFontProfiles;
 @end
 
@@ -54,7 +55,29 @@
     [self.view addSubview:classes];
 
     [self logTraitAndFontProfiles];
+    [self logContentSizeIdentity];
     [self logSystemColors];
+}
+
+- (void)logContentSizeIdentity {
+    // F18/C6: does the imported category constant compare and identify like UIKit's
+    // own object? Print only observations; no expected value is forced here.
+    UITraitCollection *plain = self.view.traitCollection;
+    UIContentSizeCategory current = plain.preferredContentSizeCategory;
+    UITraitCollection *ax = [UITraitCollection traitCollectionWithPreferredContentSizeCategory:
+        UIContentSizeCategoryAccessibilityExtraExtraExtraLarge];
+    UIContentSizeCategory axCategory = ax.preferredContentSizeCategory;
+    UIContentSizeCategory again = ax.preferredContentSizeCategory;
+    printf("TR_IDENTITY currentLargePointer=%d currentLargeEqual=%d\n",
+           current == UIContentSizeCategoryLarge,
+           [current isEqualToString:UIContentSizeCategoryLarge]);
+    printf("TR_IDENTITY axAXLPointer=%d axAXLEqual=%d axLargeEqual=%d\n",
+           axCategory == UIContentSizeCategoryAccessibilityExtraExtraExtraLarge,
+           [axCategory isEqualToString:UIContentSizeCategoryAccessibilityExtraExtraExtraLarge],
+           [axCategory isEqualToString:UIContentSizeCategoryLarge]);
+    printf("TR_IDENTITY repeatPointer=%d repeatEqual=%d repeatAXLPointer=%d\n",
+           again == axCategory, [again isEqualToString:axCategory],
+           again == UIContentSizeCategoryAccessibilityExtraExtraExtraLarge);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
