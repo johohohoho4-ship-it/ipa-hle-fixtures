@@ -653,7 +653,7 @@
     "fixtures/swift-concurrency/ipa-hle-fixture.json": "e48982a779af6358e445a99d0485d4a8441ab16d0d08f88465092bca6576e80a",
     "fixtures/swift-foundation/AppDelegate.swift": "f4d09d9831121b541db5d3be23200457614da8b517def60a5c25083bac6996c9",
     "fixtures/swift-foundation/FixtureReferenceUITests/FixtureReferenceUITests.swift": "9ad750ea4b98c7924c8f529227a0e71f9831e5a92cb611d5b92c41e0102f74d8",
-    "fixtures/swift-foundation/FoundationChecks.swift": "3e60f4c2a7de81c579e64bc826f4044b0ca64a7b4fc64798e0f472deab3be522",
+    "fixtures/swift-foundation/FoundationChecks.swift": "5dc16cefb590556f99eef7a178feb80a38d8a0d1a7cc75214058e78a87c1c23b",
     "fixtures/swift-foundation/Info.plist": "bb7e0178076f399cd0f5d77b3378c78d0f048620fe1360acb078f331ef7a955b",
     "fixtures/swift-foundation/SwiftFoundation.xcodeproj/project.pbxproj": "f21e1e3ff42320479e90c3c9451d07bc5719bc3adcb866efcbb7b4edea27a811",
     "fixtures/swift-foundation/SwiftFoundation.xcodeproj/xcshareddata/xcschemes/SwiftFoundation.xcscheme": "ed5921960acf761787a8b365aa9d44a8cf85bcfec775e8d5592b9d3c3750177c",

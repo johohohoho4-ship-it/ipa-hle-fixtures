@@ -128,6 +128,37 @@ func runFoundationChecks() -> [(String, Bool, String)] {
     check("date_format", formatter.string(from: date) == "2023-11-14T22:13:20" &&
           formatter.date(from: "2023-11-14T22:13:20") == date, formatter.string(from: date))
 
+    // D7: dateStyle/timeStyle instead of an explicit pattern, in both fixture locales.
+    // These rows are measurements: the value after "ok" is the simulator's string.
+    let styleDate = Date(timeIntervalSince1970: 1_700_000_000)  // 2023-11-14 22:13:20 UTC
+    let styleNames: [(String, DateFormatter.Style)] = [
+        ("short", .short), ("medium", .medium), ("long", .long), ("full", .full),
+    ]
+    for (language, identifier) in [("en", "en_US"), ("de", "de_DE")] {
+        for (name, style) in styleNames {
+            let dateOnly = DateFormatter()
+            dateOnly.locale = Locale(identifier: identifier)
+            dateOnly.timeZone = TimeZone(identifier: "UTC")
+            dateOnly.dateStyle = style
+            dateOnly.timeStyle = .none
+            check("date_style_\(language)_\(name)", true, dateOnly.string(from: styleDate))
+
+            let timeOnly = DateFormatter()
+            timeOnly.locale = Locale(identifier: identifier)
+            timeOnly.timeZone = TimeZone(identifier: "UTC")
+            timeOnly.dateStyle = .none
+            timeOnly.timeStyle = style
+            check("time_style_\(language)_\(name)", true, timeOnly.string(from: styleDate))
+        }
+        let both = DateFormatter()
+        both.locale = Locale(identifier: identifier)
+        both.timeZone = TimeZone(identifier: "UTC")
+        both.dateStyle = .long
+        both.timeStyle = .short
+        check("date_time_\(language)_long_short", true, both.string(from: styleDate))
+    }
+
+
     // Codable through JSON: nested types, optionals, arrays, dictionaries, custom keys.
     let person = Person(name: "Ada", age: 36, height: 1.68, member: true, nickname: nil,
                         tags: ["math", "code"], address: Address(street: "Main St", zip: 12345),
