@@ -1,0 +1,7 @@
+{
+  "project": "NamedColors.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.namedcolors",
+  "app_name": "NamedColors",
+  "minimum_ios": "16.0",
+  "scheme": "NamedColors"
+}
