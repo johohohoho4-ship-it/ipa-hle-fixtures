@@ -698,7 +698,7 @@
     "fixtures/swift-hashable/ViewController.swift": "fe466784ed07cd8a28a4c80434094bbfa4cdb05dcc20414d94b8c557e9bdb18a",
     "fixtures/swift-hashable/ipa-hle-fixture.json": "28c9a3ca1290bd8b31b7bc81afa0e6718e2cd5053e66fa67185e5516832b6b2d",
     "fixtures/swift-indexpath/FixtureReferenceUITests/FixtureReferenceUITests.swift": "58245af92089a853efb435e57519dd1a6bd095374afebe6660e70c84bc98d4c0",
-    "fixtures/swift-indexpath/IndexPathApp.swift": "bb9702452e47c1af6d9700afd6a8d87739146106b9d4b9a090b2164f4a37771a",
+    "fixtures/swift-indexpath/IndexPathApp.swift": "2a54416633c17a59802a0b20626358ae4ca5707ad0c8b2794f3d1d11c9937312",
     "fixtures/swift-indexpath/IndexPathFixture.xcodeproj/project.pbxproj": "fa4958a93da647cebc0773b909594ddfc54ab400af3d8e9b98d6c789fe241d05",
     "fixtures/swift-indexpath/IndexPathFixture.xcodeproj/xcshareddata/xcschemes/IndexPathFixture.xcscheme": "f4c72b914418cd96e4b1e703476f209ed7b51b6ac5e3a5a488844395dcbe4f22",
     "fixtures/swift-indexpath/Info.plist": "49d39133b0b3ffd20c558e8167561d71e9010329c06894438c3f30782b8d34b3",

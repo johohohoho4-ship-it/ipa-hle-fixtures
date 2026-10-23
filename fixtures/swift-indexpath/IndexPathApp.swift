@@ -34,11 +34,11 @@ enum IndexPathMeasurement {
 
         let rowSection = IndexPath(row: 2, section: 3)
         fixtureLog("IP_ROW_SECTION indices=\(indexList(rowSection)) count=\(rowSection.count)"
-                   + " section=\(rowSection.section) row=\(rowSection.row)")
+                   + " section=\(rowSection.section) row=\(rowSection.row) item=\(rowSection.item)")
 
         let single = IndexPath(index: 7)
         fixtureLog("IP_SINGLE indices=\(indexList(single)) count=\(single.count)"
-                   + " first=\(single[0]) item=\(single.item)")
+                   + " first=\(single[0])")
 
         let many = IndexPath(indexes: [1, 2, 3])
         fixtureLog("IP_INDEXES indices=\(indexList(many)) count=\(many.count)"
