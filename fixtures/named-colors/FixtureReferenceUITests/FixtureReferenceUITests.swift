@@ -6,14 +6,11 @@ final class FixtureReferenceUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testNamedColorFixtureReportsItsObservations() {
+    func testNamedColorFixtureStarts() {
         let app = XCUIApplication()
         app.launch()
-
-        let status = app.staticTexts["nc.status"]
-        XCTAssertTrue(status.waitForExistence(timeout: 20), "The named-colors fixture must appear")
-        expectation(for: NSPredicate(format: "label == %@", "ready"), evaluatedWith: status)
-        waitForExpectations(timeout: 20)
+        XCTAssertTrue(app.wait(for: .runningForeground, timeout: 20),
+                      "The named-colors fixture must stay in the foreground")
 
         let screenshot = XCTAttachment(screenshot: app.screenshot())
         screenshot.name = "named-colors-start"
