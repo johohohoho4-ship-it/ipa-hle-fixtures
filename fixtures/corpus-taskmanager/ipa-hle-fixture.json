@@ -1,0 +1,7 @@
+{
+  "project": "taskmanager.xcodeproj",
+  "scheme": "TaskManagerCorpus",
+  "app_name": "taskmanager",
+  "bundle_id": "org.ipahle.corpus.taskmanager",
+  "minimum_ios": "15.0"
+}
