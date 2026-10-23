@@ -20,10 +20,6 @@
     self.continueAfterFailure = NO;
     XCUIDevice.sharedDevice.orientation = UIDeviceOrientationPortrait;
     XCUIApplication *app = [XCUIApplication new];
-    // F1: the matrix is measurement-only. It runs in both starts, so the native
-    // console separates a cold first start from a repeated start of the same
-    // installation. The HLE run leaves the variable unset.
-    app.launchEnvironment = @{@"WS_CONFIG_MATRIX": @"1"};
     [app launch];
     @try {
         [self waitForState:@"portrait-ready" inApp:app];

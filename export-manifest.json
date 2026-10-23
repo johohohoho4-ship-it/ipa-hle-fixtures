@@ -836,15 +836,15 @@
     "fixtures/webview/ipa-hle-fixture.json": "4dd3e5606741a17a5b9cf3b21de01acc9327ff0104436a56d71a74de4ea30e8e",
     "fixtures/webview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/window-scene/AppDelegate.h": "095c91c9c046e9161a1078172991f425257db35d0acb70de43cf7bc63be4e131",
-    "fixtures/window-scene/AppDelegate.m": "4ddc706ea01d8b53c0e7243b9c112a5f6576bf8a7abd48a8d9a4a60c27d98ee8",
-    "fixtures/window-scene/FixtureReferenceUITests/FixtureReferenceUITests.m": "6eeedb98b8d1ebf56987963f27daced91606d88c7a80853ba164770dc7353e36",
+    "fixtures/window-scene/AppDelegate.m": "47020cc9e713ba7c64f04635d504199110e580b33ec2c0dbef960c1c56985f9b",
+    "fixtures/window-scene/FixtureReferenceUITests/FixtureReferenceUITests.m": "7aa7fee49ce93ec0b349e6494c7f284455b33638c53a75517096e46e4926bd8b",
     "fixtures/window-scene/Info.plist": "5b43d803902720f2eeec84677fda9ef85fad2872980e9996083417f6f66b74c5",
     "fixtures/window-scene/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
     "fixtures/window-scene/ViewController.m": "41f981e39a8e6fcf145fcfc07c067dbc0cfa1e4511808c9153efcd311e644f96",
     "fixtures/window-scene/WindowScene.xcodeproj/project.pbxproj": "e35c40c69dc23341723ffeb163b7fa4dae8a542dfa7293fa24804bbf7b176ae9",
     "fixtures/window-scene/WindowScene.xcodeproj/xcshareddata/xcschemes/WindowScene.xcscheme": "cc049670136ca75b281eea93cab69c2dec09e0a573ba193b36b1654b9541a1f1",
     "fixtures/window-scene/ipa-hle-fixture.json": "9f7a246ea03569cc1ca268089a8a637d604ae786ceaca6dfec172bb96467abf3",
-    "fixtures/window-scene/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a"
+    "fixtures/window-scene/main.m": "d724b494ec18abc338dcbaf2d7d5ce10a111e589a402baf892ac7238c4b0dac2"
   },
   "note": "Public build inputs only; reference logs and codemagic.yaml removed before publishing."
 }

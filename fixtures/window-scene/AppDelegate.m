@@ -4,8 +4,13 @@
 #include <stdlib.h>
 
 static BOOL ConfigMatrixEnabled(void) {
-    const char *value = getenv("WS_CONFIG_MATRIX");
-    return value != NULL && value[0] == '1';
+    // Native-only measurement: the simulator build always logs the matrix, the
+    // device IPA used by the strict HLE compiles it out completely.
+#if TARGET_OS_SIMULATOR
+    return YES;
+#else
+    return NO;
+#endif
 }
 
 static const char *CStringOrNil(NSString *value) {
