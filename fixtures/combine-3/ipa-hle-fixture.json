@@ -1,0 +1,7 @@
+{
+  "project": "Combine3.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.combine3",
+  "app_name": "Combine3",
+  "minimum_ios": "15.0",
+  "scheme": "Combine3"
+}
