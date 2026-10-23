@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUIList.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuilist",
+  "app_name": "SwiftUIList",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUIList"
+}
