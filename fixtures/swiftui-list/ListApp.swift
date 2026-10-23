@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 import Darwin
 
 /// One `SWLI_` line per measured view; the simulator console file keeps stdout.
@@ -44,19 +45,65 @@ final class FrameLog: ObservableObject {
         done = true
     }
 
-    /// Prints the first list row that is inside the list's visible frame after the swipe.
+    /// Prints the first List row that is visible after the swipe. SwiftUI's List is
+    /// backed by a UIKit scroll view, so the visible cell is read natively; the
+    /// stored onAppear frames alone would be stale after scrolling.
     func flushAfter() {
+        lock.lock()
+        let listFrame = frames["list"]
+        lock.unlock()
+        guard let listFrame else { return }
+        if let scroll = Self.listScrollView(near: listFrame) {
+            let cells: [UIView]
+            if let table = scroll as? UITableView {
+                cells = table.visibleCells
+            } else if let collection = scroll as? UICollectionView {
+                cells = collection.visibleCells
+            } else {
+                cells = []
+            }
+            let sorted = cells.sorted { $0.convert($0.bounds, to: nil).minY < $1.convert($1.bounds, to: nil).minY }
+            if let first = sorted.first {
+                let rect = first.convert(first.bounds, to: nil)
+                let label = first.accessibilityLabel ?? ""
+                let digits = label.filter { $0.isNumber }
+                let name = digits.isEmpty ? "list.row.unknown" : "list.row.\(digits)"
+                fixtureLog("SWLI_AFTER_\(name)=\(text(rect))")
+                fixtureLog("SWLI_AFTER_DONE")
+                return
+            }
+        }
+        // Fallback if the backing scroll view cannot be found.
         lock.lock()
         let snapshot = frames
         lock.unlock()
-        guard let list = snapshot["list"] else { return }
         let rows = snapshot
-            .filter { $0.key.hasPrefix("list.row.") && $0.value.minY >= list.minY - 1 && $0.value.minY < list.maxY }
+            .filter { $0.key.hasPrefix("list.row.") && $0.value.minY >= listFrame.minY - 1 && $0.value.minY < listFrame.maxY }
             .sorted { $0.value.minY < $1.value.minY }
         if let first = rows.first {
             fixtureLog("SWLI_AFTER_\(first.key)=\(text(first.value))")
         }
         fixtureLog("SWLI_AFTER_DONE")
+    }
+
+    private static func listScrollView(near target: CGRect) -> UIScrollView? {
+        guard let scene = UIApplication.shared.connectedScenes.compactMap({ $0 as? UIWindowScene }).first,
+              let window = scene.windows.first(where: { $0.isKeyWindow }) ?? scene.windows.first else {
+            return nil
+        }
+        func walk(_ view: UIView) -> UIScrollView? {
+            if let scroll = view as? UIScrollView {
+                let frame = scroll.convert(scroll.bounds, to: nil)
+                if abs(frame.minX - target.minX) < 2 && abs(frame.minY - target.minY) < 2 {
+                    return scroll
+                }
+            }
+            for sub in view.subviews {
+                if let found = walk(sub) { return found }
+            }
+            return nil
+        }
+        return walk(window)
     }
 }
 
