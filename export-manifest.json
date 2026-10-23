@@ -716,7 +716,7 @@
     "fixtures/swiftui-layout/SwiftUILayout.xcodeproj/project.pbxproj": "099dde1e0d0fce4fb3a8d8712f19e0459ab5fcbce5257c6aaebca5607dcf63e9",
     "fixtures/swiftui-layout/SwiftUILayout.xcodeproj/xcshareddata/xcschemes/SwiftUILayout.xcscheme": "24ccf9be1f6b0cd90a0190ed8680bd05913981334d957fb0f10f31eb92304e9a",
     "fixtures/swiftui-layout/ipa-hle-fixture.json": "cd0b7945523436c96cc37436a26ba7d483f95d09ecf3bd5400f17148b5a2f7a9",
-    "fixtures/swiftui-list/FixtureReferenceUITests/FixtureReferenceUITests.swift": "1d3592d239f4d7d6d80797cd040b459ca253742ad64dc896f6f3cdc5aed4bfb7",
+    "fixtures/swiftui-list/FixtureReferenceUITests/FixtureReferenceUITests.swift": "d1cc9c5879308dc2fa68c658a998ba1f193d27f507c142e34cfd31659a1ba4d7",
     "fixtures/swiftui-list/Info.plist": "9a05dfa60d61fa0910d59a7c061c1d63d97dea54a74bfbd193f8b86a10f1d476",
     "fixtures/swiftui-list/ListApp.swift": "1c9f283dd8310bb59809df6c67a0ba0ac26523a5e52b60a9646502ed1ef6fc29",
     "fixtures/swiftui-list/SwiftUIList.xcodeproj/project.pbxproj": "d738e17624e0752c5558a2719d651fe9c5c77e1d9f1c4fd3e8eba5daeba3884d",

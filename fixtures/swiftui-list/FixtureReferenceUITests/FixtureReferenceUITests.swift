@@ -15,9 +15,11 @@ final class FixtureReferenceUITests: XCTestCase {
         expectation(for: NSPredicate(format: "label == %@", "ready"), evaluatedWith: status)
         waitForExpectations(timeout: 20)
 
-        let list = app.tables.firstMatch
-        XCTAssertTrue(list.exists, "The measured List must be a table")
-        list.swipeUp()
+        // SwiftUI's List is not exposed as a table in the accessibility tree on
+        // this profile; its first row is a static text. Swipe from there.
+        let firstRow = app.staticTexts["Row 0"]
+        XCTAssertTrue(firstRow.waitForExistence(timeout: 10), "The first List row must exist")
+        firstRow.swipeUp()
 
         let after = app.buttons["list.after"]
         XCTAssertTrue(after.exists && after.isHittable, "The after-scroll button must be reachable")
