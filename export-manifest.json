@@ -648,7 +648,7 @@
     "fixtures/swift-concurrency-4/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/swift-concurrency-4/Concurrency4.xcodeproj/project.pbxproj": "1b752b6440255db1fe2b0bb2d7cc7e673b4ce47aa8393dcbe2f2f7ed7dd5f43a",
     "fixtures/swift-concurrency-4/Concurrency4.xcodeproj/xcshareddata/xcschemes/Concurrency4.xcscheme": "cc28f76fb2b67dfb11f948ebea24e0c27b211a658c8b8605a1bee661649b3fcb",
-    "fixtures/swift-concurrency-4/ConcurrencyChecks4.swift": "c0c1e4f7fb3645d4f3e1938f0a2e4a8bceb4e237f1a3728c91dfc3a497bdf3a9",
+    "fixtures/swift-concurrency-4/ConcurrencyChecks4.swift": "ae5f321c79b255b34aff3830955fed7789aac0111571c6e48eb774dc3ccc04f3",
     "fixtures/swift-concurrency-4/FixtureReferenceUITests/FixtureReferenceUITests.swift": "4b483a0c2efabd1418ad4e44b192bdf40962ca362cd4a71249efedd1a9b1be8e",
     "fixtures/swift-concurrency-4/Info.plist": "6b9804886534390e17dffa265f67f27e1386517207264df5fed5c446512e3e39",
     "fixtures/swift-concurrency-4/ViewController.swift": "874f2fcdd83c40b49972ad310eadeac7534b995a4dd77bf8ae983f269969b6e3",

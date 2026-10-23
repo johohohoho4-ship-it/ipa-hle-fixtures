@@ -16,6 +16,10 @@ private func throwingChild4() async throws -> Int {
     throw Boom4.value
 }
 
+private func value4() async -> Int {
+    5
+}
+
 /// E7 fixture: unsafe continuations, task priority, throwing async let,
 /// cancellation of a group child, discarding group, ContinuousClock sleep
 /// and an AsyncThrowingStream that finishes with an error.
@@ -70,6 +74,37 @@ func concurrencyChecks4() async -> [String] {
     parent.cancel()
     let cancelled = await parent.value
     lines.append("CC4_CANCEL=\(cancelled.first == true)")
+
+    // A task added after cancelAll starts cancelled (Swift 5.9 group semantics).
+    let afterCancelAll = await Task<[Bool], Never> {
+        await withTaskGroup(of: Bool.self) { group in
+            group.cancelAll()
+            group.addTask { Task.isCancelled }
+            var values: [Bool] = []
+            for await value in group {
+                values.append(value)
+            }
+            return values
+        }
+    }.value
+    lines.append("CC4_CANCELALL=\(afterCancelAll.first == true)")
+
+    // async let inside a group child (a structured child of a group child).
+    let asyncInGroup = await Task<[String], Never> {
+        await withTaskGroup(of: String.self) { group in
+            group.addTask {
+                async let inner = value4()
+                let value = await inner
+                return "inner\(value)"
+            }
+            var values: [String] = []
+            for await value in group {
+                values.append(value)
+            }
+            return values
+        }
+    }.value
+    lines.append("CC4_ASYNCINGROUP=\(asyncInGroup.first == "inner5")")
 
     let counter = Counter4()
     await withDiscardingTaskGroup { group in
