@@ -1,0 +1,7 @@
+{
+  "project": "IndexPathFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.indexpath",
+  "app_name": "IndexPathFixture",
+  "minimum_ios": "16.0",
+  "scheme": "IndexPathFixture"
+}
