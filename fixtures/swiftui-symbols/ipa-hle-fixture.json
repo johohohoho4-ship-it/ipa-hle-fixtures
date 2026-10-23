@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUISymbols.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuisymbols",
+  "app_name": "SwiftUISymbols",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUISymbols"
+}
