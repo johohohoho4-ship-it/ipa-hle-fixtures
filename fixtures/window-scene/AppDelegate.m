@@ -2,6 +2,16 @@
 #import "ViewController.h"
 #include <stdio.h>
 
+static void PrintWindows(const char *phase, UIWindowScene *scene, UIWindow *root) {
+    UIApplication *app = UIApplication.sharedApplication;
+    printf("WS_WINDOWS phase=%s appCount=%lu sceneCount=%lu appHasRoot=%d sceneHasRoot=%d "
+           "appKeyNil=%d sceneKeyNil=%d appKeyIsRoot=%d sceneKeyIsRoot=%d\n",
+           phase, (unsigned long)app.windows.count, (unsigned long)scene.windows.count,
+           root && [app.windows containsObject:root], root && [scene.windows containsObject:root],
+           app.keyWindow == nil, scene.keyWindow == nil,
+           root && app.keyWindow == root, root && scene.keyWindow == root);
+}
+
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)options {
     printf("WS_APP launch\n");
@@ -20,7 +30,9 @@
 @implementation SceneDelegate
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)options {
     UIWindowScene *windowScene = (UIWindowScene *)scene;
+    PrintWindows("beforeWindow", windowScene, nil);
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    PrintWindows("afterConstructor", windowScene, self.window);
     printf("WS_CONNECT sameSession=%d assigned=%d sceneClass=%s\n", scene.session == session,
            self.window.windowScene == windowScene, NSStringFromClass(scene.class).UTF8String);
     // Sol 18be622e: the native start does not log WS_CONFIG from
@@ -32,5 +44,6 @@
            session.role.UTF8String, probe.role.UTF8String, probe.name.UTF8String);
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
+    PrintWindows("afterKey", windowScene, self.window);
 }
 @end

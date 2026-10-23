@@ -54,9 +54,19 @@ static void PrintRect(const char *phase, const char *name, CGRect rect) {
         PrintRect(phase, "initSceneFrame", self.sceneWindowProbe.frame);
         self.frameWindowProbe.windowScene = scene;
         printf("WS_BIND phase=portrait afterSet=%d\n", self.frameWindowProbe.windowScene == scene);
+        printf("WS_MEMBERS phase=afterSet sceneHasFrame=%d appHasFrame=%d sceneHasInit=%d appHasInit=%d\n",
+               [scene.windows containsObject:self.frameWindowProbe],
+               [UIApplication.sharedApplication.windows containsObject:self.frameWindowProbe],
+               [scene.windows containsObject:self.sceneWindowProbe],
+               [UIApplication.sharedApplication.windows containsObject:self.sceneWindowProbe]);
         PrintRect(phase, "afterSetFrame", self.frameWindowProbe.frame);
         self.frameWindowProbe.windowScene = nil;
         printf("WS_BIND phase=portrait afterClearNil=%d\n", self.frameWindowProbe.windowScene == nil);
+        printf("WS_MEMBERS phase=afterClear sceneHasFrame=%d appHasFrame=%d sceneHasInit=%d appHasInit=%d\n",
+               [scene.windows containsObject:self.frameWindowProbe],
+               [UIApplication.sharedApplication.windows containsObject:self.frameWindowProbe],
+               [scene.windows containsObject:self.sceneWindowProbe],
+               [UIApplication.sharedApplication.windows containsObject:self.sceneWindowProbe]);
         PrintRect(phase, "afterClearFrame", self.frameWindowProbe.frame);
     } else {
         printf("WS_BIND phase=%s initStillAssigned=%d frameStillNil=%d\n", phase,
