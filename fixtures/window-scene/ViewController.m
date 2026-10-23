@@ -68,6 +68,15 @@ static void PrintRect(const char *phase, const char *name, CGRect rect) {
                [UIApplication.sharedApplication.windows containsObject:self.frameWindowProbe],
                [scene.windows containsObject:self.sceneWindowProbe],
                [UIApplication.sharedApplication.windows containsObject:self.sceneWindowProbe]);
+        // Sol's follow-up: does detaching the non-key frame window change the
+        // key window at all? Observations only, no expected value.
+        printf("WS_KEY phase=afterClear appKeyNil=%d sceneKeyNil=%d appKeyIsRoot=%d sceneKeyIsRoot=%d frameIsKey=%d sceneIsKey=%d\n",
+               UIApplication.sharedApplication.keyWindow == nil,
+               scene.keyWindow == nil,
+               UIApplication.sharedApplication.keyWindow == self.view.window,
+               scene.keyWindow == self.view.window,
+               self.frameWindowProbe.isKeyWindow,
+               self.sceneWindowProbe.isKeyWindow);
         PrintRect(phase, "afterClearFrame", self.frameWindowProbe.frame);
     } else {
         printf("WS_BIND phase=%s initStillAssigned=%d frameStillNil=%d\n", phase,

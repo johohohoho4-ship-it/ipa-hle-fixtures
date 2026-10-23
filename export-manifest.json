@@ -880,7 +880,7 @@
     "fixtures/window-scene/FixtureReferenceUITests/FixtureReferenceUITests.m": "7aa7fee49ce93ec0b349e6494c7f284455b33638c53a75517096e46e4926bd8b",
     "fixtures/window-scene/Info.plist": "5b43d803902720f2eeec84677fda9ef85fad2872980e9996083417f6f66b74c5",
     "fixtures/window-scene/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
-    "fixtures/window-scene/ViewController.m": "41f981e39a8e6fcf145fcfc07c067dbc0cfa1e4511808c9153efcd311e644f96",
+    "fixtures/window-scene/ViewController.m": "64b94723503c27c709c25445aaee21326912a3ef51e644987324f9b573407c74",
     "fixtures/window-scene/WindowScene.xcodeproj/project.pbxproj": "e35c40c69dc23341723ffeb163b7fa4dae8a542dfa7293fa24804bbf7b176ae9",
     "fixtures/window-scene/WindowScene.xcodeproj/xcshareddata/xcschemes/WindowScene.xcscheme": "cc049670136ca75b281eea93cab69c2dec09e0a573ba193b36b1654b9541a1f1",
     "fixtures/window-scene/ipa-hle-fixture.json": "9f7a246ea03569cc1ca268089a8a637d604ae786ceaca6dfec172bb96467abf3",
