@@ -1,4 +1,3 @@
-import SwiftUI
 import UIKit
 import Foundation
 import Darwin
@@ -84,7 +83,7 @@ enum IndexPathMeasurement {
 
         var visited: [Int] = []
         for index in many { visited.append(index) }
-        fixtureLog("IP_ITERATION indices=[\(visited.map(String.init).joined(separator: ", "))]"
+        fixtureLog("IP_ITERATION indices=[\(visited.map { String($0) }.joined(separator: ", "))]"
                    + " count=\(visited.count)")
 
         fixtureLog("IP_DONE")
@@ -92,24 +91,28 @@ enum IndexPathMeasurement {
 }
 
 @main
-struct IndexPathFixtureApp: App {
-    init() {
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 #if targetEnvironment(simulator)
         let log = NSTemporaryDirectory() + "ipa-hle-console.log"
         log.withCString { _ = freopen($0, "w", stdout) }
         setvbuf(stdout, nil, _IONBF, 0)
 #endif
         IndexPathMeasurement.run()
-    }
 
-    var body: some Scene {
-        WindowGroup {
-            VStack(spacing: 8) {
-                Text("IndexPath measurement")
-                Text("ready")
-                    .accessibilityIdentifier("ip.status")
-            }
-            .padding()
-        }
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        let controller = UIViewController()
+        controller.view.backgroundColor = .white
+        let label = UILabel(frame: CGRect(x: 20, y: 100, width: 320, height: 44))
+        label.text = "ready"
+        label.accessibilityIdentifier = "ip.status"
+        controller.view.addSubview(label)
+        window.rootViewController = controller
+        window.makeKeyAndVisible()
+        self.window = window
+        return true
     }
 }
