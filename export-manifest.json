@@ -443,7 +443,7 @@
     "fixtures/corpus-githubfollowers/GitHubFollowersUITests/GitHubFollowersUITests.swift": "01b95ef8a41121f85f024cb65a0a0fa416a5bc70775399c08abcf44593802ca2",
     "fixtures/corpus-githubfollowers/GitHubFollowersUITests/GitHubFollowersUITestsLaunchTests.swift": "af3ef55e063eb252d0206763367ea1ec9b64a7cbe19d20bf3535f6e7ba00e5b1",
     "fixtures/corpus-githubfollowers/ipa-hle-fixture.json": "9ad92007b74294e1181d7a4b9045edd6ad08ea5f0f54005336f148dccbf307a9",
-    "fixtures/corpus-lfcoloringbook/LFColoringBook.xcodeproj/project.pbxproj": "67bfb95346b40c9e70fdc39b4ca5724c9d66d4660ba1532823741eb8474ce9cb",
+    "fixtures/corpus-lfcoloringbook/LFColoringBook.xcodeproj/project.pbxproj": "a1933baed44098bffe24e4200885a337e638a594d41b0b5eb9e843dddc639a32",
     "fixtures/corpus-lfcoloringbook/LFColoringBook.xcodeproj/xcshareddata/xcschemes/LFColoringBook.xcscheme": "05e3d40b4d9780de9ef4c88d530366d504bf6856886045cea22b6729d149e8d7",
     "fixtures/corpus-lfcoloringbook/LFColoringBook/AppDelegate.swift": "9a3bc648043e21f2461630cd6cb8e59a9f4cbe4d3aa61eb1fd1279a3183212ba",
     "fixtures/corpus-lfcoloringbook/LFColoringBook/Assets.xcassets/AccentColor.colorset/Contents.json": "9af65086fa30b49252fae1a1225731691de794f7775af74d71befeb507d12b7c",
