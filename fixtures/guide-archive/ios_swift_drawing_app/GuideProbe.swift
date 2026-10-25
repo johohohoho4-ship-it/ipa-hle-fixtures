@@ -37,6 +37,8 @@ final class GuideProbe {
 		attachStatus(to: controller)
 		let top = controller.topLayoutGuide
 		let bottom = controller.bottomLayoutGuide
+		let topRepeat = controller.topLayoutGuide
+		let bottomRepeat = controller.bottomLayoutGuide
 		let view = controller.view!
 		let topObject = top as AnyObject
 		let bottomObject = bottom as AnyObject
@@ -46,6 +48,15 @@ final class GuideProbe {
 		let bottomOwner = bottomGuide?.owningView
 		let topFrame = topGuide?.layoutFrame ?? .zero
 		let bottomFrame = bottomGuide?.layoutFrame ?? .zero
+		let topView = top as? UIView
+		let bottomView = bottom as? UIView
+
+		log(String(format: "GA_KIND phase=%@ topIsUIView=%d bottomIsUIView=%d topIsLayoutGuide=%d bottomIsLayoutGuide=%d topClass=%@ topSuper=%@ bottomClass=%@ bottomSuper=%@ topViewFrame=%@ bottomViewFrame=%@",
+			phase,
+			topView != nil ? 1 : 0, bottomView != nil ? 1 : 0,
+			topGuide != nil ? 1 : 0, bottomGuide != nil ? 1 : 0,
+			className(topObject), superName(topObject), className(bottomObject), superName(bottomObject),
+			frameText(topView), frameText(bottomView)))
 
 		log(String(format: "GA_GUIDE phase=%@ top=%.1f bottom=%.1f topClass=%@ bottomClass=%@ distinct=%d topOwner=%@ bottomOwner=%@ topFrame=%.1f,%.1f,%.1f,%.1f bottomFrame=%.1f,%.1f,%.1f,%.1f",
 			phase,
@@ -57,8 +68,10 @@ final class GuideProbe {
 			Double(bottomFrame.origin.x), Double(bottomFrame.origin.y), Double(bottomFrame.size.width), Double(bottomFrame.size.height)))
 
 		let safeArea = view.safeAreaLayoutGuide as AnyObject
-		log(String(format: "GA_IDENTITY phase=%@ topProperty=1 bottomProperty=1 topIsSafe=%d bottomIsSafe=%d topOwnerIsView=%d bottomOwnerIsView=%d",
+		log(String(format: "GA_IDENTITY phase=%@ topRepeat=%d bottomRepeat=%d topIsSafe=%d bottomIsSafe=%d topOwnerIsView=%d bottomOwnerIsView=%d",
 			phase,
+			topObject === (topRepeat as AnyObject) ? 1 : 0,
+			bottomObject === (bottomRepeat as AnyObject) ? 1 : 0,
 			topObject === safeArea ? 1 : 0,
 			bottomObject === safeArea ? 1 : 0,
 			topOwner === view ? 1 : 0,
@@ -131,6 +144,20 @@ final class GuideProbe {
 	private func ownerName(_ view: UIView?) -> String {
 		guard let view = view else { return "none" }
 		return String(cString: object_getClassName(view))
+	}
+
+	private func superName(_ object: AnyObject?) -> String {
+		guard let object = object, let cls = object_getClass(object), let parent = class_getSuperclass(cls) else {
+			return "none"
+		}
+		return String(cString: class_getName(parent))
+	}
+
+	private func frameText(_ view: UIView?) -> String {
+		guard let view = view else { return "none" }
+		let frame = view.frame
+		return String(format: "%.1f,%.1f,%.1f,%.1f",
+			Double(frame.origin.x), Double(frame.origin.y), Double(frame.size.width), Double(frame.size.height))
 	}
 }
 
