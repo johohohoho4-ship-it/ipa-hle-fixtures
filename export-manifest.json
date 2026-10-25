@@ -83,7 +83,7 @@
     "fixtures/audio/ViewController.m": "c4dd2762257d99edc8f92aa58dc7fcc32359aafbd2c53efc0425f0c7b430406b",
     "fixtures/audio/beep.wav": "ee5ab768585360b387e16de81c2140d7dda09d2e9849e2b3d6bad69cf4af513c",
     "fixtures/audio/ipa-hle-fixture.json": "c1d0eb84b87ab3d6634d8e70f8575d90f2e4cec425571e0d2b7b82ef93fe0c5f",
-    "fixtures/audio/main.m": "e31f6c5e1671beb0435e51c04487d6985517376a8937134b642a17135dbc80fb",
+    "fixtures/audio/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/autoresizing/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
     "fixtures/autoresizing/AppDelegate.m": "0487134a3d4d6126d8499f006318beff973c14ec4098d4c747e07d95eec0150d",
     "fixtures/autoresizing/AutoresizingFixture.xcodeproj/project.pbxproj": "05bf7fc70bf6155436ed48b468f4bb58c3617c3423cfcaa5990ec30f1efa1f69",
