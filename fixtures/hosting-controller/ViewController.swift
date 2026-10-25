@@ -1,0 +1,82 @@
+import SwiftUI
+import UIKit
+
+final class ViewController: UIViewController {
+    private let leftHost = ProbeHost(name: "left", rootView: AnyView(LeftView()))
+    private let rightHost = ProbeHost(name: "right", rootView: AnyView(RightView()))
+    private let status = UILabel()
+    private let replaceButton = UIButton(type: .system)
+    private var didRun = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+
+        addChild(leftHost)
+        addChild(rightHost)
+        for host in [leftHost, rightHost] {
+            host.view.translatesAutoresizingMaskIntoConstraints = false
+            view.addSubview(host.view)
+        }
+        leftHost.didMove(toParent: self)
+        rightHost.didMove(toParent: self)
+
+        status.accessibilityIdentifier = "hc.status"
+        status.text = "running"
+        status.textColor = .black
+        status.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(status)
+
+        replaceButton.setTitle("Replace", for: .normal)
+        replaceButton.accessibilityIdentifier = "hc.replace"
+        replaceButton.addTarget(self, action: #selector(replaceRoot), for: .touchUpInside)
+        replaceButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(replaceButton)
+
+        let safe = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            leftHost.view.leadingAnchor.constraint(equalTo: safe.leadingAnchor),
+            leftHost.view.topAnchor.constraint(equalTo: safe.topAnchor, constant: 40),
+            leftHost.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            leftHost.view.heightAnchor.constraint(equalToConstant: 160),
+            rightHost.view.leadingAnchor.constraint(equalTo: leftHost.view.trailingAnchor),
+            rightHost.view.topAnchor.constraint(equalTo: leftHost.view.topAnchor),
+            rightHost.view.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            rightHost.view.heightAnchor.constraint(equalToConstant: 160),
+            replaceButton.centerXAnchor.constraint(equalTo: safe.centerXAnchor),
+            replaceButton.topAnchor.constraint(equalTo: leftHost.view.bottomAnchor, constant: 20),
+            status.centerXAnchor.constraint(equalTo: safe.centerXAnchor),
+            status.topAnchor.constraint(equalTo: replaceButton.bottomAnchor, constant: 12),
+        ])
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard !didRun else { return }
+        didRun = true
+        layoutProbe()
+    }
+
+    private func layoutProbe() {
+        view.layoutIfNeeded()
+        hcLine("HC_LAYOUT left=\(MemoryLayout<LeftView>.size)/\(MemoryLayout<LeftView>.stride)/\(MemoryLayout<LeftView>.alignment) right=\(MemoryLayout<RightView>.size)/\(MemoryLayout<RightView>.stride)/\(MemoryLayout<RightView>.alignment) replaced=\(MemoryLayout<ReplacedView>.size)/\(MemoryLayout<ReplacedView>.stride)/\(MemoryLayout<ReplacedView>.alignment)")
+        hcLine("HC_ROOT left=LeftView right=RightView wrapper=\(String(describing: type(of: leftHost.rootView)))")
+        hcLine("HC_CHILDREN count=\(children.count) leftParent=\(leftHost.parent === self ? 1 : 0) rightParent=\(rightHost.parent === self ? 1 : 0)")
+        hcLine("HC_FRAME left=\(frameText(leftHost.view)) right=\(frameText(rightHost.view))")
+    }
+
+    private func frameText(_ view: UIView) -> String {
+        let frame = view.frame
+        return String(format: "%.1f,%.1f,%.1f,%.1f",
+                      Double(frame.origin.x), Double(frame.origin.y),
+                      Double(frame.size.width), Double(frame.size.height))
+    }
+
+    @objc private func replaceRoot() {
+        leftHost.rootView = AnyView(ReplacedView())
+        view.layoutIfNeeded()
+        hcLine("HC_ROOTREPLACE to=ReplacedView leftFrame=\(frameText(leftHost.view))")
+        status.text = "HC_DONE"
+        hcLine("HC_DONE")
+    }
+}

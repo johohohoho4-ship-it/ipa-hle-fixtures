@@ -1,0 +1,7 @@
+{
+  "project": "HostingController.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.hostingcontroller",
+  "app_name": "HostingController",
+  "minimum_ios": "15.0",
+  "scheme": "HostingController"
+}
