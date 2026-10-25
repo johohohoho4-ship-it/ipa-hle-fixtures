@@ -3,13 +3,13 @@
 //  ExpenseTracker
 //
 //  Created by Alfian Losari on 19/04/20.
-//  Copyright © 2020 Alfian Losari. All rights reserved.
+//  Copyright (c) 2020 Alfian Losari. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-extension ExpenseLog: Identifiable {
+extension ExpenseLog {
     
     var categoryEnum: Category {
         Category(rawValue: category ?? "") ?? .other

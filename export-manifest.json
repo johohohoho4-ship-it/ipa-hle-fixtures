@@ -284,7 +284,7 @@
     "fixtures/corpus-expensetracker/ExpenseTracker/Info.plist": "118af696872f039fa293e1a67b34e5a7d3117d9b137eecd8ba17d6cae3425d20",
     "fixtures/corpus-expensetracker/ExpenseTracker/Models/Category.swift": "140c5e73ee786cc7635021ff75bf5902e224981fc4466075de0985a46ed609a2",
     "fixtures/corpus-expensetracker/ExpenseTracker/Models/CoreDataStack.swift": "b0dfdb5eba749ed1cc7e2e756744f59f3ae9ebceba410a3182bb301f26cf04ca",
-    "fixtures/corpus-expensetracker/ExpenseTracker/Models/ExpenseLog+Extension.swift": "22facd7f3ed30f93a2c0ed0270c845111c9a2b590a394a5db80c82a5158fcca7",
+    "fixtures/corpus-expensetracker/ExpenseTracker/Models/ExpenseLog+Extension.swift": "3e27425b9a3510adc32ffe5c582727fefe502ef7a63b74abb5b981f569797d22",
     "fixtures/corpus-expensetracker/ExpenseTracker/Models/Sort.swift": "c882d1663289cb83cc5114a79dedf4972f8affe3f1eded4a7842d76709075ab2",
     "fixtures/corpus-expensetracker/ExpenseTracker/Preview Content/Preview Assets.xcassets/Contents.json": "0fd49ba3c3585c709678e0046a821c3c60685ec7063720d30d3a3448be3a208b",
     "fixtures/corpus-expensetracker/ExpenseTracker/SceneDelegate.swift": "5e1df1a701ec3f54f62aa228987a58bbb61afee31ecdf6ef5f89b75a79adfbbd",
