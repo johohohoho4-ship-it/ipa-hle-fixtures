@@ -1,0 +1,7 @@
+{
+  "project": "StackViewRest.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.stackviewrest",
+  "app_name": "StackViewRest",
+  "minimum_ios": "15.0",
+  "scheme": "StackViewRest"
+}
