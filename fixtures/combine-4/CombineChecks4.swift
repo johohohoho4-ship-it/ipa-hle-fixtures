@@ -132,5 +132,41 @@ func combineChecks4() -> [String] {
     emit("CONNECT", "afterConnect=\(afterConnect),afterCancel=\(connectedValues)")
     connector.cancel()
 
+    // (7) flatMap: map counter, inner failure, later outer send, reentrant send from the sink.
+    let outer = PassthroughSubject<Int, MyError>()
+    let inner = PassthroughSubject<Int, MyError>()
+    var mapCalls: [Int] = []
+    var flatValues: [Int] = []
+    var flatCompletion = "none"
+    var transforms = 0
+    let flat = outer
+        .map { value -> Int in
+            mapCalls.append(value)
+            return value
+        }
+        .flatMap { _ -> PassthroughSubject<Int, MyError> in
+            transforms += 1
+            return inner
+        }
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished: flatCompletion = "finished"
+            case .failure: flatCompletion = "failure"
+            }
+        }, receiveValue: { value in
+            flatValues.append(value)
+            if value == 10 {
+                outer.send(3)                 // reentrant upstream send during delivery
+            }
+        })
+    outer.send(1)
+    inner.send(10)
+    inner.send(completion: .failure(.boom))
+    outer.send(2)
+    inner.send(20)
+    pump(0.05)
+    emit("FLATMAP", "mapCalls=\(mapCalls),values=\(flatValues),completion=\(flatCompletion),transforms=\(transforms)")
+    flat.cancel()
+
     return lines
 }
