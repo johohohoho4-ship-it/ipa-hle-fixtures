@@ -408,7 +408,7 @@
     "fixtures/guide-archive/ios_swift_drawing_app/Base.lproj/LaunchScreen.xib": "024be507c3887cfd9a2bb066d15e898a835ed75c466e2a974722c30946b2c990",
     "fixtures/guide-archive/ios_swift_drawing_app/Base.lproj/Main.storyboard": "3557765f9ef1578f6a9e2dced2c51019d1f1a60a06aad92c7e929d6a471121a7",
     "fixtures/guide-archive/ios_swift_drawing_app/DrawingView.swift": "c8fd750ede7484a4a368c721d04d3e6cd805e629da15663594d5dd81c1892ef0",
-    "fixtures/guide-archive/ios_swift_drawing_app/GuideProbe.swift": "f9a6c5a555cbc09cdb5b0ba731d4b7c637f2ca3a872de75359492e880eb7a5b1",
+    "fixtures/guide-archive/ios_swift_drawing_app/GuideProbe.swift": "8983c9c3d2432941437e1965a1cffa9d7c8b9006d53724761b7a5c7a13182bbe",
     "fixtures/guide-archive/ios_swift_drawing_app/Images.xcassets/AppIcon.appiconset/Contents.json": "4d01550b98d59b29cb234605dfd80c3e51882c11e3543316c34c4fc491b251ee",
     "fixtures/guide-archive/ios_swift_drawing_app/Info.plist": "6042955ee81185d6cd0aa334fabc59887a8e4ff533c0f1fd0e39198e518cda9b",
     "fixtures/guide-archive/ios_swift_drawing_app/ViewController.swift": "d0f9e87f28e3873f7e25b8a241c8a5fdc860aea5346a35265d71fc504794050a",

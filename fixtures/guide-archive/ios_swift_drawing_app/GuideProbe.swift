@@ -21,7 +21,7 @@ final class GuideProbe {
 		guard !started else { return }
 		started = true
 		guard let window = controller.view.window else {
-			print("GA_WINDOW missing")
+			log("GA_WINDOW missing")
 			finish(nil)
 			return
 		}
@@ -45,7 +45,7 @@ final class GuideProbe {
 		let topFrame = topGuide?.layoutFrame ?? .zero
 		let bottomFrame = bottomGuide?.layoutFrame ?? .zero
 
-		print(String(format: "GA_GUIDE phase=%@ top=%.1f bottom=%.1f topClass=%@ bottomClass=%@ distinct=%d topOwner=%@ bottomOwner=%@ topFrame=%.1f,%.1f,%.1f,%.1f bottomFrame=%.1f,%.1f,%.1f,%.1f",
+		log(String(format: "GA_GUIDE phase=%@ top=%.1f bottom=%.1f topClass=%@ bottomClass=%@ distinct=%d topOwner=%@ bottomOwner=%@ topFrame=%.1f,%.1f,%.1f,%.1f bottomFrame=%.1f,%.1f,%.1f,%.1f",
 			phase,
 			Double(top.length), Double(bottom.length),
 			className(topObject), className(bottomObject),
@@ -55,7 +55,7 @@ final class GuideProbe {
 			Double(bottomFrame.origin.x), Double(bottomFrame.origin.y), Double(bottomFrame.size.width), Double(bottomFrame.size.height)))
 
 		let safeArea = view.safeAreaLayoutGuide as AnyObject
-		print(String(format: "GA_IDENTITY phase=%@ topProperty=1 bottomProperty=1 topIsSafe=%d bottomIsSafe=%d topOwnerIsView=%d bottomOwnerIsView=%d",
+		log(String(format: "GA_IDENTITY phase=%@ topProperty=1 bottomProperty=1 topIsSafe=%d bottomIsSafe=%d topOwnerIsView=%d bottomOwnerIsView=%d",
 			phase,
 			topObject === safeArea ? 1 : 0,
 			bottomObject === safeArea ? 1 : 0,
@@ -72,7 +72,7 @@ final class GuideProbe {
 			if !firstIsTop && !secondIsTop && !firstIsBottom && !secondIsBottom {
 				continue
 			}
-			print(String(format: "GA_CONSTRAINT phase=%@ first=%@.%ld second=%@.%ld relation=%ld constant=%.1f priority=%.1f active=%d",
+			log(String(format: "GA_CONSTRAINT phase=%@ first=%@.%ld second=%@.%ld relation=%ld constant=%.1f priority=%.1f active=%d",
 				phase,
 				className(first), constraint.firstAttribute.rawValue,
 				className(second), constraint.secondAttribute.rawValue,
@@ -87,7 +87,7 @@ final class GuideProbe {
 			attachStatus(to: controller)
 		}
 		statusLabel?.text = "GA_DONE"
-		print("GA_DONE")
+		log("GA_DONE")
 	}
 
 	private func attachStatus(to controller: UIViewController) {
@@ -105,6 +105,19 @@ final class GuideProbe {
 		if label.superview !== controller.view {
 			label.removeFromSuperview()
 			controller.view.addSubview(label)
+		}
+	}
+
+	private func log(_ line: String) {
+		FileHandle.standardOutput.write(Data((line + "\n").utf8))
+		let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("ipa-hle-console.log")
+		let data = Data((line + "\n").utf8)
+		if let handle = try? FileHandle(forWritingTo: url) {
+			handle.seekToEndOfFile()
+			handle.write(data)
+			handle.closeFile()
+		} else {
+			FileManager.default.createFile(atPath: url.path, contents: data)
 		}
 	}
 
