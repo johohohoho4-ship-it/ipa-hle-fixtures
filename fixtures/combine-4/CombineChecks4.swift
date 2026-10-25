@@ -168,5 +168,37 @@ func combineChecks4() -> [String] {
     emit("FLATMAP", "mapCalls=\(mapCalls),values=\(flatValues),completion=\(flatCompletion),transforms=\(transforms)")
     flat.cancel()
 
+    // (8) the same sequence, but pump between the inner failure and the later outer send,
+    // so a deferred cancellation would have run.
+    let outerAsync = PassthroughSubject<Int, MyError>()
+    let innerAsync = PassthroughSubject<Int, MyError>()
+    var asyncMapCalls: [Int] = []
+    var asyncValues: [Int] = []
+    var asyncCompletion = "none"
+    var asyncTransforms = 0
+    let flatAsync = outerAsync
+        .map { value -> Int in
+            asyncMapCalls.append(value)
+            return value
+        }
+        .flatMap { _ -> PassthroughSubject<Int, MyError> in
+            asyncTransforms += 1
+            return innerAsync
+        }
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished: asyncCompletion = "finished"
+            case .failure: asyncCompletion = "failure"
+            }
+        }, receiveValue: { asyncValues.append($0) })
+    outerAsync.send(1)
+    innerAsync.send(10)
+    innerAsync.send(completion: .failure(.boom))
+    pump(0.05)
+    outerAsync.send(2)
+    pump(0.05)
+    emit("FLATMAP_ASYNC", "mapCalls=\(asyncMapCalls),values=\(asyncValues),completion=\(asyncCompletion),transforms=\(asyncTransforms)")
+    flatAsync.cancel()
+
     return lines
 }

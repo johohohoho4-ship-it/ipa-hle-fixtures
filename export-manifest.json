@@ -163,7 +163,7 @@
     "fixtures/combine-4/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/combine-4/Combine4.xcodeproj/project.pbxproj": "92b269786318f8beb1ccc7dc4de01a7664fa2cfef7be19b55ed048793d1f513a",
     "fixtures/combine-4/Combine4.xcodeproj/xcshareddata/xcschemes/Combine4.xcscheme": "59d29213e7167de269ed6e457022ef1760725e0621a9bb0957b3fc338f313090",
-    "fixtures/combine-4/CombineChecks4.swift": "18fc50046d512e54422cc4e998c9cc18f6d43c80ad6006c7a8b913ac2edf4df0",
+    "fixtures/combine-4/CombineChecks4.swift": "51b5112dc76473d7b5f0e968eb2802b6c68c71b137a70b320a4eeaf45b4ee144",
     "fixtures/combine-4/FixtureReferenceUITests/FixtureReferenceUITests.swift": "c733fc689b9dcbf264703fe01bc11c916b90e5a667495799e74dba34332ee7d3",
     "fixtures/combine-4/Info.plist": "06dd3733148d0f68d8bf422ab0d335a7b0fbb4a2d1e1f552be4030744dcc7d5f",
     "fixtures/combine-4/ViewController.swift": "57a2d687f7bbc7c6fca9e0b54a5be9f0ec5479a42a2945262ce606d75b7cabae",
