@@ -47,33 +47,3 @@ struct ReplacedView: View {
         .background(Color(white: 0.85))
     }
 }
-
-final class ProbeHost<Content: View>: UIHostingController<Content> {
-    let name: String
-    var appearCount = 0
-
-    init(name: String, rootView: Content) {
-        self.name = name
-        super.init(rootView: rootView)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) is not used")
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        hcLine("HC_CALLBACK \(name) willAppear")
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        appearCount += 1
-        hcLine("HC_CALLBACK \(name) didAppear \(appearCount)")
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        hcLine("HC_CALLBACK \(name) didDisappear")
-    }
-}

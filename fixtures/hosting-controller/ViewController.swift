@@ -2,8 +2,8 @@ import SwiftUI
 import UIKit
 
 final class ViewController: UIViewController {
-    private let leftHost = ProbeHost(name: "left", rootView: LeftView())
-    private let rightHost = ProbeHost(name: "right", rootView: RightView())
+    private let leftHost = UIHostingController(rootView: LeftView())
+    private let rightHost = UIHostingController(rootView: RightView())
     private let status = UILabel()
     private let replaceButton = UIButton(type: .system)
     private var didRun = false
@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
 
         addChild(leftHost)
         addChild(rightHost)
-        for host in [leftHost, rightHost] {
+        for host in [leftHost as UIViewController, rightHost as UIViewController] {
             host.view.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview(host.view)
         }
@@ -50,8 +50,14 @@ final class ViewController: UIViewController {
         ])
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        hcLine("HC_CALLBACK parent willAppear")
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        hcLine("HC_CALLBACK parent didAppear")
         guard !didRun else { return }
         didRun = true
         layoutProbe()
