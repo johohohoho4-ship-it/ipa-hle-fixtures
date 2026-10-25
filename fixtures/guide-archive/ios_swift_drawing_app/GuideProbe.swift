@@ -20,6 +20,8 @@ final class GuideProbe {
 	func begin(from controller: UIViewController) {
 		guard !started else { return }
 		started = true
+		let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("ipa-hle-console.log")
+		try? FileManager.default.removeItem(at: url)
 		guard let window = controller.view.window else {
 			log("GA_WINDOW missing")
 			finish(nil)
