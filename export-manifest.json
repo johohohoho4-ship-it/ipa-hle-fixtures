@@ -275,7 +275,7 @@
     "fixtures/corpus-2048/m2048/main.m": "ee6bd06d3f4271b064ab118ce7e3c82fd4c8e10f222ad4e66f068762a7c63861",
     "fixtures/corpus-2048/m2048Tests/en.lproj/InfoPlist.strings": "feb5e820d68ed31f871d2bdaf8d14935ed343a7a875ddd774d5556da8dfd951a",
     "fixtures/corpus-2048/m2048Tests/m2048Tests-Info.plist": "fdf0cc0f89dd4bc9e238c4f0e0ca05f398a89ac27e6f701d93fbe982b286ca2b",
-    "fixtures/corpus-2048/m2048Tests/m2048Tests.m": "cbc7dfe634c92bc1bc84f94949463df69fa585e6d966ff852559fd86f812b47e",
+    "fixtures/corpus-2048/m2048Tests/m2048Tests.m": "c917d6feaf2a5c60d44dacd9fc91d55c6e2c4e50a55e88f6791d1c0aad88da89",
     "fixtures/corpus-cleanstore/CleanStore.xcodeproj/project.pbxproj": "181d6e879701ba7b0761b5c57658d1b675cbcff77a712b97365690f1565b2d9c",
     "fixtures/corpus-cleanstore/CleanStore.xcodeproj/project.xcworkspace/contents.xcworkspacedata": "b06a3928b6e41e8d04b4fa1f38da2dce5a111a3a288c6285815bc1382546403a",
     "fixtures/corpus-cleanstore/CleanStore.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist": "dfa0f9bb85b95ccba9c6811adadf8cb407fb5d52088e89db83ebc308ec448542",

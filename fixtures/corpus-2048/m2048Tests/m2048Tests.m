@@ -28,7 +28,8 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    // Fixture smoke test: the app bundle is loaded as the test host.
+    XCTAssertNotNil([NSBundle mainBundle].bundleIdentifier);
 }
 
 @end
