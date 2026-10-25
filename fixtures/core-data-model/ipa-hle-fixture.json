@@ -1,0 +1,7 @@
+{
+  "project": "CoreDataFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.coredatamodel",
+  "app_name": "CoreDataFixture",
+  "minimum_ios": "15.0",
+  "scheme": "CoreDataFixture"
+}
