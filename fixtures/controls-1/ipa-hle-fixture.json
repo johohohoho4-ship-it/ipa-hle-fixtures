@@ -1,0 +1,7 @@
+{
+  "project": "Controls1Fixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.controls1",
+  "app_name": "Controls1Fixture",
+  "minimum_ios": "15.0",
+  "scheme": "Controls1Fixture"
+}
