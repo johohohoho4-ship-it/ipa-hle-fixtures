@@ -1,4 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface CounterController : UIViewController
+void PERSPrint(NSString *format, ...);
+
+@interface PersistenceController : UIViewController
 @end

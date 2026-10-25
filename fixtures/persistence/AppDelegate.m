@@ -5,7 +5,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    self.window.rootViewController = [[CounterController alloc] init];
+    self.window.rootViewController = [[PersistenceController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }
