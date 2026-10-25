@@ -1,0 +1,7 @@
+{
+  "project": "ExpenseTracker.xcodeproj",
+  "scheme": "ExpenseTrackerCorpus",
+  "app_name": "ExpenseTracker",
+  "bundle_id": "org.ipahle.corpus.expensetracker",
+  "minimum_ios": "13.4"
+}
