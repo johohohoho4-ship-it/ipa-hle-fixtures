@@ -2,8 +2,8 @@ import SwiftUI
 import UIKit
 
 final class ViewController: UIViewController {
-    private let leftHost = ProbeHost(name: "left", rootView: AnyView(LeftView()))
-    private let rightHost = ProbeHost(name: "right", rootView: AnyView(RightView()))
+    private let leftHost = ProbeHost(name: "left", rootView: LeftView())
+    private let rightHost = ProbeHost(name: "right", rootView: RightView())
     private let status = UILabel()
     private let replaceButton = UIButton(type: .system)
     private var didRun = false
@@ -60,7 +60,7 @@ final class ViewController: UIViewController {
     private func layoutProbe() {
         view.layoutIfNeeded()
         hcLine("HC_LAYOUT left=\(MemoryLayout<LeftView>.size)/\(MemoryLayout<LeftView>.stride)/\(MemoryLayout<LeftView>.alignment) right=\(MemoryLayout<RightView>.size)/\(MemoryLayout<RightView>.stride)/\(MemoryLayout<RightView>.alignment) replaced=\(MemoryLayout<ReplacedView>.size)/\(MemoryLayout<ReplacedView>.stride)/\(MemoryLayout<ReplacedView>.alignment)")
-        hcLine("HC_ROOT left=LeftView right=RightView wrapper=\(String(describing: type(of: leftHost.rootView)))")
+        hcLine("HC_ROOT left=LeftView right=RightView wrapper=none")
         hcLine("HC_CHILDREN count=\(children.count) leftParent=\(leftHost.parent === self ? 1 : 0) rightParent=\(rightHost.parent === self ? 1 : 0)")
         hcLine("HC_FRAME left=\(frameText(leftHost.view)) right=\(frameText(rightHost.view))")
     }
@@ -73,9 +73,9 @@ final class ViewController: UIViewController {
     }
 
     @objc private func replaceRoot() {
-        leftHost.rootView = AnyView(ReplacedView())
+        leftHost.rootView = LeftView(replaced: true)
         view.layoutIfNeeded()
-        hcLine("HC_ROOTREPLACE to=ReplacedView leftFrame=\(frameText(leftHost.view))")
+        hcLine("HC_ROOTREPLACE to=LeftView(replaced:true) content=ReplacedView leftFrame=\(frameText(leftHost.view))")
         status.text = "HC_DONE"
         hcLine("HC_DONE")
     }
