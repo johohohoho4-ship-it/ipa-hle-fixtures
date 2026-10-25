@@ -1,6 +1,7 @@
 {
   "source_commit": "e088bd2182d55f0b17618c5b5790e01f30c3fe14",
   "fixtures": [
+    "alerts",
     "audio",
     "autoresizing",
     "b7-framework-regressions",
@@ -84,6 +85,16 @@
   ],
   "files": {
     ".github/workflows/ios-fixture.yml": "4952c3b52a52d466c7f6cba4f84be3ea334365ed4fe14e9183dde3224b6c0eb1",
+    "fixtures/alerts/AlertsFixture.xcodeproj/project.pbxproj": "60fae33cca3b9e47b0cf142fb90030c1e31c75c7f85356620b6c003e6ceae0d3",
+    "fixtures/alerts/AlertsFixture.xcodeproj/xcshareddata/xcschemes/AlertsFixture.xcscheme": "200e48b6214dff4686eb60f13afbfcd9d200a1186fac22a5aa8b86421dace075",
+    "fixtures/alerts/AppDelegate.h": "91288b6c1fb002191dc7e56388518bd96dafa7ececdd55b5cf27eae90d285dc0",
+    "fixtures/alerts/AppDelegate.m": "55d0498bb293328310edb3559d1878b2500553348c31ded1c0c4659d563c78ca",
+    "fixtures/alerts/Controllers.h": "97b7daa7b47233739630a05f3c527d999d37811755e655e79fd1e2dd95e39f6b",
+    "fixtures/alerts/Controllers.m": "bafcac9c9ea9985f97b100934aa3485700ff1692a61a23af3cd0eafe2f0b0e10",
+    "fixtures/alerts/FixtureReferenceUITests/FixtureReferenceUITests.m": "a9c86adf421b662de59c7e2b7394deb503970a8113d2b6ed83f9996ca2a2d3f3",
+    "fixtures/alerts/Info.plist": "d889071204a76c8e699e5e48864d671bd858641b4e8ab4e12f47894bd851d86f",
+    "fixtures/alerts/ipa-hle-fixture.json": "ab3bccf5ebe5eb650eb6ccf636daf89f1d5e2db2acc5c8e6342dbd80012b1f35",
+    "fixtures/alerts/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/audio/AppDelegate.h": "91288b6c1fb002191dc7e56388518bd96dafa7ececdd55b5cf27eae90d285dc0",
     "fixtures/audio/AppDelegate.m": "467e9b500cebcc54eabc765f15008229c5b8dcb1ae2982ed1ea1ff5b455ee0ac",
     "fixtures/audio/AudioFixture.xcodeproj/project.pbxproj": "a62d5c3694e9af6a419d9824e7f38f40bd2170d67353c2fd9f7ea3a0c0a3931f",

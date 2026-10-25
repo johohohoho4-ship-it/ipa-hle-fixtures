@@ -1,0 +1,7 @@
+{
+  "project": "AlertsFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.alerts",
+  "app_name": "AlertsFixture",
+  "minimum_ios": "15.0",
+  "scheme": "AlertsFixture"
+}
