@@ -3,5 +3,5 @@
   "scheme": "PongCorpus",
   "app_name": "Pong",
   "bundle_id": "org.ipahle.corpus.pong",
-  "minimum_ios": "11.4"
+  "minimum_ios": "12.0"
 }
