@@ -1,0 +1,7 @@
+{
+  "project": "LFColoringBook.xcodeproj",
+  "scheme": "LFColoringBook",
+  "app_name": "LFColoringBook",
+  "bundle_id": "org.ipahle.corpus.lfcoloringbook",
+  "minimum_ios": "13.0"
+}
