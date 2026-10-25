@@ -8,10 +8,22 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@main
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+
+	static func main() {
+#if targetEnvironment(simulator)
+		// XCUITest launches a separate app process; its stdout is not included in
+		// the test runner's console log. Keep the same protocol in a file.
+		let log = NSTemporaryDirectory() + "ipa-hle-console.log"
+		log.withCString { _ = freopen($0, "w", stdout) }
+		setvbuf(stdout, nil, _IONBF, 0)
+#endif
+		_ = UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil,
+			NSStringFromClass(AppDelegate.self))
+	}
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 		return true
@@ -41,4 +53,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

@@ -20,8 +20,6 @@ final class GuideProbe {
 	func begin(from controller: UIViewController) {
 		guard !started else { return }
 		started = true
-		let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("ipa-hle-console.log")
-		try? FileManager.default.removeItem(at: url)
 		guard let window = controller.view.window else {
 			log("GA_WINDOW missing")
 			finish(nil)
@@ -124,16 +122,7 @@ final class GuideProbe {
 	}
 
 	private func log(_ line: String) {
-		FileHandle.standardOutput.write(Data((line + "\n").utf8))
-		let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("ipa-hle-console.log")
-		let data = Data((line + "\n").utf8)
-		if let handle = try? FileHandle(forWritingTo: url) {
-			handle.seekToEndOfFile()
-			handle.write(data)
-			handle.closeFile()
-		} else {
-			FileManager.default.createFile(atPath: url.path, contents: data)
-		}
+		print(line)
 	}
 
 	private func className(_ object: AnyObject?) -> String {
