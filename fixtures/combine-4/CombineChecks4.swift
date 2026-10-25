@@ -132,5 +132,73 @@ func combineChecks4() -> [String] {
     emit("CONNECT", "afterConnect=\(afterConnect),afterCancel=\(connectedValues)")
     connector.cancel()
 
+    // (7) flatMap: map counter, inner failure, later outer send, reentrant send from the sink.
+    let outer = PassthroughSubject<Int, MyError>()
+    let inner = PassthroughSubject<Int, MyError>()
+    var mapCalls: [Int] = []
+    var flatValues: [Int] = []
+    var flatCompletion = "none"
+    var transforms = 0
+    let flat = outer
+        .map { value -> Int in
+            mapCalls.append(value)
+            return value
+        }
+        .flatMap { _ -> PassthroughSubject<Int, MyError> in
+            transforms += 1
+            return inner
+        }
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished: flatCompletion = "finished"
+            case .failure: flatCompletion = "failure"
+            }
+        }, receiveValue: { value in
+            flatValues.append(value)
+            if value == 10 {
+                outer.send(3)                 // reentrant upstream send during delivery
+            }
+        })
+    outer.send(1)
+    inner.send(10)
+    inner.send(completion: .failure(.boom))
+    outer.send(2)
+    inner.send(20)
+    pump(0.05)
+    emit("FLATMAP", "mapCalls=\(mapCalls),values=\(flatValues),completion=\(flatCompletion),transforms=\(transforms)")
+    flat.cancel()
+
+    // (8) the same sequence, but pump between the inner failure and the later outer send,
+    // so a deferred cancellation would have run.
+    let outerAsync = PassthroughSubject<Int, MyError>()
+    let innerAsync = PassthroughSubject<Int, MyError>()
+    var asyncMapCalls: [Int] = []
+    var asyncValues: [Int] = []
+    var asyncCompletion = "none"
+    var asyncTransforms = 0
+    let flatAsync = outerAsync
+        .map { value -> Int in
+            asyncMapCalls.append(value)
+            return value
+        }
+        .flatMap { _ -> PassthroughSubject<Int, MyError> in
+            asyncTransforms += 1
+            return innerAsync
+        }
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished: asyncCompletion = "finished"
+            case .failure: asyncCompletion = "failure"
+            }
+        }, receiveValue: { asyncValues.append($0) })
+    outerAsync.send(1)
+    innerAsync.send(10)
+    innerAsync.send(completion: .failure(.boom))
+    pump(0.05)
+    outerAsync.send(2)
+    pump(0.05)
+    emit("FLATMAP_ASYNC", "mapCalls=\(asyncMapCalls),values=\(asyncValues),completion=\(asyncCompletion),transforms=\(asyncTransforms)")
+    flatAsync.cancel()
+
     return lines
 }
