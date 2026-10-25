@@ -1,0 +1,7 @@
+{
+  "project": "m2048.xcodeproj",
+  "scheme": "m2048Corpus",
+  "app_name": "m2048",
+  "bundle_id": "org.ipahle.corpus.m2048",
+  "minimum_ios": "12.0"
+}
