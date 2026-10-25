@@ -1,0 +1,7 @@
+{
+  "project": "TabBarFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.tabbar",
+  "app_name": "TabBarFixture",
+  "minimum_ios": "15.0",
+  "scheme": "TabBarFixture"
+}
