@@ -1,0 +1,7 @@
+{
+  "project": "SwiftHashable2.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swifthashable2",
+  "app_name": "SwiftHashable2",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftHashable2"
+}
