@@ -67,6 +67,5 @@ func hashableChecks2() -> [String] {
     lines.append("HSH2_DICT_MIXED=\(dictionary.count):"
                  + lookedUp.map(String.init).joined(separator: ","))
 
-    lines.append("HSH2_DONE")
     return lines
 }
