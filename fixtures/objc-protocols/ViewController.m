@@ -77,10 +77,14 @@ static NSInteger unrelatedMethod(id receiver, SEL selector) { return 1; }
 }
 - (id)forwardingTargetForSelector:(SEL)selector { return _forwardTarget; }
 @end
+static NSMutableArray<NSString *> *failedChecks;
 static BOOL check(const char *name, BOOL value) {
-    printf("D1P %s=%d\n", name, value ? 1 : 0); return value;
+    printf("D1P %s=%d\n", name, value ? 1 : 0);
+    if (!value) [failedChecks addObject:@(name)];
+    return value;
 }
 static BOOL probe(void) {
+    failedChecks = [NSMutableArray array];
     Protocol *root = @protocol(DetachedRoot), *parent = @protocol(DetachedParent);
     Protocol *grand = @protocol(DetachedGrandparent), *unused = @protocol(UnusedDetached);
     BOOL ok = check("standalone_lookup", objc_getProtocol("UnusedDetached") == unused);
@@ -158,5 +162,9 @@ static BOOL probe(void) {
     label.text = ok ? @"PROTOCOL_OK" : @"PROTOCOL_FAILED";
     label.accessibilityIdentifier = @"protocol.status";
     [self.view addSubview:label];
+    UILabel *details = [[UILabel alloc] initWithFrame:CGRectMake(20, 210, 340, 60)];
+    details.text = failedChecks.count ? [failedChecks componentsJoinedByString:@","] : @"none";
+    details.accessibilityIdentifier = @"protocol.details";
+    [self.view addSubview:details];
 }
 @end
