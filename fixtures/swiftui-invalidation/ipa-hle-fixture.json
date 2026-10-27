@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUIInvalidation.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuiinvalidation",
+  "app_name": "SwiftUIInvalidation",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftUIInvalidation"
+}

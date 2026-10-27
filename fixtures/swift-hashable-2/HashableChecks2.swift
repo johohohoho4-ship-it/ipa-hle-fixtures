@@ -53,11 +53,12 @@ func hashableChecks2() -> [String] {
     lines.append("HSH2_NSOBJECT=\(equality(AnyHashable(Obj(1)), AnyHashable(Obj(1))))")
     lines.append("HSH2_NSNUMBER_INT=\(equality(AnyHashable(NSNumber(value: 1)), AnyHashable(1)))")
 
-    var dictionary: [AnyHashable: Int] = [
-        AnyHashable(1): 10,
-        AnyHashable(1.0): 20,
-        AnyHashable(Int8(1)): 30,
-    ]
+    // Individual assignments: a literal with these three keys would trap at
+    // runtime because they compare equal ("duplicate keys").
+    var dictionary: [AnyHashable: Int] = [:]
+    dictionary[AnyHashable(1)] = 10
+    dictionary[AnyHashable(1.0)] = 20
+    dictionary[AnyHashable(Int8(1))] = 30
     let lookedUp = [
         dictionary[AnyHashable(1)] ?? -1,
         dictionary[AnyHashable(1.0)] ?? -1,
