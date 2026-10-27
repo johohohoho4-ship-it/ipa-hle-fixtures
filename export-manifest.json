@@ -746,7 +746,7 @@
     "fixtures/objc-protocols/ObjCProtocolFixture.xcodeproj/project.pbxproj": "66f5941e433e676cd9cf1a9590d9caecd5f0500b41b1a51ae3cf7d6ef05d9139",
     "fixtures/objc-protocols/ObjCProtocolFixture.xcodeproj/xcshareddata/xcschemes/ObjCProtocolFixture.xcscheme": "f05ec0f1742c2b663fb4cb91065ac059df67f5cd84b7f0e562876a27626768b9",
     "fixtures/objc-protocols/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
-    "fixtures/objc-protocols/ViewController.m": "9de306cec5c7561d1e6f12481d121ff37f6fc1af9bf10022dd15ed8d83a051b1",
+    "fixtures/objc-protocols/ViewController.m": "dfdf4bd707bd3c001806d99fe4abea9501cc775b13e96129f264e49299cf67cf",
     "fixtures/objc-protocols/ipa-hle-fixture.json": "1337eb16bca9419aabae99f329b1eb56d9b13825b842b8760c986d9e5dc0b73d",
     "fixtures/objc-protocols/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/pan/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",
