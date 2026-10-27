@@ -90,9 +90,11 @@ struct ContentView: View {
     @State private var phase = "running"
     @State private var didStart = false
 
-    /// Non-POD child value: equal for the first change, changed for the second.
+    /// Non-POD child value: equal text with a new heap buffer for the first change (longer than the
+    /// small-string limit), a different text for the second.
     private var title: String {
-        value < 2 ? "same" : "changed-\(value)"
+        value < 2 ? String(repeating: "x", count: 24)
+                  : "changed-" + String(repeating: "y", count: 16) + "-\(value)"
     }
 
     var body: some View {
