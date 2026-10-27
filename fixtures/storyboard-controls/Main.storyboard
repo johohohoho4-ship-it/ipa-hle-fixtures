@@ -44,16 +44,14 @@
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ada" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fieldV">
                                 <rect key="frame" x="20" y="260" width="200" height="34"/>
-                                <accessibility key="accessibilityConfiguration" identifier="sbctl.field"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="c7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="switchV">
                                 <rect key="frame" x="240" y="261.66666666666669" width="51" height="31"/>
-                                <accessibility key="accessibilityConfiguration" identifier="sbctl.switch"/>
                                 <connections>
                                     <action selector="toggled:" destination="controlsVC" eventType="valueChanged" id="act2"/>
                                 </connections>
@@ -61,11 +59,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tapV">
                                 <rect key="frame" x="20" y="320" width="120" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <accessibility key="accessibilityConfiguration" identifier="sbctl.tap"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="c12"/>
-                                    <constraint firstAttribute="height" constant="60" id="c13"/>
-                                </constraints>
                                 <gestureRecognizers>
                                     <tapGestureRecognizer numberOfTapsRequired="2" id="tapGR">
                                         <connections>
@@ -73,6 +66,10 @@
                                         </connections>
                                     </tapGestureRecognizer>
                                 </gestureRecognizers>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="c12"/>
+                                    <constraint firstAttribute="height" constant="60" id="c13"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="controlsSafe"/>

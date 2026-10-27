@@ -11,6 +11,12 @@ static NSString *Frame(CGRect r) { return [NSString stringWithFormat:@"%g,%g,%g,
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Die Bezeichner stehen bewusst im Code, nicht im Storyboard: der Nib-Lader soll die
+    // Kontrollklassen selbst liefern, und der XCUITest braucht nur stabile Namen.
+    self.stackView.accessibilityIdentifier = @"sbctl.stack";
+    self.nameField.accessibilityIdentifier = @"sbctl.field";
+    self.toggle.accessibilityIdentifier = @"sbctl.switch";
+    self.tapView.accessibilityIdentifier = @"sbctl.tap";
     printf("SBCTL load outlets stack=%d field=%d toggle=%d tap=%d labels=%lu\n", self.stackView != nil, self.nameField != nil,
            self.toggle != nil, self.tapView != nil, (unsigned long)self.labels.count);
     printf("SBCTL stack axis=%ld spacing=%g distribution=%ld alignment=%ld arranged=%lu subviews=%lu\n", (long)self.stackView.axis,
