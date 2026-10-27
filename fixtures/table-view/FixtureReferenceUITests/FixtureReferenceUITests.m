@@ -19,12 +19,13 @@
         [self expect:app label:[NSString stringWithFormat:@"Done %ld", (long)n]];
         [self attach:app name:[NSString stringWithFormat:@"Table-step-%ld", (long)n]];
     }
-    // A real tap on the cell that shows "Row 2" (after the deletion of the old row 2 it is the third row; its position
-    // depends on the header and the safe area, so the cell is looked up by its label instead of a coordinate).
-    XCUIElement *cell = app.cells.staticTexts[@"Row 2"];
+    // A real tap on the cell that shows "Row 1". Step 5 deleted the old row 2, so the visible
+    // texts are "Row 0", "Row 1", "Row 3", ...; the first two rows are always on screen and the
+    // label lookup avoids a coordinate guess.
+    XCUIElement *cell = app.cells.staticTexts[@"Row 1"];
     XCTAssertTrue([cell waitForExistenceWithTimeout:5]);
     [cell tap];
-    [self expect:app label:@"Selected 2"];
+    [self expect:app label:@"Selected 1"];
     [self attach:app name:@"Table-tap-selected"];
 }
 @end

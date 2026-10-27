@@ -2,6 +2,6 @@
   "project": "MovieTrackerCorpus.xcodeproj",
   "bundle_id": "org.ipahle.corpus.movietracker",
   "app_name": "MovieTracker",
-  "minimum_ios": "18.5",
+  "minimum_ios": "17.0",
   "scheme": "MovieTrackerCorpus"
 }
