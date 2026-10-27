@@ -1,0 +1,7 @@
+{
+  "project": "SwiftLifecycleCasts.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftlifecyclecasts",
+  "app_name": "SwiftLifecycleCasts",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftLifecycleCasts"
+}

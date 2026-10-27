@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardRootGeometry.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.storyboardrootgeometry",
+  "app_name": "StoryboardRootGeometry",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardRootGeometry"
+}
