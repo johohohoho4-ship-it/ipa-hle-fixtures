@@ -826,7 +826,7 @@
     "fixtures/serialization/Serialization.xcodeproj/project.pbxproj": "0ed69ee8c0c4b23b5d0bdee3428267125f0f7137acc426ff910bb15b05746a64",
     "fixtures/serialization/Serialization.xcodeproj/xcshareddata/xcschemes/Serialization.xcscheme": "3421e45fedce86eb6920bafdc802940c649a2c8d3110c90ff5850a848268e938",
     "fixtures/serialization/ViewController.h": "fd8483f5e9de1375b677a2a8ef7e0a37d9f79885266677ceb6735dac7e126744",
-    "fixtures/serialization/ViewController.mm": "2c9ca48aa5b2ac19be3c3614fe96390e4524cf20e606f288c733284f1293e8d0",
+    "fixtures/serialization/ViewController.mm": "81b2544dd532e6aae7fe600a735aae4a208cfe77c0629a426e745849805a388f",
     "fixtures/serialization/ipa-hle-fixture.json": "2198af127387db949b1ae4544a596a5d7256525f17e5fae2eafcecb0fd22cfc7",
     "fixtures/serialization/main.m": "1d6283209ff5606be0a1af90641d7d221fe45747ae16baf760e1eb7fdc7c3ef1",
     "fixtures/special-layers/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",

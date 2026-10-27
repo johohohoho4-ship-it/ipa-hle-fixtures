@@ -111,7 +111,7 @@ static BOOL referenceChecks(void) {
     BOOL raised = NO;
     @try { decoder.requiresSecureCoding = NO; } @catch (NSException *exception) { raised = YES; }
     printf("SER_POLICY disableRaised=%d stillSecure=%d\n", raised, decoder.requiresSecureCoding);
-    ok &= raised && decoder.requiresSecureCoding;
+    ok &= !raised && !decoder.requiresSecureCoding;   // native: setting NO does not raise, it switches off
     [decoder finishDecoding];
 
     NSKeyedArchiver *writer = [[NSKeyedArchiver alloc] initRequiringSecureCoding:NO];
