@@ -999,7 +999,7 @@
     "fixtures/swift-generics/ipa-hle-fixture.json": "b701953c7d8349fdc3937a6df4b14ac8f0f48f2a1f85b5108f280c56558b368f",
     "fixtures/swift-hashable-2/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/swift-hashable-2/FixtureReferenceUITests/FixtureReferenceUITests.swift": "c3086a311f0c651aab34dc0c37ee129d72e3035df2bc0e1ca2c596cc839c60d2",
-    "fixtures/swift-hashable-2/HashableChecks2.swift": "370fa5eab73fe79a4540d2b4440e70ad6c6e99df2cf51fecbadfa17aac3cde62",
+    "fixtures/swift-hashable-2/HashableChecks2.swift": "03f24f8fb67b9d7a72f3da243555864740db757c6bf8925c7b31618b058d17c2",
     "fixtures/swift-hashable-2/Info.plist": "12fbdcaab5a8cfa3b4b10b697606ffebed3876391e6c68c3d288fd643d14bc37",
     "fixtures/swift-hashable-2/SwiftHashable2.xcodeproj/project.pbxproj": "e97907094caa2acb42e3e50ab869b055d7224ce7110caaf2e796f95122ed4a61",
     "fixtures/swift-hashable-2/SwiftHashable2.xcodeproj/xcshareddata/xcschemes/SwiftHashable2.xcscheme": "9a6aca957506a5320ac9d7fcb7a991876bcd7119289bca15d7f61d034fdf2226",

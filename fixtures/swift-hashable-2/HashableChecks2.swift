@@ -4,8 +4,9 @@ struct Word: Hashable {
     let text: String
 }
 
-/// A Hashable class and a subclass instance: AnyHashable must not treat the
-/// subclass as the base type just because the base's `==` would accept it.
+/// A Hashable class and a subclass instance: the fixture measures whether
+/// AnyHashable compares the subclass through the base's `==` (natively it
+/// does) or keeps the dynamic type apart.
 class Base: Hashable {
     let value: Int
     init(_ value: Int) { self.value = value }
