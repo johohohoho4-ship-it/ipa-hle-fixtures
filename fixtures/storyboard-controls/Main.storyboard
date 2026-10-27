@@ -18,30 +18,36 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="leading" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="stackV">
                                 <rect key="frame" x="20" y="120" width="200" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1">
                                         <rect key="frame" x="0.0" y="0.0" width="34" height="34.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2">
                                         <rect key="frame" x="0.0" y="42.666666666666664" width="36" height="34.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaseline" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3">
                                         <rect key="frame" x="0.0" y="85.333333333333329" width="46" height="34.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <accessibility key="accessibilityConfiguration" identifier="sbctl.stack"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c3"/>
+                                    <constraint firstAttribute="height" constant="120" id="c4"/>
+                                </constraints>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ada" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fieldV">
                                 <rect key="frame" x="20" y="260" width="200" height="34"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sbctl.field"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="c7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -56,6 +62,10 @@
                                 <rect key="frame" x="20" y="320" width="120" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="sbctl.tap"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="c12"/>
+                                    <constraint firstAttribute="height" constant="60" id="c13"/>
+                                </constraints>
                                 <gestureRecognizers>
                                     <tapGestureRecognizer numberOfTapsRequired="2" id="tapGR">
                                         <connections>
@@ -70,17 +80,12 @@
                         <constraints>
                             <constraint firstItem="stackV" firstAttribute="top" secondItem="controlsSafe" secondAttribute="top" constant="61" id="c1"/>
                             <constraint firstItem="stackV" firstAttribute="leading" secondItem="controlsSafe" secondAttribute="leading" constant="20" id="c2"/>
-                            <constraint firstItem="stackV" firstAttribute="width" constant="200" id="c3"/>
-                            <constraint firstItem="stackV" firstAttribute="height" constant="120" id="c4"/>
                             <constraint firstItem="fieldV" firstAttribute="top" secondItem="stackV" secondAttribute="bottom" constant="20" id="c5"/>
                             <constraint firstItem="fieldV" firstAttribute="leading" secondItem="stackV" secondAttribute="leading" id="c6"/>
-                            <constraint firstItem="fieldV" firstAttribute="width" constant="200" id="c7"/>
                             <constraint firstItem="switchV" firstAttribute="centerY" secondItem="fieldV" secondAttribute="centerY" id="c8"/>
                             <constraint firstItem="switchV" firstAttribute="leading" secondItem="fieldV" secondAttribute="trailing" constant="20" id="c9"/>
                             <constraint firstItem="tapV" firstAttribute="top" secondItem="fieldV" secondAttribute="bottom" constant="26" id="c10"/>
                             <constraint firstItem="tapV" firstAttribute="leading" secondItem="stackV" secondAttribute="leading" id="c11"/>
-                            <constraint firstItem="tapV" firstAttribute="width" constant="120" id="c12"/>
-                            <constraint firstItem="tapV" firstAttribute="height" constant="60" id="c13"/>
                         </constraints>
                     </view>
                     <connections>

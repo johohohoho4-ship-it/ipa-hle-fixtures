@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardTableFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.storyboard-table",
+  "app_name": "StoryboardTableFixture",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardTableFixture"
+}

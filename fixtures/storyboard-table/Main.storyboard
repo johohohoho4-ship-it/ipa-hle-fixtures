@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tblVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table-->
+        <scene sceneID="sbtScene">
+            <objects>
+                <tableViewController id="tblVC" customClass="TableSceneController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tblView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SBTCell" rowHeight="64" id="protoCell" customClass="TableCell">
+                                <rect key="frame" x="0.0" y="28" width="393" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="protoCell" id="protoContent">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="63.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Row 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lblTitle">
+                                            <rect key="frame" x="20" y="8" width="353" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lblDetail">
+                                            <rect key="frame" x="20" y="30" width="353" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lblTitle" firstAttribute="leading" secondItem="protoContent" secondAttribute="leadingMargin" id="cTitleLead"/>
+                                        <constraint firstItem="lblTitle" firstAttribute="top" secondItem="protoContent" secondAttribute="topMargin" id="cTitleTop"/>
+                                        <constraint firstItem="lblTitle" firstAttribute="trailing" secondItem="protoContent" secondAttribute="trailingMargin" id="cTitleTrail"/>
+                                        <constraint firstItem="lblDetail" firstAttribute="leading" secondItem="protoContent" secondAttribute="leadingMargin" id="cDetailLead"/>
+                                        <constraint firstItem="lblDetail" firstAttribute="trailing" secondItem="protoContent" secondAttribute="trailingMargin" id="cDetailTrail"/>
+                                        <constraint firstItem="lblDetail" firstAttribute="top" secondItem="lblTitle" secondAttribute="bottom" constant="2" id="cDetailTop"/>
+                                        <constraint firstItem="lblDetail" firstAttribute="bottom" secondItem="protoContent" secondAttribute="bottomMargin" id="cDetailBottom"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailLabel" destination="lblDetail" id="oDetail"/>
+                                    <outlet property="titleLabel" destination="lblTitle" id="oTitle"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tblVC" id="oDataSource"/>
+                            <outlet property="delegate" destination="tblVC" id="oDelegate"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="firstResponder" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="140"/>
+        </scene>
+    </scenes>
+</document>
