@@ -59,13 +59,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tapV">
                                 <rect key="frame" x="20" y="320" width="120" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <gestureRecognizers>
-                                    <tapGestureRecognizer numberOfTapsRequired="2" id="tapGR">
-                                        <connections>
-                                            <action selector="tapped:" destination="controlsVC" id="act1"/>
-                                        </connections>
-                                    </tapGestureRecognizer>
-                                </gestureRecognizers>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="c12"/>
                                     <constraint firstAttribute="height" constant="60" id="c13"/>
