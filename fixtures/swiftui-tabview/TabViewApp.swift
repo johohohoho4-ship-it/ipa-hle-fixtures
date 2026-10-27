@@ -7,20 +7,21 @@ func fixtureLog(_ line: String) {
     _ = text.withCString { write(1, $0, strlen($0)) }
 }
 
-func typeLine(_ label: String, _ value: Any) -> String {
+func typeLine<V>(_ label: String, _ value: V) -> String {
     "TAB_TYPE \(label) \(String(reflecting: type(of: value)))"
 }
 
-func layoutLine(_ label: String, _ value: Any) -> String {
-    let size = MemoryLayout.size(ofValue: value)
-    let stride = MemoryLayout.stride(ofValue: value)
-    let alignment = MemoryLayout.alignment(ofValue: value)
+/// Generic, not `Any`: `MemoryLayout` of an existential would measure the container, not the view.
+func layoutLine<V>(_ label: String, _ value: V) -> String {
+    let size = MemoryLayout<V>.size
+    let stride = MemoryLayout<V>.stride
+    let alignment = MemoryLayout<V>.alignment
     return "TAB_LAYOUT \(label) size=\(size) stride=\(stride) alignment=\(alignment)"
 }
 
 func insetsText(_ insets: EdgeInsets) -> String {
     String(format: "top=%.1f left=%.1f bottom=%.1f right=%.1f",
-           insets.top, insets.leading, insets.bottom, insets.trailing)
+           Double(insets.top), Double(insets.leading), Double(insets.bottom), Double(insets.trailing))
 }
 
 @main

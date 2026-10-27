@@ -1138,7 +1138,7 @@
     "fixtures/swiftui-tabview/Info.plist": "d30b154fab99304250f0c935b7e8d209c5b08a95510787c8bddab85180381c3f",
     "fixtures/swiftui-tabview/SwiftUITabView.xcodeproj/project.pbxproj": "6f5ec33edbb7434d9f6e1477295ddfffa28c2da5489db37cfce929797be09c09",
     "fixtures/swiftui-tabview/SwiftUITabView.xcodeproj/xcshareddata/xcschemes/SwiftUITabView.xcscheme": "5449826ed09b04339606722d71e4c0d84c902bede376fed354f4e4da59bc35fd",
-    "fixtures/swiftui-tabview/TabViewApp.swift": "49e6ff636e89db501380545bd21890635c92d0a0047551d1c2750c523aa429a5",
+    "fixtures/swiftui-tabview/TabViewApp.swift": "8b9e5f261f0650ebcc1a333cd218fedc0f82f36c58ccc45dbd5ad8a892156ab7",
     "fixtures/swiftui-tabview/ipa-hle-fixture.json": "10508849ec5eda2dde64d06d8cba305c928b9fbcbe09f1c91074a197da287f76",
     "fixtures/swiftui-views/FixtureReferenceUITests/FixtureReferenceUITests.swift": "f4d3c460da1d0a9c32dfb1024a19411523c968980d191d883bd122df081a58b5",
     "fixtures/swiftui-views/Info.plist": "e363bfc1b1de6ec376a3d64624e634e8e4a0120589f13fe16b9b3e31921014e6",
