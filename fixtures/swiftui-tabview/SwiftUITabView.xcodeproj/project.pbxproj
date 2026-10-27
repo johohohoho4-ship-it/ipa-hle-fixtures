@@ -1,0 +1,138 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* TabViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* TabViewApp.swift */; };
+		B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A80000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000000000000000000001;
+			remoteInfo = SwiftUITabView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* TabViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000007 /* SwiftUITabView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITabView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000001 /* FixtureReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureReferenceUITests.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		B30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (A40000000000000000000002 /* SwiftUITabView */, B40000000000000000000001 /* FixtureReferenceUITests */, A40000000000000000000003 /* Products */);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* SwiftUITabView */ = {
+			isa = PBXGroup;
+			children = (A20000000000000000000001 /* TabViewApp.swift */, A20000000000000000000006 /* Info.plist */);
+			path = .;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000007 /* SwiftUITabView.app */, B20000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
+		B40000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXGroup;
+			children = (B20000000000000000000001 /* FixtureReferenceUITests.swift */,);
+			path = FixtureReferenceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* SwiftUITabView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (A60000000000000000000001 /* Sources */, A30000000000000000000001 /* Frameworks */, A60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = SwiftUITabView;
+			productName = SwiftUITabView;
+			productReference = A20000000000000000000007 /* SwiftUITabView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B50000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70000000000000000000002 /* Target config list */;
+			buildPhases = (B60000000000000000000001 /* Sources */, B30000000000000000000001 /* Frameworks */, B60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = (B80000000000000000000002 /* PBXTargetDependency */);
+			name = FixtureReferenceUITests;
+			productName = FixtureReferenceUITests;
+			productReference = B20000000000000000000002 /* FixtureReferenceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					B50000000000000000000001 = {CreatedOnToolsVersion = 16.0; TestTargetID = A50000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* SwiftUITabView */, B50000000000000000000001 /* FixtureReferenceUITests */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* TabViewApp.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000000000000000000001 /* SwiftUITabView */;
+			targetProxy = B80000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A90000000000000000000002 /* Release project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		A90000000000000000000003 /* Debug target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.swiftuitabview; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; ENABLE_DEBUG_DYLIB = NO; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Debug; };
+		A90000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.swiftuitabview; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; ENABLE_DEBUG_DYLIB = NO; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; }; name = Release; };
+		B90000000000000000000003 /* Debug target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.swiftuitabview.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = SwiftUITabView; USES_XCTEST = YES; }; name = Debug; };
+		B90000000000000000000004 /* Release target */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 17.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.fixture.swiftuitabview.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = SwiftUITabView; USES_XCTEST = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Project config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000001 /* Debug project */, A90000000000000000000002 /* Release project */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000003 /* Debug target */, A90000000000000000000004 /* Release target */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		B70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (B90000000000000000000003 /* Debug target */, B90000000000000000000004 /* Release target */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A80000000000000000000001 /* Project object */;
+}

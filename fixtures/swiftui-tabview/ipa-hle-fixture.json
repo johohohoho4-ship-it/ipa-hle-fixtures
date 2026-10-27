@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUITabView.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuitabview",
+  "app_name": "SwiftUITabView",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftUITabView"
+}
