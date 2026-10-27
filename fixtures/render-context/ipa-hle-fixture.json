@@ -1,0 +1,7 @@
+{
+  "project": "RenderContext.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.render-context",
+  "app_name": "RenderContext",
+  "minimum_ios": "15.0",
+  "scheme": "RenderContext"
+}
