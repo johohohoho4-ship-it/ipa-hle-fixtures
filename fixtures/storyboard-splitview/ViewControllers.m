@@ -218,7 +218,7 @@ static NSString *storyboardIdentifier(UIViewController *controller) {
         NSString *donePhase = gPhase;
         logCallback(donePhase, @"SPVSplitViewController", @"transitionCompletion",
                     [NSString stringWithFormat:@"completed=%d cancelled=%d duration=%.3f",
-                     context.completed, context.cancelled, context.transitionDuration]);
+                     (int)!context.isCancelled, context.cancelled, context.transitionDuration]);
         [strongSelf spvPrintProfile:donePhase];
         [strongSelf spvPrintIdentity:donePhase];
         [strongSelf spvPrintGeometry:donePhase];
@@ -309,7 +309,7 @@ static NSString *storyboardIdentifier(UIViewController *controller) {
     [coordinator animateAlongsideTransition:nil completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         logCallback(gPhase, @"SPVMasterViewController", @"transitionCompletion",
                     [NSString stringWithFormat:@"completed=%d viewFrame=%s viewWindow=%d",
-                     context.completed, rectStr(self.view.frame).UTF8String,
+                     (int)!context.isCancelled, rectStr(self.view.frame).UTF8String,
                      self.view.window != nil]);
     }];
 }
@@ -359,7 +359,7 @@ static NSString *storyboardIdentifier(UIViewController *controller) {
     [coordinator animateAlongsideTransition:nil completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         logCallback(gPhase, @"SPVDetailViewController", @"transitionCompletion",
                     [NSString stringWithFormat:@"completed=%d viewFrame=%s viewWindow=%d",
-                     context.completed, rectStr(self.view.frame).UTF8String,
+                     (int)!context.isCancelled, rectStr(self.view.frame).UTF8String,
                      self.view.window != nil]);
     }];
 }

@@ -18,7 +18,10 @@ final class FixtureReferenceUITests: XCTestCase {
 
         let toggle = app.switches["inp.toggle"]
         XCTAssertTrue(toggle.waitForExistence(timeout: 10), "The Toggle must be queryable")
-        toggle.tap()
+        // The identifier resolves to the whole form row; its centre is the label, which does
+        // not flip a switch-style Toggle. The normalized offset targets the control itself
+        // inside the measured row instead of guessing a screen coordinate.
+        toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.92, dy: 0.5)).tap()
         waitFor(label: "toggled", on: status)
         attach(app, "swiftui-inputs-toggle")
 
