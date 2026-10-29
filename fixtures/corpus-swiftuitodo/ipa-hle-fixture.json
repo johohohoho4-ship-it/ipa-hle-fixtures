@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUITodoCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.swiftuitodo",
+  "app_name": "SwiftUITodo",
+  "minimum_ios": "15.0",
+  "scheme": "SwiftUITodoCorpus"
+}
