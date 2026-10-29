@@ -1027,6 +1027,7 @@
     "fixtures/storyboard-scrollview/StoryboardScrollviewFixture.xcodeproj/xcshareddata/xcschemes/StoryboardScrollviewFixture.xcscheme": "c38f5e78780e94b0bf20ad8392ab96a6be6142c9d5e3fb0a63e8c722a34267f5",
     "fixtures/storyboard-scrollview/ViewControllers.h": "92dceeb163f857500d07e9da1c84fef87d15c0f64c56e245fde7ff90fa7280a2",
     "fixtures/storyboard-scrollview/ViewControllers.m": "6246834471d42c0f4f7f7f9bfdd7891eb82a1a86eb69e72f76f8981dee9a726a",
+    "fixtures/storyboard-scrollview/compiled/Main.storyboardc/Info.plist": "881f4c1c8b4104d0aa3b949e9729f6ea5c317f3f91544874247948fe10871419",
     "fixtures/storyboard-scrollview/ipa-hle-fixture.json": "ff885335b4cff3cbababe8bab59e968248a80f31a52057c081e3ce60f304e582",
     "fixtures/storyboard-scrollview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/storyboard-splitview/AppDelegate.h": "13349a4936776341301c573deff2c95a0dbc77412956f298fb6923aeac46b8f5",
