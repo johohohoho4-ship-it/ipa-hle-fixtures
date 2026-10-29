@@ -182,7 +182,7 @@
     "fixtures/collections-native/FixtureReferenceUITests/FixtureReferenceUITests.m": "4bd0250eefab5442208e571f3cbf8e1351df9cd3343f63ce93077d09b323d9e9",
     "fixtures/collections-native/Info.plist": "d93c4f6a7a54fa625f1eb6b0475476e8abf1032c5d6f5e0a866b9d727071850e",
     "fixtures/collections-native/ipa-hle-fixture.json": "db0c156eb99f1d18a2249e702a64bf726164351cb582810153e5b2811845e939",
-    "fixtures/collections-native/main.m": "15b4edd9d2699c0d30c264fae95900746a7c89b3808c52b45477761f0bf158eb",
+    "fixtures/collections-native/main.m": "f798bcbed549953f8887455bc92a11bc18276fd6d3b141e4c0dfdc9ddb0cf63c",
     "fixtures/combine-2/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/combine-2/Combine2.xcodeproj/project.pbxproj": "4d5386c98fdcfb30b9a776251b78586181b189b08db6d02dffb6bac4a993ccb9",
     "fixtures/combine-2/Combine2.xcodeproj/xcshareddata/xcschemes/Combine2.xcscheme": "d21488d201f0423f3cc24e7d0b3cd93dedf10f2135c21a55575c71642e425d92",

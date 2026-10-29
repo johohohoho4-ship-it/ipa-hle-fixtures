@@ -89,7 +89,7 @@ static void CLL(NSString *format, ...) {
 
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     label.text = @"Collections";
-    label.accessibilityIdentifier = "collections.title";
+    label.accessibilityIdentifier = @"collections.title";
     label.textAlignment = NSTextAlignmentCenter;
 
     UIViewController *controller = [[UIViewController alloc] init];
