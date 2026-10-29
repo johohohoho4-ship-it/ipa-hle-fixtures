@@ -1175,7 +1175,7 @@
     "fixtures/swiftui-hello/SwiftUIHello.xcodeproj/project.pbxproj": "b7a9e30e427b17cab286c94e8f32af46e161e309156076bb7e22966ae654f4c2",
     "fixtures/swiftui-hello/SwiftUIHello.xcodeproj/xcshareddata/xcschemes/SwiftUIHello.xcscheme": "448dcc2e15334dcb2fb95f57f5a806e094fcf51e48dff937d2db5224b214c720",
     "fixtures/swiftui-hello/ipa-hle-fixture.json": "260cb6a7792ebb31d4b12fb468dfb78fdd5f1c1bbf52307a70916075668ed96c",
-    "fixtures/swiftui-inputs/FixtureReferenceUITests/FixtureReferenceUITests.swift": "1a174b043c09fc0b6f28166d25411fd90131d08ab2730ce22de3779f708e5dd5",
+    "fixtures/swiftui-inputs/FixtureReferenceUITests/FixtureReferenceUITests.swift": "8c0865001b34be5765ab1676527909fc871732ce59c9c35671103740fdff698e",
     "fixtures/swiftui-inputs/Info.plist": "283dc7f2a92ff81dbea574e9d6edcf5bc3cd1f2a579daea80aa762cba7e5e32e",
     "fixtures/swiftui-inputs/InputsApp.swift": "140fa4e99ca76d28349e3548eee8821be9b8ddcab32475345edc80a25b51f113",
     "fixtures/swiftui-inputs/SwiftUIInputsFixture.xcodeproj/project.pbxproj": "87da608a09c9bb599497a2affcc3fcefb423771a72fffcbe384b5c8765886590",
