@@ -12,7 +12,6 @@
 		A10000000000000000000004 /* TaskEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* TaskEditView.swift */; };
 		A10000000000000000000005 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* UserData.swift */; };
 		A10000000000000000000006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* AppDelegate.swift */; };
-		A10000000000000000000007 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* SceneDelegate.swift */; };
 		B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +32,6 @@
 		A20000000000000000000004 /* TaskEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditView.swift; sourceTree = "<group>"; };
 		A20000000000000000000005 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A20000000000000000000006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A20000000000000000000007 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A20000000000000000000008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20000000000000000000009 /* SwiftUITodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUITodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20000000000000000000001 /* FixtureReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureReferenceUITests.swift; sourceTree = "<group>"; };
@@ -53,7 +51,7 @@
 		};
 		A40000000000000000000002 /* SwiftUITodo */ = {
 			isa = PBXGroup;
-			children = (A20000000000000000000006 /* AppDelegate.swift */, A20000000000000000000007 /* SceneDelegate.swift */, A20000000000000000000001 /* Task.swift */, A20000000000000000000005 /* UserData.swift */, A20000000000000000000002 /* TaskListView.swift */, A20000000000000000000003 /* TaskItemView.swift */, A20000000000000000000004 /* TaskEditView.swift */, A20000000000000000000008 /* Info.plist */);
+			children = (A20000000000000000000006 /* AppDelegate.swift */, A20000000000000000000001 /* Task.swift */, A20000000000000000000005 /* UserData.swift */, A20000000000000000000002 /* TaskListView.swift */, A20000000000000000000003 /* TaskItemView.swift */, A20000000000000000000004 /* TaskEditView.swift */, A20000000000000000000008 /* Info.plist */);
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -119,7 +117,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* Task.swift in Sources */, A10000000000000000000002 /* TaskListView.swift in Sources */, A10000000000000000000003 /* TaskItemView.swift in Sources */, A10000000000000000000004 /* TaskEditView.swift in Sources */, A10000000000000000000005 /* UserData.swift in Sources */, A10000000000000000000006 /* AppDelegate.swift in Sources */, A10000000000000000000007 /* SceneDelegate.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* Task.swift in Sources */, A10000000000000000000002 /* TaskListView.swift in Sources */, A10000000000000000000003 /* TaskItemView.swift in Sources */, A10000000000000000000004 /* TaskEditView.swift in Sources */, A10000000000000000000005 /* UserData.swift in Sources */, A10000000000000000000006 /* AppDelegate.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
 		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
