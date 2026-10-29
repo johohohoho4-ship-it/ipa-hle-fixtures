@@ -1039,6 +1039,7 @@
     "fixtures/storyboard-splitview/StoryboardSplitviewFixture.xcodeproj/xcshareddata/xcschemes/StoryboardSplitviewFixture.xcscheme": "d8bf480b45068fb25150b2f165655a2d9728342b8945f4621b0f66b7739761f9",
     "fixtures/storyboard-splitview/ViewControllers.h": "54c2e239f140bd80765f50c54cfb1c19c7cb8061742df26cda853eb0eeeba841",
     "fixtures/storyboard-splitview/ViewControllers.m": "da705a51af29ed11ac54591c8df11d75ae7727fe320778b3042d2b9bf55e29b1",
+    "fixtures/storyboard-splitview/compiled/Main.storyboardc/Info.plist": "e71c548d12830f89eea925eff14be24ef4069c946741579af688d3840132a958",
     "fixtures/storyboard-splitview/ipa-hle-fixture.json": "32ce4554b8c9c6b50eec647758566b8d3443614d684677b5759582c187016687",
     "fixtures/storyboard-splitview/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/storyboard-table/AppDelegate.h": "13349a4936776341301c573deff2c95a0dbc77412956f298fb6923aeac46b8f5",
