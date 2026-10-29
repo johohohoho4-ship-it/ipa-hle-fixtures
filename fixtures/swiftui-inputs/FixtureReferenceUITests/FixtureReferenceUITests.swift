@@ -48,6 +48,9 @@ final class FixtureReferenceUITests: XCTestCase {
         // the simulator's accessibility-driven XCUITest. Its frame and start value are
         // measured; the increment itself is documented as not driven. This is honest
         // instead of guessing another coordinate.
+        let stepper = app.steppers["inp.stepper"].exists
+            ? app.steppers["inp.stepper"]
+            : app.steppers.firstMatch
         XCTAssertTrue(stepper.exists, "The Stepper must stay in the element tree")
         attach(app, "swiftui-inputs-stepper")
 
