@@ -11,6 +11,7 @@
 		A10000000000000000000003 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* main.m */; };
 		B10000000000000000000001 /* FixtureReferenceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.m */; };
 		A10000000000000000000004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Main.storyboard */; };
+		A10000000000000000000005 /* ExtPrototypeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* ExtPrototypeScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 		B20000000000000000000001 /* FixtureReferenceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixtureReferenceUITests.m; sourceTree = "<group>"; };
 		B20000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20000000000000000000008 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A20000000000000000000009 /* ExtPrototypeScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtPrototypeScene.h; sourceTree = "<group>"; };
+		A2000000000000000000000A /* ExtPrototypeScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtPrototypeScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +52,7 @@
 		};
 		A40000000000000000000002 /* StoryboardTableFixture */ = {
 			isa = PBXGroup;
-			children = (A20000000000000000000004 /* AppDelegate.h */, A20000000000000000000001 /* AppDelegate.m */, A20000000000000000000005 /* ViewControllers.h */, A20000000000000000000002 /* ViewControllers.m */, A20000000000000000000003 /* main.m */, A20000000000000000000006 /* Info.plist */, A20000000000000000000008 /* Main.storyboard */);
+			children = (A20000000000000000000004 /* AppDelegate.h */, A20000000000000000000001 /* AppDelegate.m */, A20000000000000000000005 /* ViewControllers.h */, A20000000000000000000002 /* ViewControllers.m */, A20000000000000000000009 /* ExtPrototypeScene.h */, A2000000000000000000000A /* ExtPrototypeScene.m */, A20000000000000000000003 /* main.m */, A20000000000000000000006 /* Info.plist */, A20000000000000000000008 /* Main.storyboard */);
 			path = .;
 			sourceTree = "<group>";
 		};
@@ -114,7 +117,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AppDelegate.m in Sources */, A10000000000000000000002 /* ViewControllers.m in Sources */, A10000000000000000000003 /* main.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001 /* AppDelegate.m in Sources */, A10000000000000000000002 /* ViewControllers.m in Sources */, A10000000000000000000005 /* ExtPrototypeScene.m in Sources */, A10000000000000000000003 /* main.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
 		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001 /* FixtureReferenceUITests.m in Sources */,); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 

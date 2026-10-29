@@ -1,0 +1,7 @@
+{
+  "project": "TapSequencesFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.tap-sequences",
+  "app_name": "TapSequencesFixture",
+  "minimum_ios": "15.0",
+  "scheme": "TapSequencesFixture"
+}

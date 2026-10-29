@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardSplitviewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.storyboard-splitview",
+  "app_name": "StoryboardSplitviewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardSplitviewFixture"
+}

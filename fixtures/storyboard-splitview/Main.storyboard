@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="spvSplit">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Split View Controller-->
+        <scene sceneID="spvSceneSplit">
+            <objects>
+                <splitViewController storyboardIdentifier="split" id="spvSplit" customClass="SPVSplitViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="spvMaster" kind="relationship" relationship="masterViewController" id="spvRelMaster"/>
+                        <segue destination="spvDetail" kind="relationship" relationship="detailViewController" id="spvRelDetail"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spvFirstResponderSplit" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Master-->
+        <scene sceneID="spvSceneMaster">
+            <objects>
+                <viewController storyboardIdentifier="master" id="spvMaster" customClass="SPVMasterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="spvMasterView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASTER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spvMasterTitle">
+                                <rect key="frame" x="20" y="67" width="353" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="spv.master"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="waiting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spvStatus">
+                                <rect key="frame" x="20" y="96" width="353" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="spv.status"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="spvMasterSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="spvMasterTitle" firstAttribute="top" secondItem="spvMasterSafe" secondAttribute="top" constant="20" id="spvMasterC1"/>
+                            <constraint firstItem="spvMasterTitle" firstAttribute="leading" secondItem="spvMasterSafe" secondAttribute="leading" constant="20" id="spvMasterC2"/>
+                            <constraint firstItem="spvMasterSafe" firstAttribute="trailing" secondItem="spvMasterTitle" secondAttribute="trailing" constant="20" id="spvMasterC3"/>
+                            <constraint firstItem="spvStatus" firstAttribute="top" secondItem="spvMasterTitle" secondAttribute="bottom" constant="8" id="spvMasterC4"/>
+                            <constraint firstItem="spvStatus" firstAttribute="leading" secondItem="spvMasterTitle" secondAttribute="leading" id="spvMasterC5"/>
+                            <constraint firstItem="spvMasterTitle" firstAttribute="trailing" secondItem="spvStatus" secondAttribute="trailing" id="spvMasterC6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="spvStatus" id="spvOutStatus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spvFirstResponderMaster" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400.0" y="0.0"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="spvSceneDetail">
+            <objects>
+                <viewController storyboardIdentifier="detail" id="spvDetail" customClass="SPVDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="spvDetailView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DETAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spvDetailTitle">
+                                <rect key="frame" x="20" y="67" width="353" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="spv.detail"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="spvDetailSafe"/>
+                        <color key="backgroundColor" red="0.94900000000000000" green="0.94900000000000000" blue="0.96899999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="spvDetailTitle" firstAttribute="top" secondItem="spvDetailSafe" secondAttribute="top" constant="20" id="spvDetailC1"/>
+                            <constraint firstItem="spvDetailTitle" firstAttribute="leading" secondItem="spvDetailSafe" secondAttribute="leading" constant="20" id="spvDetailC2"/>
+                            <constraint firstItem="spvDetailSafe" firstAttribute="trailing" secondItem="spvDetailTitle" secondAttribute="trailing" constant="20" id="spvDetailC3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="spvFirstResponderDetail" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

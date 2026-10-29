@@ -102,6 +102,18 @@ static NSString *rgbaStr(UIColor *c) {
     cell.detailLabel.text = [NSString stringWithFormat:@"Selected %ld", (long)indexPath.row + 1];
     printf("SBT_TAP row=%ld selected=%ld detail=%s\n", (long)indexPath.row,
            (long)tableView.indexPathForSelectedRow.row, str(cell.detailLabel.text));
+
+    // Second measurement section (SBTX_*). Only the XCUITest asks for it, with the launch
+    // argument -SBTXScene YES; in that run the tap above is also the entry into the second
+    // scene. Without the argument the original SBT_ run stays exactly as it was.
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SBTXScene"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            printf("SBTX_EXT instantiate scene=sbtxScene\n");
+            UIViewController *scene = [self.storyboard instantiateViewControllerWithIdentifier:@"sbtxScene"];
+            scene.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:scene animated:NO completion:nil];
+        });
+    }
 }
 
 #pragma mark - lifecycle

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="scnVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scrollview-->
+        <scene sceneID="scnScene">
+            <objects>
+                <viewController storyboardIdentifier="scroll" id="scnVC" customClass="SCNScrollViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="scnRoot">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scnScroll">
+                                <rect key="frame" x="0.0" y="67" width="393" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="scnContainer">
+                                        <rect key="frame" x="0.0" y="0.0" width="1200" height="800"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="scnRed">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.90000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="scnGreen">
+                                                <rect key="frame" x="400" y="0.0" width="400" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.69999999999999996" blue="0.29999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="scnBlue">
+                                                <rect key="frame" x="0.0" y="400" width="400" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="scnOrange">
+                                                <rect key="frame" x="400" y="400" width="400" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94999999999999996" green="0.55000000000000004" blue="0.10000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="scnYellow">
+                                                <rect key="frame" x="800" y="0.0" width="400" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94999999999999996" green="0.85000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.94999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <accessibility key="accessibilityConfiguration" identifier="scn.scroll"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="scnVC" id="scnDelegate"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scnStep">
+                                <rect key="frame" x="20" y="559" width="120" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="scn.step"/>
+                                <state key="normal" title="Step"/>
+                                <connections>
+                                    <action selector="stepPressed:" destination="scnVC" eventType="touchUpInside" id="scnStepAction"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scnStatus">
+                                <rect key="frame" x="20" y="615" width="353" height="20.333333333333336"/>
+                                <accessibility key="accessibilityConfiguration" identifier="scn.status"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="scnSafe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scnScroll" firstAttribute="top" secondItem="scnSafe" secondAttribute="top" constant="8" id="scnC1"/>
+                            <constraint firstItem="scnScroll" firstAttribute="leading" secondItem="scnRoot" secondAttribute="leading" id="scnC2"/>
+                            <constraint firstItem="scnRoot" firstAttribute="trailing" secondItem="scnScroll" secondAttribute="trailing" id="scnC3"/>
+                            <constraint firstItem="scnScroll" firstAttribute="height" constant="480" id="scnC4"/>
+                            <constraint firstItem="scnStep" firstAttribute="top" secondItem="scnScroll" secondAttribute="bottom" constant="12" id="scnC5"/>
+                            <constraint firstItem="scnStep" firstAttribute="leading" secondItem="scnSafe" secondAttribute="leading" constant="20" id="scnC6"/>
+                            <constraint firstItem="scnStep" firstAttribute="width" constant="120" id="scnC7"/>
+                            <constraint firstItem="scnStep" firstAttribute="height" constant="44" id="scnC8"/>
+                            <constraint firstItem="scnStatus" firstAttribute="top" secondItem="scnStep" secondAttribute="bottom" constant="12" id="scnC9"/>
+                            <constraint firstItem="scnStatus" firstAttribute="leading" secondItem="scnSafe" secondAttribute="leading" constant="20" id="scnC10"/>
+                            <constraint firstItem="scnSafe" firstAttribute="trailing" secondItem="scnStatus" secondAttribute="trailing" constant="20" id="scnC11"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="scnScroll" id="scnOutScroll"/>
+                        <outlet property="containerView" destination="scnContainer" id="scnOutContainer"/>
+                        <outlet property="stepButton" destination="scnStep" id="scnOutStep"/>
+                        <outlet property="statusLabel" destination="scnStatus" id="scnOutStatus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scnFirstResponder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

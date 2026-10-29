@@ -1,0 +1,7 @@
+{
+  "project": "UIKitPropertiesFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.uikit-properties",
+  "app_name": "UIKitPropertiesFixture",
+  "minimum_ios": "15.0",
+  "scheme": "UIKitPropertiesFixture"
+}

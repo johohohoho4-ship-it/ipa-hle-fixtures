@@ -1,0 +1,7 @@
+{
+  "project": "SwipeableCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.swipeable",
+  "app_name": "SwipeableCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "SwipeableCorpus"
+}

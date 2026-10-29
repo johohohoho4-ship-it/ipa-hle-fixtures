@@ -1,0 +1,7 @@
+{
+  "project": "StoryboardScrollviewFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.storyboard-scrollview",
+  "app_name": "StoryboardScrollviewFixture",
+  "minimum_ios": "15.0",
+  "scheme": "StoryboardScrollviewFixture"
+}
