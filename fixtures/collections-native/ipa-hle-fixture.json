@@ -1,0 +1,7 @@
+{
+  "project": "CollectionsNative.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.collectionsnative",
+  "app_name": "CollectionsNative",
+  "minimum_ios": "15.0",
+  "scheme": "CollectionsNative"
+}
