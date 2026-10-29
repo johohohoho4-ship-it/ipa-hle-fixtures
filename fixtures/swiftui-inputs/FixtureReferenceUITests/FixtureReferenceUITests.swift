@@ -47,17 +47,24 @@ final class FixtureReferenceUITests: XCTestCase {
             ? app.steppers["inp.stepper"]
             : app.steppers.firstMatch
         XCTAssertTrue(stepper.waitForExistence(timeout: 10), "The Stepper must be queryable")
-        // SwiftUI's Stepper exposes its two inner buttons without identifiers and not
-        // necessarily below the queried stepper row; look for the localised increment
-        // label across the app. No coordinate or index guessing.
+        // SwiftUI's Stepper exposes no inner buttons on iOS 18 (two runs found none by the
+        // localised increment label). If the label exists it is used; otherwise the tap goes
+        // to the upper right quarter of the measured stepper row, where UIKit draws "+".
         let incrementPredicate = NSPredicate(format: "label IN %@",
                                              ["Increment", "Erhöhen", "Plus", "Add"])
         let increment = app.buttons.matching(incrementPredicate).firstMatch
-        XCTAssertTrue(increment.waitForExistence(timeout: 10),
-                      "The Stepper increment must exist:\n\(app.debugDescription)")
-        increment.tap()
+        let incrementByOffset = stepper.coordinate(withNormalizedOffset: CGVector(dx: 0.95, dy: 0.25))
+        if increment.waitForExistence(timeout: 3) {
+            increment.tap()
+        } else {
+            incrementByOffset.tap()
+        }
         waitFor(label: "stepper:1", on: status)
-        increment.tap()
+        if increment.exists {
+            increment.tap()
+        } else {
+            incrementByOffset.tap()
+        }
         waitFor(label: "stepper:2", on: status)
         attach(app, "swiftui-inputs-stepper")
 
