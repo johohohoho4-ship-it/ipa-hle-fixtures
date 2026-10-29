@@ -47,12 +47,14 @@ final class FixtureReferenceUITests: XCTestCase {
             ? app.steppers["inp.stepper"]
             : app.steppers.firstMatch
         XCTAssertTrue(stepper.waitForExistence(timeout: 10), "The Stepper must be queryable")
-        // SwiftUI's Stepper exposes its two inner buttons without identifiers; the
-        // increment is found by its accessibility label, never by a coordinate.
-        let incrementPredicate = NSPredicate(format: "label IN %@", ["Increment", "Erhöhen"])
-        let increment = stepper.buttons.matching(incrementPredicate).firstMatch
+        // SwiftUI's Stepper exposes its two inner buttons without identifiers and not
+        // necessarily below the queried stepper row; look for the localised increment
+        // label across the app. No coordinate or index guessing.
+        let incrementPredicate = NSPredicate(format: "label IN %@",
+                                             ["Increment", "Erhöhen", "Plus", "Add"])
+        let increment = app.buttons.matching(incrementPredicate).firstMatch
         XCTAssertTrue(increment.waitForExistence(timeout: 10),
-                      "The Stepper increment must exist:\n\(stepper.debugDescription)")
+                      "The Stepper increment must exist:\n\(app.debugDescription)")
         increment.tap()
         waitFor(label: "stepper:1", on: status)
         increment.tap()
