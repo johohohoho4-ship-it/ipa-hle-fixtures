@@ -991,6 +991,7 @@
     "fixtures/storyboard-table/StoryboardTableFixture.xcodeproj/xcshareddata/xcschemes/StoryboardTableFixture.xcscheme": "ddfd5490db33836e853824c8e8b80cb4f3d41845e4c3d471faf45f51365b0406",
     "fixtures/storyboard-table/ViewControllers.h": "a1aeb369e68834024f25810ea981cf1316b85b648db3fc5b2e1df51fa638cf03",
     "fixtures/storyboard-table/ViewControllers.m": "efbd57ca385e346105b98cc34343e10890dedfec75d33a0c3aa1a1a22d00f9b8",
+    "fixtures/storyboard-table/compiled/Main.storyboardc/Info.plist": "b6ffa771705eae2c36704816ed9bdad7a29e60a4d5b143c952fe134ab3e50d99",
     "fixtures/storyboard-table/ipa-hle-fixture.json": "d1af762d46cb636f96f6c5353a8dcbd0eba4fbc8fc87dce7c81c0ca48a5e3ed2",
     "fixtures/storyboard-table/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/storyboard/AppDelegate.h": "13349a4936776341301c573deff2c95a0dbc77412956f298fb6923aeac46b8f5",
