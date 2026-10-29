@@ -216,10 +216,10 @@ static NSString *xsubviews(UIView *view) {
         UILabel *text = cell.textLabel;
         UILabel *detail = cell.detailTextLabel;
         printf("SBTX_BUILTIN row=%ld class=%s textLabel=%s text=%s color=%s font=%s frame=%s inContent=%d detailLabel=%s detail=%s detailColor=%s detailFont=%s detailFrame=%s detailInContent=%d\n",
-               (long)row, object_getClassName(cell), xref(text).UTF8String, xstr(text.text).UTF8String,
+               (long)row, object_getClassName(cell), xref(text).UTF8String, xstr(text.text),
                xrgba(text.textColor).UTF8String, xfont(text.font).UTF8String, xrect(text.frame).UTF8String,
                text != nil && text.superview == cell.contentView,
-               xref(detail).UTF8String, xstr(detail.text).UTF8String,
+               xref(detail).UTF8String, xstr(detail.text),
                xrgba(detail.textColor).UTF8String, xfont(detail.font).UTF8String, xrect(detail.frame).UTF8String,
                detail != nil && detail.superview == cell.contentView);
     }
