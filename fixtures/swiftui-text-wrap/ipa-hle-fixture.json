@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUITextWrap.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuitextwrap",
+  "app_name": "SwiftUITextWrap",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUITextWrap"
+}
