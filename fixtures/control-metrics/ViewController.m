@@ -5,8 +5,10 @@
 // content size, alignmentRectInsets and alignmentRectForFrame: of a UITextField
 // (RoundedRect, 14 pt) and a UISwitch, and the AutoLayout result when those
 // controls are paired with each other and with plain UIViews at centerY
-// constraints with integer, half, third and sixth point offsets. Nothing here
-// asserts expected values; every number is read from the runtime.
+// constraints with integer, half, third and sixth point offsets. It also
+// reports fractional and negative edge coordinates that separate edge rounding
+// from origin-plus-size rounding. Nothing here asserts expected values; every
+// number is read from the runtime.
 
 static void printSize(const char *kind, const char *name, CGSize size) {
     printf("CM_INTRINSIC kind=%s name=%s w=%.4f h=%.4f\n",
@@ -54,6 +56,8 @@ static UISwitch *makeSwitch(void) {
 
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray<NSDictionary *> *rows;
+@property (nonatomic, strong) NSMutableArray<NSDictionary *> *rasterRows;
+@property (nonatomic, strong) UIView *rasterContainer;
 @property (nonatomic, strong) UITextField *intrinsicField;
 @property (nonatomic, strong) UISwitch *intrinsicSwitch;
 @property (nonatomic) BOOL printed;
@@ -119,6 +123,37 @@ static UISwitch *makeSwitch(void) {
     fflush(stdout);
 }
 
+// Raster separation cases. Each view is placed by required Auto Layout
+// constraints; the printed frame is the runtime result. The container sits at
+// the screen origin, so frame coordinates are also absolute coordinates.
+- (void)addRasterRowNamed:(NSString *)name
+                        x:(CGFloat)x
+                        y:(CGFloat)y
+                    width:(CGFloat)width
+                   height:(CGFloat)height {
+    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = UIColor.systemBlueColor;
+    view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.rasterContainer addSubview:view];
+
+    [view.leadingAnchor constraintEqualToAnchor:self.rasterContainer.leadingAnchor constant:x].active = YES;
+    [view.topAnchor constraintEqualToAnchor:self.rasterContainer.topAnchor constant:y].active = YES;
+    [view.widthAnchor constraintEqualToConstant:width].active = YES;
+    [view.heightAnchor constraintEqualToConstant:height].active = YES;
+
+    [self.rasterRows addObject:@{@"name": name, @"view": view}];
+}
+
+- (void)printRasterRow:(NSDictionary *)row {
+    CGRect frame = ((UIView *)row[@"view"]).frame;
+    printf("CM_RASTER name=%s frame=(%.4f,%.4f,%.4f,%.4f) "
+           "center=(%.4f,%.4f)\n",
+           [row[@"name"] UTF8String],
+           frame.origin.x, frame.origin.y, frame.size.width, frame.size.height,
+           CGRectGetMidX(frame), CGRectGetMidY(frame));
+    fflush(stdout);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.systemBackgroundColor;
@@ -166,6 +201,19 @@ static UISwitch *makeSwitch(void) {
     [self addRowNamed:@"view36-switch-0" leftView:makeBox(36) rightView:makeSwitch()
             leftWidth:120 rightWidth:51 offset:0 y:y];
 
+    // Separation cases for the 1/scale edge grid. The container sits at (0,0),
+    // so a negative x or y is also negative in window coordinates.
+    self.rasterContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 393, 200)];
+    self.rasterContainer.backgroundColor = UIColor.clearColor;
+    [self.view addSubview:self.rasterContainer];
+    self.rasterRows = [NSMutableArray array];
+    [self addRasterRowNamed:@"edge-x8.2-w0.2" x:8.2 y:0 width:0.2 height:10];
+    [self addRasterRowNamed:@"edge-x8.25-w10.25" x:8.25 y:20 width:10.25 height:10];
+    [self addRasterRowNamed:@"half-x8.5-w10" x:8.5 y:40 width:10 height:10];
+    [self addRasterRowNamed:@"negative-x-half" x:-6.5 y:60 width:20 height:10];
+    [self addRasterRowNamed:@"negative-x-quarter" x:-6.25 y:80 width:20 height:10];
+    [self addRasterRowNamed:@"negative-y-half" x:20 y:-6.5 width:20 height:10];
+
     UILabel *status = [[UILabel alloc] initWithFrame:CGRectZero];
     status.accessibilityIdentifier = @"cm.status";
     status.text = @"CM_PENDING";
@@ -195,6 +243,11 @@ static UISwitch *makeSwitch(void) {
     UIView *laidSwitch = fieldRow[@"right"];
     printAlignment("UITextField", "resolved", [laidField alignmentRectForFrame:laidField.frame]);
     printAlignment("UISwitch", "resolved", [laidSwitch alignmentRectForFrame:laidSwitch.frame]);
+
+    for (NSDictionary *row in self.rasterRows) {
+        [self printRasterRow:row];
+    }
+    printf("CM_RASTER_DONE rows=%lu\n", (unsigned long)self.rasterRows.count);
 
     printf("CM_DONE rows=%lu\n", (unsigned long)self.rows.count);
     fflush(stdout);
