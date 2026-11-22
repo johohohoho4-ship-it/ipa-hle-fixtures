@@ -1,0 +1,7 @@
+{
+  "project": "ControlMetricsFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.control-metrics",
+  "app_name": "ControlMetricsFixture",
+  "minimum_ios": "15.0",
+  "scheme": "ControlMetricsFixture"
+}
