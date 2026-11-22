@@ -15,15 +15,28 @@
 @implementation TapSurfaceView
 
 - (void)recordPhase:(NSString *)phase touches:(NSSet<UITouch *> *)touches {
-    UITouch *touch = [touches anyObject];
+    NSArray<UITouch *> *members = touches.allObjects;
+    NSUInteger count = members.count;
+    NSUInteger tapCounts[count ? count : 1];
+    for (NSUInteger i = 0; i < count; i++) {
+        NSUInteger tapCount = members[i].tapCount;
+        NSUInteger j = i;
+        while (j > 0 && tapCounts[j - 1] > tapCount) {
+            tapCounts[j] = tapCounts[j - 1];
+            j--;
+        }
+        tapCounts[j] = tapCount;
+    }
     CFTimeInterval now = CACurrentMediaTime();
     CFTimeInterval deltaMs = self.previousPhaseTime > 0 ? (now - self.previousPhaseTime) * 1000.0 : -1.0;
     self.previousPhaseTime = now;
     self.lastPhaseTime = now;
-    self.lastTapCount = touch.tapCount;
-    printf("TAP_TOUCH surface=%s phase=%s tapCount=%ld touches=%lu dtMs=%.3f time=%.6f\n",
-           self.surfaceName.UTF8String, phase.UTF8String, (long)touch.tapCount,
-           (unsigned long)touches.count, deltaMs, now);
+    self.lastTapCount = count ? tapCounts[0] : 0;
+    printf("TAP_TOUCH surface=%s phase=%s tapCounts=", self.surfaceName.UTF8String, phase.UTF8String);
+    for (NSUInteger i = 0; i < count; i++) {
+        printf("%s%lu", i ? "," : "", (unsigned long)tapCounts[i]);
+    }
+    printf(" touches=%lu dtMs=%.3f time=%.6f\n", (unsigned long)count, deltaMs, now);
     fflush(stdout);
 }
 

@@ -1306,7 +1306,7 @@
     "fixtures/tap-sequences/TapSequencesFixture.xcodeproj/project.pbxproj": "e5402b83efff528c6c038a4622c60a4b8d0b33e284d384a661b2c841cf2763b2",
     "fixtures/tap-sequences/TapSequencesFixture.xcodeproj/xcshareddata/xcschemes/TapSequencesFixture.xcscheme": "b8abc654e3ddefade2e64aecadf80707679c612e976fc17b0d1b93ee7e269e62",
     "fixtures/tap-sequences/ViewController.h": "d29c64fb13f130bbfc3af396f12e9308d874eabc0a1bec2e9b7ec156b1d5081d",
-    "fixtures/tap-sequences/ViewController.m": "94fb8d92e00f69c8d6bb28b44525f80dcb4310de55d39ee3eef79db8f2bb8c3b",
+    "fixtures/tap-sequences/ViewController.m": "f01625db9cd8346a0ae4327d838437eeb7b82cea6760f08dfd19c7e07e3f93a7",
     "fixtures/tap-sequences/ipa-hle-fixture.json": "f7aa05b6e1b6fe5505b34b91e7e6113dbe2c8f999430190d09a94bf508cbb738",
     "fixtures/tap-sequences/main.m": "e0aee4dc85a552fdd461ebf461bf548c972d1a3d126f57c380100b05906efc4a",
     "fixtures/template/build-fixture.sh": "175c8b21aafe16ddf8fbd2cc017eb87ee51e81119629ff6b290ac91d2a6a887f",
