@@ -81,8 +81,8 @@ final class ViewController: UIViewController {
         let intrinsic = button.intrinsicContentSize
         let insets = button.alignmentRectInsets
         let intrinsicFrame = CGRect(origin: .zero, size: intrinsic)
-        let intrinsicAlignment = button.alignmentRectForFrame(intrinsicFrame)
-        let resolvedAlignment = button.alignmentRectForFrame(button.frame)
+        let intrinsicAlignment = button.alignmentRect(forFrame: intrinsicFrame)
+        let resolvedAlignment = button.alignmentRect(forFrame: button.frame)
         let title = button.title(for: .normal) ?? ""
         let titleIntrinsic = button.titleLabel?.intrinsicContentSize ?? .zero
         let titleFrame = button.titleLabel?.frame ?? .zero
