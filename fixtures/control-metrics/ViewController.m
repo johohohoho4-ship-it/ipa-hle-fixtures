@@ -54,6 +54,18 @@ static UISwitch *makeSwitch(void) {
     return toggle;
 }
 
+// F3: intrinsic width profiles of the rounded text field. The font stays
+// Regular system; only point size, text and placeholder vary. Every value is
+// read from the runtime.
+static UITextField *makeProfileField(CGFloat pointSize, NSString *text, NSString *placeholder) {
+    UITextField *field = [[UITextField alloc] initWithFrame:CGRectZero];
+    field.borderStyle = UITextBorderStyleRoundedRect;
+    field.font = [UIFont systemFontOfSize:pointSize];
+    field.text = text;
+    field.placeholder = placeholder;
+    return field;
+}
+
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray<NSDictionary *> *rows;
 @property (nonatomic, strong) NSMutableArray<NSDictionary *> *rasterRows;
@@ -173,6 +185,40 @@ static UISwitch *makeSwitch(void) {
     printInsets("UITextField", self.intrinsicField.alignmentRectInsets);
     printSize("switch", "default", self.intrinsicSwitch.intrinsicContentSize);
     printInsets("UISwitch", self.intrinsicSwitch.alignmentRectInsets);
+
+    // Width profiles: empty text, short text, a long sentence and a placeholder
+    // each at 14 and 17 pt Regular. The intrinsic size is printed before Auto
+    // Layout resolves any width constraint.
+    NSArray<NSNumber *> *pointSizes = @[@14.0, @17.0];
+    NSArray<NSArray *> *profiles = @[
+        @[@"empty", [NSNull null], [NSNull null]],
+        @[@"ada", @"Ada", [NSNull null]],
+        @[@"long", @"The quick brown fox jumps over the lazy dog", [NSNull null]],
+        @[@"placeholder", [NSNull null], @"Name"],
+    ];
+    for (NSNumber *pointSize in pointSizes) {
+        for (NSArray *profile in profiles) {
+            id textValue = profile[1];
+            id placeholderValue = profile[2];
+            NSString *text = [textValue isKindOfClass:[NSNull class]] ? nil : textValue;
+            NSString *placeholder = [placeholderValue isKindOfClass:[NSNull class]] ? nil : placeholderValue;
+            UITextField *field = makeProfileField(pointSize.doubleValue, text, placeholder);
+            CGSize size = field.intrinsicContentSize;
+            UIEdgeInsets insets = field.alignmentRectInsets;
+            UIFont *font = field.font;
+            printf("CM_FIELD size=%.4f profile=%s text=%s placeholder=%s "
+                   "intrinsic=(%.4f,%.4f) insets=(%.4f,%.4f,%.4f,%.4f) "
+                   "font=%s family=%s point=%.4f\n",
+                   pointSize.doubleValue,
+                   [profile[0] UTF8String],
+                   text == nil ? "none" : [text UTF8String],
+                   placeholder == nil ? "none" : [placeholder UTF8String],
+                   size.width, size.height,
+                   insets.top, insets.left, insets.bottom, insets.right,
+                   font.fontName.UTF8String, font.familyName.UTF8String, font.pointSize);
+            fflush(stdout);
+        }
+    }
 
     CGFloat y = 100;
     CGFloat step = 70;

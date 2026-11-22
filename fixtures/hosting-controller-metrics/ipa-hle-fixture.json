@@ -1,0 +1,7 @@
+{
+  "project": "HostingControllerMetrics.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.hostingcontrollermetrics",
+  "app_name": "HostingControllerMetrics",
+  "minimum_ios": "15.0",
+  "scheme": "HostingControllerMetrics"
+}
