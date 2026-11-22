@@ -1,0 +1,7 @@
+{
+  "project": "SelectorSemanticsFixture.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.uikit-selector-semantics",
+  "app_name": "SelectorSemanticsFixture",
+  "minimum_ios": "15.0",
+  "scheme": "SelectorSemanticsFixture"
+}
