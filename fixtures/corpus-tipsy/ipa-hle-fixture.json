@@ -1,0 +1,7 @@
+{
+  "project": "TipsyCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.tipsy",
+  "app_name": "TipsyCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "TipsyCorpus"
+}
