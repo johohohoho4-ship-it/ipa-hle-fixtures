@@ -1,3 +1,4 @@
+import Darwin
 import UIKit
 
 final class ViewController: UIViewController {
@@ -11,10 +12,8 @@ final class ViewController: UIViewController {
         status.accessibilityIdentifier = "string-compare.status"
         view.addSubview(status)
         Task { @MainActor in
-            for line in stringCompareChecks() {
-                print(line)
-            }
-            print("SC_DONE")
+            stringCompareChecks()
+            puts("SC_DONE")
             status.text = "SC_DONE"
         }
     }
