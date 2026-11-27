@@ -1,0 +1,7 @@
+{
+  "project": "LocaleC.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.localec",
+  "app_name": "LocaleC",
+  "minimum_ios": "15.0",
+  "scheme": "LocaleC"
+}
