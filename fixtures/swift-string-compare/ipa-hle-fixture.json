@@ -1,0 +1,7 @@
+{
+  "project": "SwiftStringCompare.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftstringcompare",
+  "app_name": "SwiftStringCompare",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftStringCompare"
+}

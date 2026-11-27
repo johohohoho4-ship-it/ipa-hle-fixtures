@@ -1,0 +1,7 @@
+{
+  "project": "SwiftDeterministicHashing.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftdeterministichashing",
+  "app_name": "SwiftDeterministicHashing",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftDeterministicHashing"
+}
