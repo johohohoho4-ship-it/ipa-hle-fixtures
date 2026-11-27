@@ -1,0 +1,7 @@
+{
+  "project": "HonoluluArtCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.honoluluart",
+  "app_name": "HonoluluArtCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "HonoluluArtCorpus"
+}

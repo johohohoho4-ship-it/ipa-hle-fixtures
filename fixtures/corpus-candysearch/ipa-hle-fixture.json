@@ -1,0 +1,7 @@
+{
+  "project": "CandySearchCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.candysearch",
+  "app_name": "CandySearchCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "CandySearchCorpus"
+}

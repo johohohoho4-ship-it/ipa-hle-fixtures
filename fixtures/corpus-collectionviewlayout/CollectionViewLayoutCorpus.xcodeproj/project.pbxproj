@@ -1,0 +1,182 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* AppDelegate.m */; };
+		A10000000000000000000002 /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* BookCell.m */; };
+		A10000000000000000000003 /* BookShelfCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* BookShelfCollectionViewController.m */; };
+		A10000000000000000000004 /* BookShelfDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* BookShelfDataSource.m */; };
+		A10000000000000000000005 /* BookShelfDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* BookShelfDecorationView.m */; };
+		A10000000000000000000006 /* BookShelfHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* BookShelfHeaderView.m */; };
+		A10000000000000000000007 /* BookShelfLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* BookShelfLayout.m */; };
+		A10000000000000000000008 /* PassbookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* PassbookCell.m */; };
+		A10000000000000000000009 /* PassbookCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* PassbookCollectionViewController.m */; };
+		A10000000000000000000010 /* PassbookDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* PassbookDataSource.m */; };
+		A10000000000000000000011 /* PassbookLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* PassbookLayout.m */; };
+		A10000000000000000000012 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* main.m */; };
+		A10000000000000000000024 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000024 /* MainStoryboard.storyboard */; };
+		A10000000000000000000025 /* shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000025 /* shelf.png */; };
+		A10000000000000000000026 /* "shelf@2x.png" in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000026 /* "shelf@2x.png" */; };
+		A10000000000000000000027 /* "white-tweed.png" in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000027 /* "white-tweed.png" */; };
+		A10000000000000000000028 /* "white-tweed@2X.png" in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000028 /* "white-tweed@2X.png" */; };
+		B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A80000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000000000000000000001;
+			remoteInfo = CollectionViewLayoutCorpus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A20000000000000000000002 /* BookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookCell.m; sourceTree = "<group>"; };
+		A20000000000000000000003 /* BookShelfCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfCollectionViewController.m; sourceTree = "<group>"; };
+		A20000000000000000000004 /* BookShelfDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfDataSource.m; sourceTree = "<group>"; };
+		A20000000000000000000005 /* BookShelfDecorationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfDecorationView.m; sourceTree = "<group>"; };
+		A20000000000000000000006 /* BookShelfHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfHeaderView.m; sourceTree = "<group>"; };
+		A20000000000000000000007 /* BookShelfLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookShelfLayout.m; sourceTree = "<group>"; };
+		A20000000000000000000008 /* PassbookCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbookCell.m; sourceTree = "<group>"; };
+		A20000000000000000000009 /* PassbookCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbookCollectionViewController.m; sourceTree = "<group>"; };
+		A20000000000000000000010 /* PassbookDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbookDataSource.m; sourceTree = "<group>"; };
+		A20000000000000000000011 /* PassbookLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassbookLayout.m; sourceTree = "<group>"; };
+		A20000000000000000000012 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A20000000000000000000013 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A20000000000000000000014 /* BookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookCell.h; sourceTree = "<group>"; };
+		A20000000000000000000015 /* BookShelfCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfCollectionViewController.h; sourceTree = "<group>"; };
+		A20000000000000000000016 /* BookShelfDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfDataSource.h; sourceTree = "<group>"; };
+		A20000000000000000000017 /* BookShelfDecorationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfDecorationView.h; sourceTree = "<group>"; };
+		A20000000000000000000018 /* BookShelfHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfHeaderView.h; sourceTree = "<group>"; };
+		A20000000000000000000019 /* BookShelfLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookShelfLayout.h; sourceTree = "<group>"; };
+		A20000000000000000000020 /* PassbookCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassbookCell.h; sourceTree = "<group>"; };
+		A20000000000000000000021 /* PassbookCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassbookCollectionViewController.h; sourceTree = "<group>"; };
+		A20000000000000000000022 /* PassbookDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassbookDataSource.h; sourceTree = "<group>"; };
+		A20000000000000000000023 /* PassbookLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassbookLayout.h; sourceTree = "<group>"; };
+		A20000000000000000000024 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A20000000000000000000025 /* shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shelf.png; sourceTree = "<group>"; };
+		A20000000000000000000026 /* "shelf@2x.png" */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shelf@2x.png"; sourceTree = "<group>"; };
+		A20000000000000000000027 /* "white-tweed.png" */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-tweed.png"; sourceTree = "<group>"; };
+		A20000000000000000000028 /* "white-tweed@2X.png" */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-tweed@2X.png"; sourceTree = "<group>"; };
+		A20000000000000000000029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000030 /* "CollectionViewLayoutDemo-Prefix.pch" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollectionViewLayoutDemo-Prefix.pch"; sourceTree = "<group>"; };
+		A2E000000000000000000009 /* CollectionViewLayoutCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewLayoutCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000001 /* FixtureReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureReferenceUITests.swift; sourceTree = "<group>"; };
+		B20000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		B30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (A40000000000000000000002 /* CollectionViewLayoutCorpus */, B40000000000000000000001 /* FixtureReferenceUITests */, A40000000000000000000003 /* Products */);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* CollectionViewLayoutCorpus */ = {
+			isa = PBXGroup;
+			children = (A20000000000000000000001, A20000000000000000000002, A20000000000000000000003, A20000000000000000000004, A20000000000000000000005, A20000000000000000000006, A20000000000000000000007, A20000000000000000000008, A20000000000000000000009, A20000000000000000000010, A20000000000000000000011, A20000000000000000000012, A20000000000000000000013, A20000000000000000000014, A20000000000000000000015, A20000000000000000000016, A20000000000000000000017, A20000000000000000000018, A20000000000000000000019, A20000000000000000000020, A20000000000000000000021, A20000000000000000000022, A20000000000000000000023, A20000000000000000000024, A20000000000000000000025, A20000000000000000000026, A20000000000000000000027, A20000000000000000000028, A20000000000000000000029, A20000000000000000000030,);
+			path = .;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A2E000000000000000000009 /* CollectionViewLayoutCorpus.app */, B20000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
+		B40000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXGroup;
+			children = (B20000000000000000000001 /* FixtureReferenceUITests.swift */,);
+			path = FixtureReferenceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* CollectionViewLayoutCorpus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (A60000000000000000000001 /* Sources */, A30000000000000000000001 /* Frameworks */, A60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = CollectionViewLayoutCorpus;
+			productName = CollectionViewLayoutCorpus;
+			productReference = A2E000000000000000000009 /* CollectionViewLayoutCorpus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B50000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70000000000000000000002 /* Target config list */;
+			buildPhases = (B60000000000000000000001 /* Sources */, B30000000000000000000001 /* Frameworks */, B60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = (B80000000000000000000002 /* PBXTargetDependency */);
+			name = FixtureReferenceUITests;
+			productName = FixtureReferenceUITests;
+			productReference = B20000000000000000000002 /* FixtureReferenceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					B50000000000000000000001 = {CreatedOnToolsVersion = 16.0; TestTargetID = A50000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* CollectionViewLayoutCorpus */, B50000000000000000000001 /* FixtureReferenceUITests */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000024, A10000000000000000000025, A10000000000000000000026, A10000000000000000000027, A10000000000000000000028,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000004, A10000000000000000000005, A10000000000000000000006, A10000000000000000000007, A10000000000000000000008, A10000000000000000000009, A10000000000000000000010, A10000000000000000000011, A10000000000000000000012,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000000000000000000001 /* CollectionViewLayoutCorpus */;
+			targetProxy = B80000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; CLANG_ENABLE_OBJC_ARC = YES; }; name = Debug; };
+		A90000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; CLANG_ENABLE_OBJC_ARC = YES; }; name = Release; };
+		A90000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; ENABLE_DEBUG_DYLIB = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.collectionviewlayout; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; CLANG_ENABLE_OBJC_ARC = YES; GCC_PREFIX_HEADER = "CollectionViewLayoutDemo-Prefix.pch"; GCC_PRECOMPILE_PREFIX_HEADER = YES; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		A90000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; ENABLE_DEBUG_DYLIB = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.collectionviewlayout; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; CLANG_ENABLE_OBJC_ARC = YES; GCC_PREFIX_HEADER = "CollectionViewLayoutDemo-Prefix.pch"; GCC_PRECOMPILE_PREFIX_HEADER = YES; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Release; };
+		B90000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.collectionviewlayout.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = CollectionViewLayoutCorpus; USES_XCTEST = YES; }; name = Debug; };
+		B90000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 15.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.collectionviewlayout.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = CollectionViewLayoutCorpus; USES_XCTEST = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Project config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000001 /* Debug */, A90000000000000000000002 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000003 /* Debug */, A90000000000000000000004 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		B70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (B90000000000000000000003 /* Debug */, B90000000000000000000004 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A80000000000000000000001 /* Project object */;
+}

@@ -39,9 +39,9 @@
 		A20000000000000000000008 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A20000000000000000000009 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A20000000000000000000010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A20000000000000000000009 /* TipsyCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsyCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E000000000000000000009 /* TipsyCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipsyCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B20000000000000000000001 /* FixtureReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureReferenceUITests.swift; sourceTree = "<group>"; };
-		B20000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			path = .;
 			sourceTree = "<group>";
 		};
-		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000009 /* TipsyCorpus.app */, B20000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A2E000000000000000000009 /* TipsyCorpus.app */, B2E000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
 		B40000000000000000000001 /* FixtureReferenceUITests */ = {
 			isa = PBXGroup;
 			children = (B20000000000000000000001 /* FixtureReferenceUITests.swift */,);
@@ -79,7 +79,7 @@
 			dependencies = ();
 			name = TipsyCorpus;
 			productName = TipsyCorpus;
-			productReference = A20000000000000000000009 /* TipsyCorpus.app */;
+			productReference = A2E000000000000000000009 /* TipsyCorpus.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B50000000000000000000001 /* FixtureReferenceUITests */ = {
@@ -90,7 +90,7 @@
 			dependencies = (B80000000000000000000002 /* PBXTargetDependency */);
 			name = FixtureReferenceUITests;
 			productName = FixtureReferenceUITests;
-			productReference = B20000000000000000000002 /* FixtureReferenceUITests.xctest */;
+			productReference = B2E000000000000000000002 /* FixtureReferenceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet var twentyPercentButton: UIButton!
     @IBOutlet var stepperLabel: UILabel!
     @IBOutlet var stepper: UIStepper!
+    @IBOutlet var calculateButton: UIButton!
     
     
     //MARK: - Views
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         twentyPercentButton.accessibilityIdentifier = "tipsy.tip.20"
         stepperLabel.accessibilityIdentifier = "tipsy.people.label"
         stepper.accessibilityIdentifier = "tipsy.people"
+        calculateButton.accessibilityIdentifier = "tipsy.calculate"
         // The decimal pad has no return key; a tap outside the field dismisses it.
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
     }

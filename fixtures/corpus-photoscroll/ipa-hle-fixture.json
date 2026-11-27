@@ -1,0 +1,7 @@
+{
+  "project": "PhotoScrollCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.photoscroll",
+  "app_name": "PhotoScrollCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "PhotoScrollCorpus"
+}

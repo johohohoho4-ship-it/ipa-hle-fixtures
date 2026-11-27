@@ -1,0 +1,7 @@
+{
+  "project": "GoodAsOldPhonesCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.goodasoldphones",
+  "app_name": "GoodAsOldPhonesCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "GoodAsOldPhonesCorpus"
+}

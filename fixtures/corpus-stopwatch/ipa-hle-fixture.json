@@ -1,0 +1,7 @@
+{
+  "project": "StopwatchCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.stopwatch",
+  "app_name": "StopwatchCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "StopwatchCorpus"
+}

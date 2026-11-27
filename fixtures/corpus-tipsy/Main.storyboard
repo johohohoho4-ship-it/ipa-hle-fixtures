@@ -200,6 +200,7 @@
                     <connections>
                         <outlet property="billTextField" destination="wcN-ka-Q4F" id="Inq-4V-eaK"/>
                         <outlet property="stepper" destination="haq-5m-pqs" id="eAj-ek-pKk"/>
+                        <outlet property="calculateButton" destination="FSl-VY-LBj" id="TipsyCalcOutlet1"/>
                         <outlet property="stepperLabel" destination="bSy-Yc-886" id="jMr-ec-61b"/>
                         <outlet property="tenPercentButton" destination="7y6-Kf-yF0" id="X95-kA-jN7"/>
                         <outlet property="twentyPercentButton" destination="UtR-dU-EKt" id="A5s-3o-sQ2"/>

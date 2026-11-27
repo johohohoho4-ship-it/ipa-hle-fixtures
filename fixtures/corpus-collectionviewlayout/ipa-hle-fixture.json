@@ -1,0 +1,7 @@
+{
+  "project": "CollectionViewLayoutCorpus.xcodeproj",
+  "bundle_id": "org.ipahle.corpus.collectionviewlayout",
+  "app_name": "CollectionViewLayoutCorpus",
+  "minimum_ios": "15.0",
+  "scheme": "CollectionViewLayoutCorpus"
+}
