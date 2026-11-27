@@ -13,7 +13,7 @@ final class ViewController: UIViewController {
         view.addSubview(status)
         Task { @MainActor in
             stringCompareChecks()
-            puts("SC_DONE")
+            printf("SC_DONE\n")
             status.text = "SC_DONE"
         }
     }
