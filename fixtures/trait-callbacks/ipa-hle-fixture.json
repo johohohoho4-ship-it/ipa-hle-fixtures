@@ -1,0 +1,7 @@
+{
+  "project": "TraitCallbacks.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.traitcallbacks",
+  "app_name": "TraitCallbacks",
+  "minimum_ios": "17.0",
+  "scheme": "TraitCallbacks"
+}
