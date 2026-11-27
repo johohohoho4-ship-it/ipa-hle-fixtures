@@ -178,7 +178,7 @@
     printf("GAI_ERRORS null=%d numhost=%d numserv=%d fam=%d sock=%d str_ok=%d\n",
            err_null, err_numhost, err_numserv, err_fam, err_sock, str_ok);
     if (err_null == EAI_NONAME && err_numhost == EAI_NONAME && err_numserv == EAI_NONAME &&
-        err_fam == EAI_FAMILY && err_sock == EAI_SOCKTYPE && str_ok == 1) {
+        err_fam == EAI_FAMILY && err_sock == EAI_BADHINTS && str_ok == 1) {
         passed++;
     }
 
