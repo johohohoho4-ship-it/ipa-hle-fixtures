@@ -13,8 +13,9 @@ final class ViewController: UIViewController {
         view.addSubview(status)
         Task { @MainActor in
             stringCompareChecks()
-            printf("SC_DONE\n")
-            status.text = "SC_DONE"
+            let done = "SC_STRING_COMPARE_DONE"
+            done.withCString { puts($0) }
+            status.text = "SC_STRING_COMPARE_DONE"
         }
     }
 }

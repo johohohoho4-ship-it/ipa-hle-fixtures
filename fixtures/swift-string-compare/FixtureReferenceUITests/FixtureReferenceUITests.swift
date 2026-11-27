@@ -12,7 +12,7 @@ final class FixtureReferenceUITests: XCTestCase {
 
         let status = app.staticTexts["string-compare.status"]
         XCTAssertTrue(status.waitForExistence(timeout: 20))
-        expectation(for: NSPredicate(format: "label == %@", "SC_DONE"), evaluatedWith: status)
+        expectation(for: NSPredicate(format: "label == %@", "SC_STRING_COMPARE_DONE"), evaluatedWith: status)
         waitForExpectations(timeout: 20)
 
         let screenshot = XCTAttachment(screenshot: app.screenshot())
