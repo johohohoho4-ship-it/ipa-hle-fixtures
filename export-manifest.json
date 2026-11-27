@@ -1035,7 +1035,7 @@
     "fixtures/locale-c/LocaleC.xcodeproj/project.pbxproj": "efcbf118ec671f97dd7b1ecf269778dfb75f4f55689b39dc6db00f9910c591b7",
     "fixtures/locale-c/LocaleC.xcodeproj/xcshareddata/xcschemes/LocaleC.xcscheme": "46912cd090d66237c95416461183714ce4451da877a244af46df8ad93514417b",
     "fixtures/locale-c/ViewController.h": "d29c64fb13f130bbfc3af396f12e9308d874eabc0a1bec2e9b7ec156b1d5081d",
-    "fixtures/locale-c/ViewController.m": "3f78bb871b0d0a553cedb88621cdfb77f5b914f3573b9aa6baa499cc917f57ab",
+    "fixtures/locale-c/ViewController.m": "6b4c6e9362b105f0c02ab6337986f0d90f25eef753cc8c1e5af994d644cef90f",
     "fixtures/locale-c/ipa-hle-fixture.json": "18bf9e8a08517d85143274def2fc4c2f636c0b6613eb345de6220171a712d202",
     "fixtures/locale-c/main.m": "b48339b0d785625a6144d46cbaa5bd5afd82c8b7189b9731b6d702e73748384b",
     "fixtures/memory-map/AppDelegate.h": "1ebacce07b7c240555dc01e5835784e4bf43a010e539cccb281481f17f0b6be8",

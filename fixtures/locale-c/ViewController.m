@@ -8,6 +8,12 @@
 #include <string.h>
 #include <xlocale.h>
 
+// Darwin returns LC_ALL results from one static buffer that the next
+// setlocale(LC_ALL, ...) overwrites, so snapshot each value immediately.
+static void copy_locale(char *dst, size_t size, const char *value) {
+    snprintf(dst, size, "%s", value ? value : "(null)");
+}
+
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -47,37 +53,41 @@
            CODESET, RADIXCHAR, THOUSEP, CRNCYSTR, CHAR_MAX);
     passed++;
 
-    // 2. Initial C locale, POSIX normalization, CODESET
-    const char *init_all = setlocale(LC_ALL, NULL);
-    const char *posix_all = setlocale(LC_ALL, "POSIX");
+    // 2. Initial C locale, POSIX acceptance (reported as "POSIX"), CODESET
+    char init_all[64];
+    char posix_all[64];
+    copy_locale(init_all, sizeof(init_all), setlocale(LC_ALL, NULL));
+    copy_locale(posix_all, sizeof(posix_all), setlocale(LC_ALL, "POSIX"));
     const char *init_cs = nl_langinfo(CODESET);
     printf("LOC_INIT all=%s posix=%s cs=%s\n",
-           init_all ? init_all : "(null)",
-           posix_all ? posix_all : "(null)",
+           init_all, posix_all,
            init_cs ? init_cs : "(null)");
-    if (init_all && strcmp(init_all, "C") == 0 &&
-        posix_all && strcmp(posix_all, "C") == 0 &&
+    if (strcmp(init_all, "C") == 0 &&
+        strcmp(posix_all, "POSIX") == 0 &&
         init_cs && strcmp(init_cs, "US-ASCII") == 0) {
         passed++;
     }
 
-    // 3. LC_CTYPE="UTF-8", composite LC_ALL string, restore to C and composite
-    const char *u_ct = setlocale(LC_CTYPE, "UTF-8");
-    const char *u_all = setlocale(LC_ALL, NULL);
+    // 3. LC_CTYPE="UTF-8" from a defined C base, composite LC_ALL string, restore
+    setlocale(LC_ALL, "C");
+    char u_ct[64];
+    char u_all[64];
+    char r_c[64];
+    char r_comp[64];
+    copy_locale(u_ct, sizeof(u_ct), setlocale(LC_CTYPE, "UTF-8"));
+    copy_locale(u_all, sizeof(u_all), setlocale(LC_ALL, NULL));
     const char *u_cs = nl_langinfo(CODESET);
-    const char *r_c = setlocale(LC_ALL, "C");
-    const char *r_comp = setlocale(LC_ALL, "C/UTF-8/C/C/C/C");
+    copy_locale(r_c, sizeof(r_c), setlocale(LC_ALL, "C"));
+    copy_locale(r_comp, sizeof(r_comp), setlocale(LC_ALL, "C/UTF-8/C/C/C/C"));
     printf("LOC_UTF8 ct=%s all=%s cs=%s rc=%s comp=%s\n",
-           u_ct ? u_ct : "(null)",
-           u_all ? u_all : "(null)",
+           u_ct, u_all,
            u_cs ? u_cs : "(null)",
-           r_c ? r_c : "(null)",
-           r_comp ? r_comp : "(null)");
-    if (u_ct && strcmp(u_ct, "UTF-8") == 0 &&
-        u_all && strcmp(u_all, "C/UTF-8/C/C/C/C") == 0 &&
+           r_c, r_comp);
+    if (strcmp(u_ct, "UTF-8") == 0 &&
+        strcmp(u_all, "C/UTF-8/C/C/C/C") == 0 &&
         u_cs && strcmp(u_cs, "UTF-8") == 0 &&
-        r_c && strcmp(r_c, "C") == 0 &&
-        r_comp && strcmp(r_comp, "C/UTF-8/C/C/C/C") == 0) {
+        strcmp(r_c, "C") == 0 &&
+        strcmp(r_comp, "C/UTF-8/C/C/C/C") == 0) {
         passed++;
     }
 
@@ -106,18 +116,19 @@
     unsetenv("LC_TIME");
     unsetenv("LC_MESSAGES");
     unsetenv("LANG");
-    const char *env_empty = setlocale(LC_ALL, "");
+    char env_empty_copy[64];
+    char env_utf8_copy[64];
+    char env_reset_copy[64];
+    copy_locale(env_empty_copy, sizeof(env_empty_copy), setlocale(LC_ALL, ""));
     setenv("LC_CTYPE", "UTF-8", 1);
-    const char *env_utf8 = setlocale(LC_ALL, "");
+    copy_locale(env_utf8_copy, sizeof(env_utf8_copy), setlocale(LC_ALL, ""));
     unsetenv("LC_CTYPE");
-    const char *env_reset = setlocale(LC_ALL, "");
+    copy_locale(env_reset_copy, sizeof(env_reset_copy), setlocale(LC_ALL, ""));
     printf("LOC_ENV empty=%s utf8=%s reset=%s\n",
-           env_empty ? env_empty : "(null)",
-           env_utf8 ? env_utf8 : "(null)",
-           env_reset ? env_reset : "(null)");
-    if (env_empty && strcmp(env_empty, "C") == 0 &&
-        env_utf8 && strcmp(env_utf8, "C/UTF-8/C/C/C/C") == 0 &&
-        env_reset && strcmp(env_reset, "C") == 0) {
+           env_empty_copy, env_utf8_copy, env_reset_copy);
+    if (strcmp(env_empty_copy, "C") == 0 &&
+        strcmp(env_utf8_copy, "C/UTF-8/C/C/C/C") == 0 &&
+        strcmp(env_reset_copy, "C") == 0) {
         passed++;
     }
 
