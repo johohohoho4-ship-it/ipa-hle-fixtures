@@ -1,0 +1,7 @@
+{
+  "project": "NetdbGetaddrinfo.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.netdbgetaddrinfo",
+  "app_name": "NetdbGetaddrinfo",
+  "minimum_ios": "15.0",
+  "scheme": "NetdbGetaddrinfo"
+}
