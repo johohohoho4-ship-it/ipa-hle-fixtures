@@ -69,7 +69,21 @@ final class ViewController: UIViewController {
         hcLine("HC_ROOT left=LeftView right=RightView wrapper=none")
         hcLine("HC_CHILDREN count=\(children.count) leftParent=\(leftHost.parent === self ? 1 : 0) rightParent=\(rightHost.parent === self ? 1 : 0)")
         hcLine("HC_FRAME left=\(frameText(leftHost.view)) right=\(frameText(rightHost.view))")
+        buttonTitleProbes()
         buttonProbe()
+    }
+
+    private func buttonTitleProbes() {
+        for (profile, title) in [("short", "I"), ("long", "Replace the selected item"), ("fractional", "Wi")] {
+            let button = UIButton(type: .system)
+            button.setTitle(title, for: .normal)
+            guard let label = button.titleLabel, let font = label.font else { continue }
+            let intrinsic = button.intrinsicContentSize
+            let titleSize = label.intrinsicContentSize
+            let textWidth = (title as NSString).size(withAttributes: [.font: font]).width
+            hcLine(String(format: "HCM_TITLE_VARIANT profile=%@ intrinsic=(%.4f,%.4f) label=(%.4f,%.4f) textWidth=%.4f",
+                          profile, intrinsic.width, intrinsic.height, titleSize.width, titleSize.height, textWidth))
+        }
     }
 
     // F3: native metrics of the unchanged H9 system button hc.replace. The
