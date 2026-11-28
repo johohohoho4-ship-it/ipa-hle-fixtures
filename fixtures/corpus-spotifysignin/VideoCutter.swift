@@ -49,11 +49,11 @@ open class VideoCutter: NSObject {
         exportSession.timeRange = range
         exportSession.exportAsynchronously { () -> Void in
           switch exportSession.status {
-          case AVAssetExportSessionStatus.completed:
+          case AVAssetExportSession.Status.completed:
             completion?(exportSession.outputURL, nil)
-          case AVAssetExportSessionStatus.failed:
+          case AVAssetExportSession.Status.failed:
             print("Failed: \(String(describing: exportSession.error))")
-          case AVAssetExportSessionStatus.cancelled:
+          case AVAssetExportSession.Status.cancelled:
             print("Failed: \(String(describing: exportSession.error))")
           default:
             print("default case")
