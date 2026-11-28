@@ -1,0 +1,7 @@
+{
+  "project": "KqueueWrapper.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.kqueuewrapper",
+  "app_name": "KqueueWrapper",
+  "minimum_ios": "15.0",
+  "scheme": "KqueueWrapper"
+}
