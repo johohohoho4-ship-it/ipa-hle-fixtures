@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUITextModifiers.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuitextmodifiers",
+  "app_name": "SwiftUITextModifiers",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUITextModifiers"
+}
