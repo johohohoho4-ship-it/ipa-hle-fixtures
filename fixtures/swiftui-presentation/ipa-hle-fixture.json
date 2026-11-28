@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUIPresentation.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuipresentation",
+  "app_name": "SwiftUIPresentation",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftUIPresentation"
+}
