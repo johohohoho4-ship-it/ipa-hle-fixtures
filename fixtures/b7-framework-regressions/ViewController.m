@@ -172,6 +172,41 @@ static BOOL B7TestMemoryManagement(void) {
                     retainedDuringBlock, releasedAfterBlock]);
 }
 
+static BOOL B7TestSystemObjectLifetime(void) {
+    __weak NSMutableString *weakString = nil;
+    NSMutableArray *holder = [NSMutableArray new];
+    @autoreleasepool {
+        NSMutableString *string = [[NSMutableString alloc] initWithString:@"D2 system collection member"];
+        [holder addObject:string];
+        weakString = string;
+    }
+    BOOL held = weakString != nil;
+    holder = nil;
+    BOOL cleared = weakString == nil;
+
+    CFStringRef cfString = CFStringCreateWithCString(kCFAllocatorDefault,
+        "D2 explicitly owned CoreFoundation string", kCFStringEncodingUTF8);
+    __weak NSString *weakCF = (__bridge NSString *)cfString;
+    BOOL cfWasAlive = weakCF != nil;
+    if (cfString) CFRelease(cfString);
+    BOOL cfCleared = weakCF == nil;
+
+    // Report allocator behavior separately. Consecutive native allocations need not reuse a slot.
+    uintptr_t previous = 0;
+    BOOL reused = NO;
+    for (NSUInteger i = 0; i < 64; ++i) {
+        @autoreleasepool {
+            NSObject *object = [NSObject new];
+            uintptr_t address = (uintptr_t)(__bridge void *)object;
+            reused |= address == previous;
+            previous = address;
+        }
+    }
+    B7Write([NSString stringWithFormat:@"D2_SYSTEM_ALLOCATOR reused=%d", reused]);
+    return B7Check(@"D2_SYSTEM", held && cleared && cfWasAlive && cfCleared,
+                   [NSString stringWithFormat:@"container=%d/%d cf=%d/%d", held, cleared, cfWasAlive, cfCleared]);
+}
+
 static BOOL B7TestKeyValueAndObservation(void) {
     B7ObservationProbe *probe = [B7ObservationProbe new];
     probe.age = 18;
@@ -705,12 +740,13 @@ static BOOL B7RunSelectedGroups(NSInteger *sqliteRowsOut) {
     NSDictionary *environment = NSProcessInfo.processInfo.environment;
     NSString *selection = environment[@"B7_GROUPS"];
     NSArray<NSString *> *groups = selection.length ? [selection componentsSeparatedByString:@","] :
-        @[@"D2", @"D3", @"D4", @"D5", @"D7", @"D8", @"D11_D12", @"I1", @"I3", @"D13"];
+        @[@"D2", @"D2_SYSTEM", @"D3", @"D4", @"D5", @"D7", @"D8", @"D11_D12", @"I1", @"I3", @"D13"];
     BOOL allOK = YES;
     for (NSString *group in groups) {
         @try {
             BOOL ok = NO;
             if ([group isEqualToString:@"D2"]) ok = B7TestMemoryManagement();
+            else if ([group isEqualToString:@"D2_SYSTEM"]) ok = B7TestSystemObjectLifetime();
             else if ([group isEqualToString:@"D3"]) ok = B7TestKeyValueAndObservation();
             else if ([group isEqualToString:@"D4"]) ok = B7TestStrings();
             else if ([group isEqualToString:@"D5"]) ok = B7TestCollections();
