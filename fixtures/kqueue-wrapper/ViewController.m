@@ -189,7 +189,9 @@
         passed++;
     }
 
-    // 7. kevent64() with EVFILT_USER and 64-bit udata
+    // 7. kevent64() on its own kqueue: Darwin pins kevent vs kevent64 per queue,
+    //    so a queue already used by kevent() rejects kevent64() with EINVAL.
+    int kq64 = kqueue();
     struct kevent64_s ch64;
     struct kevent64_s ev64;
     memset(&ch64, 0, sizeof(ch64));
@@ -199,51 +201,33 @@
     ch64.flags = EV_ADD | EV_CLEAR;
     ch64.udata = 0xCAFEBABE11223344ULL;
     errno = 0;
-    int k64_r0 = kevent64(kq2, &ch64, 1, &ev64, 1, 0, &zero);
+    int k64_r0 = (kq64 >= 0) ? kevent64(kq64, &ch64, 1, &ev64, 1, 0, &zero) : -99;
     int k64_e0 = errno;
 
     ch64.flags = 0;
     ch64.fflags = NOTE_TRIGGER | NOTE_FFCOPY | 0x77;
     errno = 0;
-    int k64_r1 = kevent64(kq2, &ch64, 1, &ev64, 1, 0, &zero);
+    int k64_r1 = (kq64 >= 0) ? kevent64(kq64, &ch64, 1, &ev64, 1, 0, &zero) : -99;
     int k64_e1 = errno;
 
     ch64.flags = EV_DELETE;
     ch64.fflags = 0;
-    kevent64(kq2, &ch64, 1, NULL, 0, 0, &zero);
-
-    // Separate queues: does kevent64 fail on fresh user and timer registrations too?
-    int kq3 = kqueue();
-    struct kevent64_s probe;
-    memset(&probe, 0, sizeof(probe));
-    probe.ident = 0x303;
-    probe.filter = EVFILT_USER;
-    probe.flags = EV_ADD | EV_CLEAR;
-    errno = 0;
-    int probe_rc = (kq3 >= 0) ? kevent64(kq3, &probe, 1, NULL, 0, 0, &zero) : -99;
-    int probe_err = errno;
-    errno = 0;
-    int probe2_rc = (kq3 >= 0) ? kevent64(kq3, &probe, 1, NULL, 0, KEVENT_FLAG_IMMEDIATE, &zero) : -99;
-    int probe2_err = errno;
-    if (kq3 >= 0) {
-        close(kq3);
+    if (kq64 >= 0) {
+        kevent64(kq64, &ch64, 1, NULL, 0, 0, &zero);
     }
 
-    int kq4 = kqueue();
-    struct kevent64_s tprobe;
-    memset(&tprobe, 0, sizeof(tprobe));
-    tprobe.ident = 0x404;
-    tprobe.filter = EVFILT_TIMER;
-    tprobe.flags = EV_ADD | EV_ONESHOT;
-    tprobe.data = 1;
+    // Mixed interfaces: kq2 has already been used through kevent(), kq64 through kevent64().
     errno = 0;
-    int tprobe_rc = (kq4 >= 0) ? kevent64(kq4, &tprobe, 1, NULL, 0, 0, &zero) : -99;
-    int tprobe_err = errno;
-    if (kq4 >= 0) {
-        close(kq4);
+    int mix64_rc = kevent64(kq2, NULL, 0, NULL, 0, 0, &zero);
+    int mix64_err = errno;
+    errno = 0;
+    int mix32_rc = (kq64 >= 0) ? kevent(kq64, NULL, 0, NULL, 0, &zero) : -99;
+    int mix32_err = errno;
+    if (kq64 >= 0) {
+        close(kq64);
     }
 
-    printf("KQ_KEVENT64 r0=%d e0=%d r1=%d e1=%d id=%llx filt=%d ff=%x ud=%llx ext=%llu,%llu probe=%d perr=%d probe2=%d perr2=%d timer=%d terr=%d\n",
+    printf("KQ_KEVENT64 r0=%d e0=%d r1=%d e1=%d id=%llx filt=%d ff=%x ud=%llx ext=%llu,%llu mix64=%d,%d mix32=%d,%d\n",
            k64_r0, k64_e0, k64_r1, k64_e1,
            (unsigned long long)ev64.ident,
            (int)ev64.filter,
@@ -251,10 +235,12 @@
            (unsigned long long)ev64.udata,
            (unsigned long long)ev64.ext[0],
            (unsigned long long)ev64.ext[1],
-           probe_rc, probe_err, probe2_rc, probe2_err, tprobe_rc, tprobe_err);
-    if (k64_r0 == 0 && k64_r1 == 1 && ev64.ident == 0x202 &&
+           mix64_rc, mix64_err, mix32_rc, mix32_err);
+    if (k64_r0 == 0 && k64_e0 == 0 && k64_r1 == 1 && ev64.ident == 0x202 &&
         ev64.filter == EVFILT_USER && ev64.fflags == 0x77 &&
-        ev64.udata == 0xCAFEBABE11223344ULL && ev64.ext[0] == 0 && ev64.ext[1] == 0) {
+        ev64.udata == 0xCAFEBABE11223344ULL && ev64.ext[0] == 0 && ev64.ext[1] == 0 &&
+        mix64_rc == -1 && mix64_err == EINVAL &&
+        mix32_rc == -1 && mix32_err == EINVAL) {
         passed++;
     }
 
