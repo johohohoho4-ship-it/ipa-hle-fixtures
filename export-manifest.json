@@ -1447,7 +1447,7 @@
     "fixtures/swift-string-compare/AppDelegate.swift": "2b287947abd4e19883af264e479042898029a1698ccd280f557b2f59b8aeee73",
     "fixtures/swift-string-compare/FixtureReferenceUITests/FixtureReferenceUITests.swift": "27fd20adeadabb5e983c12f8176dd115c3ac0aed55350fe0774befa080653495",
     "fixtures/swift-string-compare/Info.plist": "cf1dc74266575bfbdb0b54404b448b99ae42717d20b0c3449b2f7985535aa596",
-    "fixtures/swift-string-compare/StringCompareChecks.swift": "272dbbfd98c1c41b8e3cdd50aee8c18eaef8907b6e4d3b05a6354caf97b3db81",
+    "fixtures/swift-string-compare/StringCompareChecks.swift": "30c783da4e7eb11f9a29c7305920fd2c8a61bb460a473e0f129524ceac35dcf8",
     "fixtures/swift-string-compare/SwiftStringCompare.xcodeproj/project.pbxproj": "50021371066a60c1a76c0769399d1f652414c723a7d74d30764d683c6b893417",
     "fixtures/swift-string-compare/SwiftStringCompare.xcodeproj/xcshareddata/xcschemes/SwiftStringCompare.xcscheme": "c1438d4615a07faa601ed2e0065fdf772ca6e3a3044943fd4a8fe17be876cd4a",
     "fixtures/swift-string-compare/ViewController.swift": "e474997ccff3bc9f7f952d8f51866c7880759f272c752af50605b48b93b0b392",

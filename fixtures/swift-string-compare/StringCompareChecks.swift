@@ -13,6 +13,13 @@ import Foundation
 /// scalar, but its raw bytes start with the first string's bytes. The fast path says
 /// "less" (true), the NFC-scalar path says "not less" (false).
 ///
+/// Two NFC-prefix pairs from Sol's core review (28.11.2026): the raw bytes diverge at
+/// offset 0 and the combining accent keeps the left string from ending at a
+/// normalization boundary, so both go to `_slowCompare` from offset 0. Its NFC
+/// iterators end together after the prefix, but `<` then compares the *original* slice
+/// ends, so both directions are false while `==` is false too. `less`/`equal` are
+/// `@inline(never)` so the -O optimizer cannot fold the literal operands.
+///
 /// `withCString` + `puts` instead of `print`: a -O `print` or a returned `[String]`
 /// builds an array (`_ArrayBuffer._consumeAndCreateNew` → `_swift_arrayInitWithCopy`)
 /// and an implicitly converted String uses `String.utf8CString`; neither is
@@ -30,6 +37,19 @@ func stringCompareChecks() {
     report("SC_STRING_COMPARE_ACCENT_EQ=\(composed == decomposed)")
     report("SC_STRING_COMPARE_ACCENT_LT=\(composed < decomposed)")
 
+    // NFC-prefix pairs, Sol's P2 from the 28.11.2026 core review.
+    let accentPrefix = "e\u{0301}"
+    let accentPrefixRight = "\u{00E9}x"
+    report("SC_STRING_COMPARE_NFC_PREFIX_ACCENT_LT=\(less(accentPrefix, accentPrefixRight))")
+    report("SC_STRING_COMPARE_NFC_PREFIX_ACCENT_GT=\(less(accentPrefixRight, accentPrefix))")
+    report("SC_STRING_COMPARE_NFC_PREFIX_ACCENT_EQ=\(equal(accentPrefix, accentPrefixRight))")
+
+    let ringPrefix = "A\u{030A}\u{0301}"
+    let ringPrefixRight = "\u{01FA}x"
+    report("SC_STRING_COMPARE_NFC_PREFIX_RING_LT=\(less(ringPrefix, ringPrefixRight))")
+    report("SC_STRING_COMPARE_NFC_PREFIX_RING_GT=\(less(ringPrefixRight, ringPrefix))")
+    report("SC_STRING_COMPARE_NFC_PREFIX_RING_EQ=\(equal(ringPrefix, ringPrefixRight))")
+
     let longLeft = "a String long enough for the heap: " + "b"
     let longRight = "a String long enough for the heap: " + "c"
     report("SC_STRING_COMPARE_LONG_LT=\(longLeft < longRight)")
@@ -44,4 +64,16 @@ func stringCompareChecks() {
 
 private func report(_ line: String) {
     line.withCString { puts($0) }
+}
+
+// `@inline(never)` keeps the literal operands out of the caller's constant folding;
+// the comparison itself still compiles to the inlined `String` `<`/`==`.
+@inline(never)
+private func less(_ left: String, _ right: String) -> Bool {
+    left < right
+}
+
+@inline(never)
+private func equal(_ left: String, _ right: String) -> Bool {
+    left == right
 }
