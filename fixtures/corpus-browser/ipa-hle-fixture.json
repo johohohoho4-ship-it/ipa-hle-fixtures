@@ -1,0 +1,7 @@
+{
+  "project": "BrowserCorpus.xcodeproj",
+  "scheme": "BrowserCorpus",
+  "app_name": "BrowserCorpus",
+  "bundle_id": "org.ipahle.corpus.browser",
+  "minimum_ios": "15.0"
+}

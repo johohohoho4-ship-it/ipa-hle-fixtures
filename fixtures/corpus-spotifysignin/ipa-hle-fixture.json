@@ -1,0 +1,7 @@
+{
+  "project": "SpotifySignInCorpus.xcodeproj",
+  "scheme": "SpotifySignInCorpus",
+  "app_name": "SpotifySignInCorpus",
+  "bundle_id": "org.ipahle.corpus.spotifysignin",
+  "minimum_ios": "15.0"
+}

@@ -1,0 +1,7 @@
+{
+  "project": "AnimationsCorpus.xcodeproj",
+  "scheme": "AnimationsCorpus",
+  "app_name": "AnimationsCorpus",
+  "bundle_id": "org.ipahle.corpus.animations",
+  "minimum_ios": "15.0"
+}

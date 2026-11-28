@@ -1,0 +1,7 @@
+{
+  "project": "QBChatReduxCorpus.xcodeproj",
+  "scheme": "QBChatReduxCorpus",
+  "app_name": "QBChatReduxCorpus",
+  "bundle_id": "org.ipahle.corpus.qbchatredux",
+  "minimum_ios": "13.1"
+}

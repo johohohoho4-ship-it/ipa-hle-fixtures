@@ -1,0 +1,7 @@
+{
+  "project": "HitListCorpus.xcodeproj",
+  "scheme": "HitListCorpus",
+  "app_name": "HitListCorpus",
+  "bundle_id": "org.ipahle.corpus.hitlist",
+  "minimum_ios": "15.0"
+}

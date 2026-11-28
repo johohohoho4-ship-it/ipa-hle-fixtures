@@ -1,0 +1,7 @@
+{
+  "project": "PinterestCorpus.xcodeproj",
+  "scheme": "PinterestCorpus",
+  "app_name": "PinterestCorpus",
+  "bundle_id": "org.ipahle.corpus.pinterest",
+  "minimum_ios": "15.0"
+}

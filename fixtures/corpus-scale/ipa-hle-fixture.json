@@ -1,0 +1,7 @@
+{
+  "project": "ScaleCorpus.xcodeproj",
+  "scheme": "ScaleCorpus",
+  "app_name": "ScaleCorpus",
+  "bundle_id": "org.ipahle.corpus.scale",
+  "minimum_ios": "15.0"
+}

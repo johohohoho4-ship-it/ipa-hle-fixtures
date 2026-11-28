@@ -1,0 +1,7 @@
+{
+  "project": "BlueLibraryCorpus.xcodeproj",
+  "scheme": "BlueLibraryCorpus",
+  "app_name": "BlueLibraryCorpus",
+  "bundle_id": "org.ipahle.corpus.bluelibrary",
+  "minimum_ios": "15.0"
+}

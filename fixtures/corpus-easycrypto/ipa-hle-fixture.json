@@ -1,0 +1,7 @@
+{
+  "project": "EasyCryptoCorpus.xcodeproj",
+  "scheme": "EasyCryptoCorpus",
+  "app_name": "EasyCryptoCorpus",
+  "bundle_id": "org.ipahle.corpus.easycrypto",
+  "minimum_ios": "16.0"
+}

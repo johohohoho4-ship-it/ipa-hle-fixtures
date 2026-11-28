@@ -1,0 +1,7 @@
+{
+  "project": "BirthdaysCorpus.xcodeproj",
+  "scheme": "BirthdaysCorpus",
+  "app_name": "BirthdaysCorpus",
+  "bundle_id": "org.ipahle.corpus.birthdays",
+  "minimum_ios": "15.0"
+}

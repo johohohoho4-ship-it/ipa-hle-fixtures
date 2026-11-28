@@ -1,0 +1,7 @@
+{
+  "project": "InterestsCorpus.xcodeproj",
+  "scheme": "InterestsCorpus",
+  "app_name": "InterestsCorpus",
+  "bundle_id": "org.ipahle.corpus.interests",
+  "minimum_ios": "15.0"
+}

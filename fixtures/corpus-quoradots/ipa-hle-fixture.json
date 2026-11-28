@@ -1,0 +1,7 @@
+{
+  "project": "QuoraDotsCorpus.xcodeproj",
+  "scheme": "QuoraDotsCorpus",
+  "app_name": "QuoraDotsCorpus",
+  "bundle_id": "org.ipahle.corpus.quoradots",
+  "minimum_ios": "15.0"
+}

@@ -1,0 +1,7 @@
+{
+  "project": "ToDoListUIkitCorpus.xcodeproj",
+  "scheme": "ToDoListUIkitCorpus",
+  "app_name": "ToDoListUIkitCorpus",
+  "bundle_id": "org.ipahle.corpus.todolistuikit",
+  "minimum_ios": "18.4"
+}

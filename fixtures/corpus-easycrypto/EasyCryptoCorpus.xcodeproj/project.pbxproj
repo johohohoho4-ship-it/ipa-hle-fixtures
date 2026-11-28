@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* APIDebuger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* APIDebuger.swift */; };
+		A10000000000000000000002 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* APIError.swift */; };
+		A10000000000000000000003 /* APIErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* APIErrorResponse.swift */; };
+		A10000000000000000000004 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ActivityIndicator.swift */; };
+		A10000000000000000000005 /* "AppDependencyContainer + Injection.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* "AppDependencyContainer + Injection.swift" */; };
+		A10000000000000000000006 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* AppDependencyContainer.swift */; };
+		A10000000000000000000007 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* AppRouter.swift */; };
+		A10000000000000000000008 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Assets.swift */; };
+		A10000000000000000000009 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* BaseViewModel.swift */; };
+		A10000000000000000000010 /* "Binding+Utils.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* "Binding+Utils.swift" */; };
+		A10000000000000000000011 /* "CGFloat + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* "CGFloat + Extension.swift" */; };
+		A10000000000000000000012 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* Cancelable.swift */; };
+		A10000000000000000000013 /* CoinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* CoinDetail.swift */; };
+		A10000000000000000000014 /* CoinDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* CoinDetailCoordinator.swift */; };
+		A10000000000000000000015 /* CoinDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* CoinDetailHeaderView.swift */; };
+		A10000000000000000000016 /* CoinDetailRank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* CoinDetailRank.swift */; };
+		A10000000000000000000017 /* CoinDetailRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* CoinDetailRemote.swift */; };
+		A10000000000000000000018 /* CoinDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* CoinDetailRepository.swift */; };
+		A10000000000000000000019 /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* CoinDetailView.swift */; };
+		A10000000000000000000020 /* CoinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* CoinDetailViewModel.swift */; };
+		A10000000000000000000021 /* CoinMarketUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000021 /* CoinMarketUsecase.swift */; };
+		A10000000000000000000022 /* CoinUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000022 /* CoinUnit.swift */; };
+		A10000000000000000000023 /* "Color + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000023 /* "Color + Extension.swift" */; };
+		A10000000000000000000024 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000024 /* Color.swift */; };
+		A10000000000000000000025 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000025 /* Configuration.swift */; };
+		A10000000000000000000026 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000026 /* Constants.swift */; };
+		A10000000000000000000027 /* Coordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000027 /* Coordinatable.swift */; };
+		A10000000000000000000028 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000028 /* CoordinatorProtocol.swift */; };
+		A10000000000000000000029 /* CoreDataDeletePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000029 /* CoreDataDeletePublisher.swift */; };
+		A10000000000000000000030 /* CoreDataFetchPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000030 /* CoreDataFetchPublisher.swift */; };
+		A10000000000000000000031 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000031 /* CoreDataManager.swift */; };
+		A10000000000000000000032 /* CoreDataMarketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000032 /* CoreDataMarketData.swift */; };
+		A10000000000000000000033 /* CoreDataSavePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000033 /* CoreDataSavePublisher.swift */; };
+		A10000000000000000000034 /* CryotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000034 /* CryotoCell.swift */; };
+		A10000000000000000000035 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000035 /* CurrencyFormatter.swift */; };
+		A10000000000000000000036 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000036 /* CustomAlertView.swift */; };
+		A10000000000000000000037 /* DataFlowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000037 /* DataFlowProtocol.swift */; };
+		A10000000000000000000038 /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000038 /* DecimalFormatter.swift */; };
+		A10000000000000000000039 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000039 /* DetailView.swift */; };
+		A10000000000000000000040 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000040 /* DetailViewModel.swift */; };
+		A10000000000000000000041 /* "Double + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000041 /* "Double + Extension.swift" */; };
+		A10000000000000000000042 /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000042 /* Dropdown.swift */; };
+		A10000000000000000000043 /* EasyCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000043 /* EasyCryptoApp.swift */; };
+		A10000000000000000000044 /* "Encoding + Dictionary.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000044 /* "Encoding + Dictionary.swift" */; };
+		A10000000000000000000045 /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000045 /* Encoding.swift */; };
+		A10000000000000000000046 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000046 /* FontManager.swift */; };
+		A10000000000000000000047 /* FontNameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000047 /* FontNameManager.swift */; };
+		A10000000000000000000048 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000048 /* HTTPMethod.swift */; };
+		A10000000000000000000049 /* "HTTPURLResponse + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000049 /* "HTTPURLResponse + Extension.swift" */; };
+		A10000000000000000000050 /* HandleViewModelStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000050 /* HandleViewModelStateModifier.swift */; };
+		A10000000000000000000051 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000051 /* ImageCache.swift */; };
+		A10000000000000000000052 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000052 /* ImageDownloader.swift */; };
+		A10000000000000000000053 /* ImageDownloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000053 /* ImageDownloaderView.swift */; };
+		A10000000000000000000054 /* "Int + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000054 /* "Int + Extension.swift" */; };
+		A10000000000000000000055 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000055 /* Log.swift */; };
+		A10000000000000000000056 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000056 /* MainCoordinator.swift */; };
+		A10000000000000000000057 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000057 /* MainView.swift */; };
+		A10000000000000000000058 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000058 /* MainViewModel.swift */; };
+		A10000000000000000000059 /* MarketPriceCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000059 /* MarketPriceCacheRepository.swift */; };
+		A10000000000000000000060 /* MarketPriceRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000060 /* MarketPriceRemote.swift */; };
+		A10000000000000000000061 /* MarketPriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000061 /* MarketPriceRepository.swift */; };
+		A10000000000000000000062 /* MarketPriceUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000062 /* MarketPriceUsecase.swift */; };
+		A10000000000000000000063 /* MarketsPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000063 /* MarketsPrice.swift */; };
+		A10000000000000000000064 /* MessageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000064 /* MessageHelper.swift */; };
+		A10000000000000000000065 /* "Navigation + Exetnsion.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000065 /* "Navigation + Exetnsion.swift" */; };
+		A10000000000000000000066 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000066 /* NavigationBarModifier.swift */; };
+		A10000000000000000000067 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000067 /* NetworkClient.swift */; };
+		A10000000000000000000068 /* NetworkClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000068 /* NetworkClientManager.swift */; };
+		A10000000000000000000069 /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000069 /* NetworkClientProtocol.swift */; };
+		A10000000000000000000070 /* "NetworkTarget + Default.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000070 /* "NetworkTarget + Default.swift" */; };
+		A10000000000000000000071 /* "NetworkTarget + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000071 /* "NetworkTarget + Extension.swift" */; };
+		A10000000000000000000072 /* NetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000072 /* NetworkTarget.swift */; };
+		A10000000000000000000073 /* "Optional + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000073 /* "Optional + Extension.swift" */; };
+		A10000000000000000000074 /* PlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000074 /* PlaceholderModifier.swift */; };
+		A10000000000000000000075 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000075 /* PriceView.swift */; };
+		A10000000000000000000076 /* "Publisher + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000076 /* "Publisher + Extension.swift" */; };
+		A10000000000000000000077 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000077 /* RequestBuilder.swift */; };
+		A10000000000000000000078 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000078 /* SafariView.swift */; };
+		A10000000000000000000079 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000079 /* SearchBar.swift */; };
+		A10000000000000000000080 /* SearchMarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000080 /* SearchMarket.swift */; };
+		A10000000000000000000081 /* SearchMarketDataRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000081 /* SearchMarketDataRemote.swift */; };
+		A10000000000000000000082 /* SearchMarketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000082 /* SearchMarketRepository.swift */; };
+		A10000000000000000000083 /* SearchMarketUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000083 /* SearchMarketUsecase.swift */; };
+		A10000000000000000000084 /* SortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000084 /* SortView.swift */; };
+		A10000000000000000000085 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000085 /* SpinnerView.swift */; };
+		A10000000000000000000086 /* SpinnerViewIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000086 /* SpinnerViewIndicator.swift */; };
+		A10000000000000000000087 /* "String + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000087 /* "String + Extension.swift" */; };
+		A10000000000000000000088 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000088 /* TabItemView.swift */; };
+		A10000000000000000000089 /* "UIScreen + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000089 /* "UIScreen + Extension.swift" */; };
+		A10000000000000000000090 /* "URL + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000090 /* "URL + Extension.swift" */; };
+		A10000000000000000000091 /* "URLRequest + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000091 /* "URLRequest + Extension.swift" */; };
+		A10000000000000000000092 /* "View + Extension.swift" in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000092 /* "View + Extension.swift" */; };
+		A10000000000000000000093 /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000093 /* ViewDidLoadModifier.swift */; };
+		A10000000000000000000094 /* WorkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000094 /* WorkScheduler.swift */; };
+		A10000000000000000000095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000095 /* Assets.xcassets */; };
+		A10000000000000000000096 /* CoinsDB.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000096 /* CoinsDB.xcdatamodeld */; };
+		A10000000000000000000097 /* "Launch Screen.storyboard" in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000097 /* "Launch Screen.storyboard" */; };
+		A10000000000000000000098 /* arialbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000098 /* arialbold.ttf */; };
+		B10000000000000000000001 /* FixtureReferenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000000000000000000001 /* FixtureReferenceUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B80000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A80000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000000000000000000001;
+			remoteInfo = EasyCryptoCorpus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* APIDebuger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDebuger.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* APIErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorResponse.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* "AppDependencyContainer + Injection.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDependencyContainer + Injection.swift"; sourceTree = "<group>"; };
+		A20000000000000000000006 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* "Binding+Utils.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Utils.swift"; sourceTree = "<group>"; };
+		A20000000000000000000011 /* "CGFloat + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000012 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		A20000000000000000000013 /* CoinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetail.swift; sourceTree = "<group>"; };
+		A20000000000000000000014 /* CoinDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailCoordinator.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* CoinDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailHeaderView.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* CoinDetailRank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailRank.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* CoinDetailRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailRemote.swift; sourceTree = "<group>"; };
+		A20000000000000000000018 /* CoinDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailRepository.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* CoinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000021 /* CoinMarketUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketUsecase.swift; sourceTree = "<group>"; };
+		A20000000000000000000022 /* CoinUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinUnit.swift; sourceTree = "<group>"; };
+		A20000000000000000000023 /* "Color + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000024 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A20000000000000000000025 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A20000000000000000000026 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A20000000000000000000027 /* Coordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatable.swift; sourceTree = "<group>"; };
+		A20000000000000000000028 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		A20000000000000000000029 /* CoreDataDeletePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDeletePublisher.swift; sourceTree = "<group>"; };
+		A20000000000000000000030 /* CoreDataFetchPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFetchPublisher.swift; sourceTree = "<group>"; };
+		A20000000000000000000031 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000032 /* CoreDataMarketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMarketData.swift; sourceTree = "<group>"; };
+		A20000000000000000000033 /* CoreDataSavePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSavePublisher.swift; sourceTree = "<group>"; };
+		A20000000000000000000034 /* CryotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryotoCell.swift; sourceTree = "<group>"; };
+		A20000000000000000000035 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		A20000000000000000000036 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		A20000000000000000000037 /* DataFlowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowProtocol.swift; sourceTree = "<group>"; };
+		A20000000000000000000038 /* DecimalFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalFormatter.swift; sourceTree = "<group>"; };
+		A20000000000000000000039 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A20000000000000000000040 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000041 /* "Double + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000042 /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		A20000000000000000000043 /* EasyCryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyCryptoApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000044 /* "Encoding + Dictionary.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encoding + Dictionary.swift"; sourceTree = "<group>"; };
+		A20000000000000000000045 /* Encoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
+		A20000000000000000000046 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000047 /* FontNameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontNameManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000048 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		A20000000000000000000049 /* "HTTPURLResponse + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000050 /* HandleViewModelStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleViewModelStateModifier.swift; sourceTree = "<group>"; };
+		A20000000000000000000051 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		A20000000000000000000052 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		A20000000000000000000053 /* ImageDownloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderView.swift; sourceTree = "<group>"; };
+		A20000000000000000000054 /* "Int + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000055 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A20000000000000000000056 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		A20000000000000000000057 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A20000000000000000000058 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000059 /* MarketPriceCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceCacheRepository.swift; sourceTree = "<group>"; };
+		A20000000000000000000060 /* MarketPriceRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceRemote.swift; sourceTree = "<group>"; };
+		A20000000000000000000061 /* MarketPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceRepository.swift; sourceTree = "<group>"; };
+		A20000000000000000000062 /* MarketPriceUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPriceUsecase.swift; sourceTree = "<group>"; };
+		A20000000000000000000063 /* MarketsPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsPrice.swift; sourceTree = "<group>"; };
+		A20000000000000000000064 /* MessageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHelper.swift; sourceTree = "<group>"; };
+		A20000000000000000000065 /* "Navigation + Exetnsion.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation + Exetnsion.swift"; sourceTree = "<group>"; };
+		A20000000000000000000066 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		A20000000000000000000067 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		A20000000000000000000068 /* NetworkClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000069 /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		A20000000000000000000070 /* "NetworkTarget + Default.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkTarget + Default.swift"; sourceTree = "<group>"; };
+		A20000000000000000000071 /* "NetworkTarget + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkTarget + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000072 /* NetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTarget.swift; sourceTree = "<group>"; };
+		A20000000000000000000073 /* "Optional + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000074 /* PlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderModifier.swift; sourceTree = "<group>"; };
+		A20000000000000000000075 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		A20000000000000000000076 /* "Publisher + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000077 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		A20000000000000000000078 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		A20000000000000000000079 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		A20000000000000000000080 /* SearchMarket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMarket.swift; sourceTree = "<group>"; };
+		A20000000000000000000081 /* SearchMarketDataRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMarketDataRemote.swift; sourceTree = "<group>"; };
+		A20000000000000000000082 /* SearchMarketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMarketRepository.swift; sourceTree = "<group>"; };
+		A20000000000000000000083 /* SearchMarketUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMarketUsecase.swift; sourceTree = "<group>"; };
+		A20000000000000000000084 /* SortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortView.swift; sourceTree = "<group>"; };
+		A20000000000000000000085 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		A20000000000000000000086 /* SpinnerViewIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewIndicator.swift; sourceTree = "<group>"; };
+		A20000000000000000000087 /* "String + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000088 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		A20000000000000000000089 /* "UIScreen + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000090 /* "URL + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000091 /* "URLRequest + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000092 /* "View + Extension.swift" */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View + Extension.swift"; sourceTree = "<group>"; };
+		A20000000000000000000093 /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
+		A20000000000000000000094 /* WorkScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkScheduler.swift; sourceTree = "<group>"; };
+		A20000000000000000000095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000096 /* CoinsDB.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodeld; path = CoinsDB.xcdatamodeld; sourceTree = "<group>"; };
+		A20000000000000000000097 /* "Launch Screen.storyboard" */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A20000000000000000000098 /* arialbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arialbold.ttf; sourceTree = "<group>"; };
+		A20000000000000000000099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E000000000000000000009 /* EasyCryptoCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyCryptoCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000000000000000000001 /* FixtureReferenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureReferenceUITests.swift; sourceTree = "<group>"; };
+		B2E000000000000000000002 /* FixtureReferenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixtureReferenceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+		B30000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (A40000000000000000000002 /* EasyCryptoCorpus */, B40000000000000000000001 /* FixtureReferenceUITests */, A40000000000000000000003 /* Products */);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* EasyCryptoCorpus */ = {
+			isa = PBXGroup;
+			children = (A20000000000000000000001, A20000000000000000000002, A20000000000000000000003, A20000000000000000000004, A20000000000000000000005, A20000000000000000000006, A20000000000000000000007, A20000000000000000000008, A20000000000000000000009, A20000000000000000000010, A20000000000000000000011, A20000000000000000000012, A20000000000000000000013, A20000000000000000000014, A20000000000000000000015, A20000000000000000000016, A20000000000000000000017, A20000000000000000000018, A20000000000000000000019, A20000000000000000000020, A20000000000000000000021, A20000000000000000000022, A20000000000000000000023, A20000000000000000000024, A20000000000000000000025, A20000000000000000000026, A20000000000000000000027, A20000000000000000000028, A20000000000000000000029, A20000000000000000000030, A20000000000000000000031, A20000000000000000000032, A20000000000000000000033, A20000000000000000000034, A20000000000000000000035, A20000000000000000000036, A20000000000000000000037, A20000000000000000000038, A20000000000000000000039, A20000000000000000000040, A20000000000000000000041, A20000000000000000000042, A20000000000000000000043, A20000000000000000000044, A20000000000000000000045, A20000000000000000000046, A20000000000000000000047, A20000000000000000000048, A20000000000000000000049, A20000000000000000000050, A20000000000000000000051, A20000000000000000000052, A20000000000000000000053, A20000000000000000000054, A20000000000000000000055, A20000000000000000000056, A20000000000000000000057, A20000000000000000000058, A20000000000000000000059, A20000000000000000000060, A20000000000000000000061, A20000000000000000000062, A20000000000000000000063, A20000000000000000000064, A20000000000000000000065, A20000000000000000000066, A20000000000000000000067, A20000000000000000000068, A20000000000000000000069, A20000000000000000000070, A20000000000000000000071, A20000000000000000000072, A20000000000000000000073, A20000000000000000000074, A20000000000000000000075, A20000000000000000000076, A20000000000000000000077, A20000000000000000000078, A20000000000000000000079, A20000000000000000000080, A20000000000000000000081, A20000000000000000000082, A20000000000000000000083, A20000000000000000000084, A20000000000000000000085, A20000000000000000000086, A20000000000000000000087, A20000000000000000000088, A20000000000000000000089, A20000000000000000000090, A20000000000000000000091, A20000000000000000000092, A20000000000000000000093, A20000000000000000000094, A20000000000000000000095, A20000000000000000000096, A20000000000000000000097, A20000000000000000000098, A20000000000000000000099,);
+			path = .;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* Products */ = {isa = PBXGroup; children = (A2E000000000000000000009 /* EasyCryptoCorpus.app */, B2E000000000000000000002 /* FixtureReferenceUITests.xctest */); name = Products; sourceTree = "<group>"; };
+		B40000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXGroup;
+			children = (B20000000000000000000001 /* FixtureReferenceUITests.swift */,);
+			path = FixtureReferenceUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* EasyCryptoCorpus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (A60000000000000000000001 /* Sources */, A30000000000000000000001 /* Frameworks */, A60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = ();
+			name = EasyCryptoCorpus;
+			productName = EasyCryptoCorpus;
+			productReference = A2E000000000000000000009 /* EasyCryptoCorpus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B50000000000000000000001 /* FixtureReferenceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B70000000000000000000002 /* Target config list */;
+			buildPhases = (B60000000000000000000001 /* Sources */, B30000000000000000000001 /* Frameworks */, B60000000000000000000002 /* Resources */);
+			buildRules = ();
+			dependencies = (B80000000000000000000002 /* PBXTargetDependency */);
+			name = FixtureReferenceUITests;
+			productName = FixtureReferenceUITests;
+			productReference = B2E000000000000000000002 /* FixtureReferenceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A50000000000000000000001 = {CreatedOnToolsVersion = 16.0; };
+					B50000000000000000000001 = {CreatedOnToolsVersion = 16.0; TestTargetID = A50000000000000000000001; };
+				};
+			};
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (A50000000000000000000001 /* EasyCryptoCorpus */, B50000000000000000000001 /* FixtureReferenceUITests */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000095, A10000000000000000000096, A10000000000000000000097, A10000000000000000000098,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000002 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000003, A10000000000000000000004, A10000000000000000000005, A10000000000000000000006, A10000000000000000000007, A10000000000000000000008, A10000000000000000000009, A10000000000000000000010, A10000000000000000000011, A10000000000000000000012, A10000000000000000000013, A10000000000000000000014, A10000000000000000000015, A10000000000000000000016, A10000000000000000000017, A10000000000000000000018, A10000000000000000000019, A10000000000000000000020, A10000000000000000000021, A10000000000000000000022, A10000000000000000000023, A10000000000000000000024, A10000000000000000000025, A10000000000000000000026, A10000000000000000000027, A10000000000000000000028, A10000000000000000000029, A10000000000000000000030, A10000000000000000000031, A10000000000000000000032, A10000000000000000000033, A10000000000000000000034, A10000000000000000000035, A10000000000000000000036, A10000000000000000000037, A10000000000000000000038, A10000000000000000000039, A10000000000000000000040, A10000000000000000000041, A10000000000000000000042, A10000000000000000000043, A10000000000000000000044, A10000000000000000000045, A10000000000000000000046, A10000000000000000000047, A10000000000000000000048, A10000000000000000000049, A10000000000000000000050, A10000000000000000000051, A10000000000000000000052, A10000000000000000000053, A10000000000000000000054, A10000000000000000000055, A10000000000000000000056, A10000000000000000000057, A10000000000000000000058, A10000000000000000000059, A10000000000000000000060, A10000000000000000000061, A10000000000000000000062, A10000000000000000000063, A10000000000000000000064, A10000000000000000000065, A10000000000000000000066, A10000000000000000000067, A10000000000000000000068, A10000000000000000000069, A10000000000000000000070, A10000000000000000000071, A10000000000000000000072, A10000000000000000000073, A10000000000000000000074, A10000000000000000000075, A10000000000000000000076, A10000000000000000000077, A10000000000000000000078, A10000000000000000000079, A10000000000000000000080, A10000000000000000000081, A10000000000000000000082, A10000000000000000000083, A10000000000000000000084, A10000000000000000000085, A10000000000000000000086, A10000000000000000000087, A10000000000000000000088, A10000000000000000000089, A10000000000000000000090, A10000000000000000000091, A10000000000000000000092, A10000000000000000000093, A10000000000000000000094,); runOnlyForDeploymentPostprocessing = 0; };
+		B60000000000000000000001 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (B10000000000000000000001,); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B80000000000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000000000000000000001 /* EasyCryptoCorpus */;
+			targetProxy = B80000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+		A90000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+		A90000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; ENABLE_DEBUG_DYLIB = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.easycrypto; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		A90000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; ENABLE_DEBUG_DYLIB = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Info.plist; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.easycrypto; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Release; };
+		B90000000000000000000003 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.easycrypto.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = EasyCryptoCorpus; USES_XCTEST = YES; }; name = Debug; };
+		B90000000000000000000004 /* Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGNING_ALLOWED = NO; CODE_SIGNING_REQUIRED = NO; CODE_SIGN_IDENTITY = ""; ENABLE_TESTING_SEARCH_PATHS = YES; GENERATE_INFOPLIST_FILE = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = org.ipahle.corpus.easycrypto.uitests; PRODUCT_NAME = "$(TARGET_NAME)"; SDKROOT = iphoneos; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = 1; TEST_TARGET_NAME = EasyCryptoCorpus; USES_XCTEST = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Project config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000001 /* Debug */, A90000000000000000000002 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (A90000000000000000000003 /* Debug */, A90000000000000000000004 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		B70000000000000000000002 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (B90000000000000000000003 /* Debug */, B90000000000000000000004 /* Release */,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A80000000000000000000001 /* Project object */;
+}

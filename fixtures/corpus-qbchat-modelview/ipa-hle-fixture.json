@@ -1,0 +1,7 @@
+{
+  "project": "QBChatModelViewCorpus.xcodeproj",
+  "scheme": "QBChatModelViewCorpus",
+  "app_name": "QBChatModelViewCorpus",
+  "bundle_id": "org.ipahle.corpus.qbchatmodelview",
+  "minimum_ios": "13.1"
+}

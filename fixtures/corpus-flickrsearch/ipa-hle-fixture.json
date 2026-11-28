@@ -1,0 +1,7 @@
+{
+  "project": "FlickrSearchCorpus.xcodeproj",
+  "scheme": "FlickrSearchCorpus",
+  "app_name": "FlickrSearchCorpus",
+  "bundle_id": "org.ipahle.corpus.flickrsearch",
+  "minimum_ios": "15.0"
+}

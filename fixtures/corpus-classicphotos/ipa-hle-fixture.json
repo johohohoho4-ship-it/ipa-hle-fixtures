@@ -1,0 +1,7 @@
+{
+  "project": "ClassicPhotosCorpus.xcodeproj",
+  "scheme": "ClassicPhotosCorpus",
+  "app_name": "ClassicPhotosCorpus",
+  "bundle_id": "org.ipahle.corpus.classicphotos",
+  "minimum_ios": "15.0"
+}

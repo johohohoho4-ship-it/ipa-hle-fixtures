@@ -1,0 +1,7 @@
+{
+  "project": "FacebookMeCorpus.xcodeproj",
+  "scheme": "FacebookMeCorpus",
+  "app_name": "FacebookMeCorpus",
+  "bundle_id": "org.ipahle.corpus.facebookme",
+  "minimum_ios": "15.0"
+}

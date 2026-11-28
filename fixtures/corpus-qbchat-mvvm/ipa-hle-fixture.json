@@ -1,0 +1,7 @@
+{
+  "project": "QBChatMVVMCorpus.xcodeproj",
+  "scheme": "QBChatMVVMCorpus",
+  "app_name": "QBChatMVVMCorpus",
+  "bundle_id": "org.ipahle.corpus.qbchatmvvm",
+  "minimum_ios": "13.1"
+}

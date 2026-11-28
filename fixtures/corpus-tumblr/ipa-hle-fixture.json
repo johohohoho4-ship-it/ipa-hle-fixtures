@@ -1,0 +1,7 @@
+{
+  "project": "TumblrCorpus.xcodeproj",
+  "scheme": "TumblrCorpus",
+  "app_name": "TumblrCorpus",
+  "bundle_id": "org.ipahle.corpus.tumblr",
+  "minimum_ios": "15.0"
+}

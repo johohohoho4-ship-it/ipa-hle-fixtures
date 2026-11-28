@@ -1,0 +1,7 @@
+{
+  "project": "TodoTDDCorpus.xcodeproj",
+  "scheme": "TodoTDDCorpus",
+  "app_name": "TodoTDDCorpus",
+  "bundle_id": "org.ipahle.corpus.todotdd",
+  "minimum_ios": "15.0"
+}

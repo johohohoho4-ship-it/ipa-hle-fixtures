@@ -1,0 +1,7 @@
+{
+  "project": "SnapchatMenuCorpus.xcodeproj",
+  "scheme": "SnapchatMenuCorpus",
+  "app_name": "SnapchatMenuCorpus",
+  "bundle_id": "org.ipahle.corpus.snapchatmenu",
+  "minimum_ios": "15.0"
+}

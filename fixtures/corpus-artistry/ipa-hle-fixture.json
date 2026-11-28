@@ -1,0 +1,7 @@
+{
+  "project": "ArtistryCorpus.xcodeproj",
+  "scheme": "ArtistryCorpus",
+  "app_name": "ArtistryCorpus",
+  "bundle_id": "org.ipahle.corpus.artistry",
+  "minimum_ios": "15.0"
+}

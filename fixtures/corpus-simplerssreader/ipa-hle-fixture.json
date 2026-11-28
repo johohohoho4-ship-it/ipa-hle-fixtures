@@ -1,0 +1,7 @@
+{
+  "project": "SimpleRSSReaderCorpus.xcodeproj",
+  "scheme": "SimpleRSSReaderCorpus",
+  "app_name": "SimpleRSSReaderCorpus",
+  "bundle_id": "org.ipahle.corpus.simplerssreader",
+  "minimum_ios": "15.0"
+}

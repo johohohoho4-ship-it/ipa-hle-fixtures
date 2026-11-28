@@ -1,0 +1,7 @@
+{
+  "project": "TwitterBirdCorpus.xcodeproj",
+  "scheme": "TwitterBirdCorpus",
+  "app_name": "TwitterBirdCorpus",
+  "bundle_id": "org.ipahle.corpus.twitterbird",
+  "minimum_ios": "15.0"
+}
