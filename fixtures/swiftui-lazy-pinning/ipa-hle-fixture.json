@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUILazyPinning.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuilazypinning",
+  "app_name": "SwiftUILazyPinning",
+  "minimum_ios": "16.0",
+  "scheme": "SwiftUILazyPinning"
+}
