@@ -1,0 +1,7 @@
+{
+  "project": "AssetCatalog.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.assetcatalog",
+  "app_name": "AssetCatalog",
+  "minimum_ios": "16.0",
+  "scheme": "AssetCatalog"
+}
