@@ -1,0 +1,7 @@
+{
+  "project": "SwiftUINavigation.xcodeproj",
+  "bundle_id": "org.ipahle.fixture.swiftuinavigation",
+  "app_name": "SwiftUINavigation",
+  "minimum_ios": "17.0",
+  "scheme": "SwiftUINavigation"
+}
